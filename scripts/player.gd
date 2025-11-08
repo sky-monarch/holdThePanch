@@ -5,6 +5,9 @@ extends CharacterBody2D
 @export var run_speed: float = 700
 @export var gravity: float = 900
 @export var jump_force: float = 400
+@export var damage = 10
+@export var max_hp = 100
+var hp = max_hp
 
 # Узлы
 @onready var anim = $AnimatedSprite2D
@@ -78,7 +81,6 @@ func attack():
 
 	# Ждём фиксированное время атаки 
 	await get_tree().create_timer(1).timeout
-
 	is_attacking = false
 	attack_area.monitoring = false
 
@@ -90,3 +92,23 @@ func defend():
 	is_defend = false
 	defend_area.monitoring = false
 	
+
+func take_damage(_damage):
+	if not is_defend:
+		anim.play("Hurt")
+		hp -= _damage
+		await get_tree().create_timer(0.5).timeout
+		if hp<=0:
+			die()
+
+
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if body.has_method("take_damage"):
+		body.take_damage(damage)
+		
+
+
+func die():
+	anim.play("Die")
+	await get_tree().create_timer(0.8).timeout
+	queue_free()
