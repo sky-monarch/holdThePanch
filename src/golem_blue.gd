@@ -12,7 +12,6 @@ var can_attack: bool = false
 var is_attacking: bool = false
 var is_hurting: bool = false
 
-# --- Узлы ---
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var detection_area: Area2D = $DetectionArea
 @onready var attack_area: Area2D = $AttackArea
@@ -73,8 +72,8 @@ func _attack() -> void:
 	is_attacking = true
 	anim.play("Attack")
 
-	await get_tree().create_timer(0.4).timeout
-	if can_attack and player and player.has_method("take_damage"):
+	await get_tree().create_timer(0.8).timeout
+	if can_attack and player and player.has_method("take_damage") and not player.is_defend:
 		player.take_damage(damage)
 
 	await anim.animation_finished
@@ -86,15 +85,16 @@ func _attack() -> void:
 func take_damage(amount: int) -> void:
 	if is_dead or is_hurting:
 		return
-
 	hp -= amount
 	is_hurting = true
+	can_attack = false
 	anim.play("Hurt")
 	await anim.animation_finished
 	if hp <= 0:
 		die()
 	await get_tree().create_timer(1).timeout
 	is_hurting = false
+	can_attack = true
 
 func die() -> void:
 	is_dead = true
