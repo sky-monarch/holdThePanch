@@ -227,7 +227,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nkv6s")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack",
 "speed": 5.0
 }, {
@@ -271,7 +271,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ne6du")
 }],
-"loop": true,
+"loop": false,
 "name": &"Die",
 "speed": 5.0
 }, {
@@ -288,7 +288,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5te50")
 }],
-"loop": true,
+"loop": false,
 "name": &"Hurt",
 "speed": 5.0
 }, {
@@ -364,7 +364,7 @@ size = Vector2(38, 32.666668)
 size = Vector2(189, 139)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7rag"]
-size = Vector2(55, 37.666664)
+size = Vector2(69.00001, 33.333336)
 
 [node name="Golem_blue" type="CharacterBody2D"]
 scale = Vector2(3, 3)
@@ -373,9 +373,8 @@ script = ExtResource("1_t5dxf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 2)
 sprite_frames = SubResource("SpriteFrames_tad3y")
-animation = &"Attack"
+animation = &"Die"
 autoplay = "Idle"
-frame_progress = 0.8068638
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 17.333334)
@@ -390,5 +389,5 @@ shape = SubResource("RectangleShape2D_5ikqo")
 [node name="AttackArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(9.5, 16.166668)
+position = Vector2(0.16666476, 17.666668)
 shape = SubResource("RectangleShape2D_i7rag")

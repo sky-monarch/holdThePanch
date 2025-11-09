@@ -538,7 +538,7 @@ animations = [{
 size = Vector2(25, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ehvfd"]
-size = Vector2(20, 35)
+size = Vector2(64, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jouj7"]
 size = Vector2(64, 35.333336)
@@ -550,7 +550,7 @@ script = ExtResource("1_ehvfd")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.6666667, 0)
 sprite_frames = SubResource("SpriteFrames_8wfru")
-animation = &"Die"
+animation = &"Hurt"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -558,14 +558,16 @@ position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_gmfve")
 
 [node name="AttackArea" type="Area2D" parent="."]
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(22, 1.5000004)
+position = Vector2(0, 1.5000004)
 shape = SubResource("RectangleShape2D_ehvfd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="DefendArea" type="Area2D" parent="."]
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DefendArea"]
 position = Vector2(-0.33333525, 1.6666677)
