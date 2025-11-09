@@ -12,10 +12,13 @@ var is_attacking: bool = false
 var is_defend: bool = false
 var is_hurting: bool = false
 var type_attack: int = 1
+var tween = null
 
 @onready var anim = $AnimatedSprite2D
 @onready var attack_area = $AttackArea
 @onready var defend_area = $DefendArea
+@onready var helth_bar = $HelthBar/FullHelthBar
+@onready var empty_bar = $HelthBar/EmptyHelthBar
 
 
 func _physics_process(delta: float) -> void:
@@ -84,6 +87,7 @@ func take_damage(_damage):
 
 	is_hurting = true
 	hp -= _damage
+	update_helth_bar()
 	anim.play("Hurt")
 
 	await get_tree().create_timer(0.5).timeout
@@ -100,5 +104,17 @@ func _on_attack_area_body_entered(body: Node2D):
 
 func die():
 	anim.play("Die")
-	await get_tree().create_timer(3).timeout
+	await anim.animation_finished
 	queue_free()
+	
+	
+func update_helth_bar():
+	var scale_hp = clamp(float(hp)/float(max_hp), 0.0, 1.0)/2
+	if tween and tween.is_valid():
+		tween.kill()
+	tween = create_tween()
+	tween.tween_property(helth_bar, "scale:x", scale_hp, 0.2)
+	tween.tween_property(empty_bar, "scale:x", scale_hp, 0.2)
+	
+	
+	

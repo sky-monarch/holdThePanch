@@ -11,10 +11,13 @@ var is_dead: bool = false
 var can_attack: bool = false
 var is_attacking: bool = false
 var is_hurting: bool = false
+var tween = null
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var detection_area: Area2D = $DetectionArea
 @onready var attack_area: Area2D = $AttackArea
+@onready var helth_bar = $HelthBar/FullHelthBar
+@onready var empty_bar = $HelthBar/EmptyHelthBar
 
 func _ready() -> void:
 	hp = max_hp
@@ -86,6 +89,7 @@ func take_damage(amount: int) -> void:
 	if is_dead or is_hurting:
 		return
 	hp -= amount
+	update_helth_bar()
 	is_hurting = true
 	can_attack = false
 	anim.play("Hurt")
@@ -101,3 +105,11 @@ func die() -> void:
 	anim.play("Die")
 	await anim.animation_finished
 	queue_free()
+	
+func update_helth_bar():
+	var scale_hp = clamp(float(hp)/float(max_hp), 0.0, 1.0)/2
+	if tween and tween.is_valid():
+		tween.kill()
+	tween = create_tween()
+	tween.tween_property(helth_bar, "scale:x", scale_hp, 0.2)
+	tween.tween_property(empty_bar, "scale:x", scale_hp, 0.2)

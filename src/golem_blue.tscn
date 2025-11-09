@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://cjlwmi86owhys"]
+[gd_scene load_steps=59 format=3 uid="uid://cjlwmi86owhys"]
 
 [ext_resource type="Script" uid="uid://yevmy8sjwjl0" path="res://src/golem_blue.gd" id="1_t5dxf"]
 [ext_resource type="Texture2D" uid="uid://baq05wtx4ggvn" path="res://resourse/sprites/Golem_blue/Golem_1_attack.png" id="2_fech2"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c3q400liwmpi1" path="res://resourse/sprites/Golem_blue/Golem_1_hurt.png" id="4_hgx8b"]
 [ext_resource type="Texture2D" uid="uid://ba7onojvadtpq" path="res://resourse/sprites/Golem_blue/Golem_1_idle.png" id="5_xmveb"]
 [ext_resource type="Texture2D" uid="uid://betlqlhcka4tv" path="res://resourse/sprites/Golem_blue/Golem_1_walk.png" id="6_83cme"]
+[ext_resource type="Texture2D" uid="uid://drvc6e78shxy2" path="res://resourse/sprites/helth/Pixel1_Healthbar_0002_pixel1_border.png" id="7_csbyb"]
+[ext_resource type="Texture2D" uid="uid://3ie0ir08wrks" path="res://resourse/sprites/helth/Pixel1_Healthbar_0001_pixel1_healthbar.png" id="8_hgx8b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1q6o1"]
 atlas = ExtResource("2_fech2")
@@ -391,3 +393,17 @@ shape = SubResource("RectangleShape2D_5ikqo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2(0.16666476, 17.666668)
 shape = SubResource("RectangleShape2D_i7rag")
+
+[node name="HelthBar" type="Node2D" parent="."]
+
+[node name="EmptyHelthBar" type="Sprite2D" parent="HelthBar"]
+position = Vector2(-25.333334, -41.666668)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_csbyb")
+centered = false
+
+[node name="FullHelthBar" type="Sprite2D" parent="HelthBar"]
+position = Vector2(-25.333334, -35.666668)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_hgx8b")
+centered = false
