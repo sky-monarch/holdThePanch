@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=3 uid="uid://dr176xyhdun12"]
+[gd_scene load_steps=124 format=3 uid="uid://dr176xyhdun12"]
 
 [ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="2_gp13o"]
 [ext_resource type="Texture2D" uid="uid://ct0iubsgh2hyk" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/grass_3.png" id="3_11xjm"]
@@ -53,7 +53,6 @@
 [ext_resource type="Texture2D" uid="uid://dpca5rvvg2h57" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/wood_plank_1.png" id="51_n2cyw"]
 [ext_resource type="Texture2D" uid="uid://d06sx28vdesjx" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/wood_plank_2.png" id="52_fcxfv"]
 [ext_resource type="Texture2D" uid="uid://bqj6ikew3luw" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/barrel_damaged.png" id="53_oqmlk"]
-[ext_resource type="Texture2D" uid="uid://bsfcdcfhvghkk" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/wood_plank_3.png" id="54_2tpnp"]
 [ext_resource type="Texture2D" uid="uid://djxcplx2fcqm6" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/books.png" id="55_nhx8c"]
 [ext_resource type="Texture2D" uid="uid://c54e0iyynnjic" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/bookshelf_1.png" id="56_nmbjy"]
 [ext_resource type="Texture2D" uid="uid://u45vr20idth0" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/bookshelf_2.png" id="57_5136p"]
@@ -4071,9 +4070,6 @@ texture = ExtResource("53_oqmlk")
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_36vvo"]
-texture = ExtResource("54_2tpnp")
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srxqy"]
 texture = ExtResource("55_nhx8c")
 
@@ -4166,7 +4162,6 @@ sources/36 = SubResource("TileSetAtlasSource_juslg")
 sources/37 = SubResource("TileSetAtlasSource_qayql")
 sources/38 = SubResource("TileSetAtlasSource_4ad1l")
 sources/39 = SubResource("TileSetAtlasSource_mrxj6")
-sources/40 = SubResource("TileSetAtlasSource_36vvo")
 
 [node name="TileSet" type="Node2D"]
 position = Vector2(3, 0)

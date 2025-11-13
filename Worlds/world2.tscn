@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cah61mokfrd7d"]
+[gd_scene load_steps=11 format=3 uid="uid://cah61mokfrd7d"]
 
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="1_k2e5y"]
 [ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="2_4nfeb"]
@@ -441,9 +441,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="TileSet" id="TileSet_k2e5y"]
+
 [node name="Node2D" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Земля" type="TileMap" parent="."]
 position = Vector2(1, -1)
 tile_set = SubResource("TileSet_bcda8")
 format = 2
@@ -451,23 +453,23 @@ layer_0/tile_data = PackedInt32Array(2686976, 1245184, 12, 2686977, 1245184, 12,
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Фон1" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="BackgroundLayer1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+[node name="BackgroundLayer1" type="Sprite2D" parent="ParallaxBackground/Фон1"]
 position = Vector2(1666.5, 140.5)
 scale = Vector2(16.946875, 5.7055554)
 texture = ExtResource("2_4nfeb")
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Фон2" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="BackgroundLayer2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+[node name="BackgroundLayer2" type="Sprite2D" parent="ParallaxBackground/Фон2"]
 position = Vector2(1666.5001, 133.00002)
 scale = Vector2(16.934374, 5.8222218)
 texture = ExtResource("3_hei82")
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Фон3" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="BackgroundLayer3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+[node name="BackgroundLayer3" type="Sprite2D" parent="ParallaxBackground/Фон3"]
 position = Vector2(1661.9999, 143)
 scale = Vector2(16.91875, 5.7611113)
 texture = ExtResource("4_e1sii")
@@ -483,3 +485,7 @@ shape = SubResource("CapsuleShape2D_22d7n")
 position = Vector2(2.6666667, 51.666668)
 sprite_frames = SubResource("SpriteFrames_usgi2")
 animation = &"Idle"
+
+[node name="Дикорации" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_k2e5y")
+format = 2
