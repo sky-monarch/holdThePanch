@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dr176xyhdun12"]
+[gd_scene load_steps=126 format=3 uid="uid://dr176xyhdun12"]
 
 [ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="2_gp13o"]
 [ext_resource type="Texture2D" uid="uid://ct0iubsgh2hyk" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/grass_3.png" id="3_11xjm"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b1gguj14fpg8v" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/grass_2.png" id="4_oadkd"]
 [ext_resource type="Texture2D" uid="uid://drxi807xxxpc1" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/i.jpg" id="4_rv3r3"]
 [ext_resource type="Texture2D" uid="uid://deggl3p4l1xo8" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_3.png" id="4_v5v3b"]
-[ext_resource type="Texture2D" uid="uid://deluf3f3wytb3" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/1.png" id="4_vrid6"]
 [ext_resource type="Texture2D" uid="uid://dpv7ogcbh30pp" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/shop.png" id="5_6dc0h"]
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="5_rv3r3"]
 [ext_resource type="Texture2D" uid="uid://d2ujuju8nagox" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/lamp.png" id="6_6ptiq"]
@@ -19,6 +18,49 @@
 [ext_resource type="Texture2D" uid="uid://bft2ug4bnfwed" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/grass_1.png" id="13_fehe6"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="14_oadkd"]
 [ext_resource type="Texture2D" uid="uid://duvcyhe7f68k" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/shop_anim.png" id="18_irqid"]
+[ext_resource type="Texture2D" uid="uid://c4ykfalgln1rn" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/axe.png" id="19_5cj5m"]
+[ext_resource type="Texture2D" uid="uid://cbqke3xe44r5m" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/bag_1.png" id="20_ku0kd"]
+[ext_resource type="Texture2D" uid="uid://c5ngusggrlqr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/crate_1.png" id="21_uk4gg"]
+[ext_resource type="Texture2D" uid="uid://c02mt6ulj45dh" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/crate_1_damaged.png" id="22_pf0kn"]
+[ext_resource type="Texture2D" uid="uid://bih2r7jiw34p1" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/crate_2.png" id="23_rhq61"]
+[ext_resource type="Texture2D" uid="uid://ed04klh515x2" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/crate_2_damaged.png" id="24_f3jur"]
+[ext_resource type="Texture2D" uid="uid://dbclkg6oehuqf" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/crate_3.png" id="25_mbyvo"]
+[ext_resource type="Texture2D" uid="uid://d14emqbvhp4sj" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/crate_3_damaged.png" id="26_bknsp"]
+[ext_resource type="Texture2D" uid="uid://dd6h0ncjgfhvo" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/curtain_blue_1.png" id="27_y5bcb"]
+[ext_resource type="Texture2D" uid="uid://j7ca66nx2ano" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/curtain_blue_2.png" id="28_64yuv"]
+[ext_resource type="Texture2D" uid="uid://kty2v4spiule" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/curtain_red_1.png" id="29_f2jfh"]
+[ext_resource type="Texture2D" uid="uid://bel44nukrj6u4" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/curtain_red_2.png" id="30_11fmb"]
+[ext_resource type="Texture2D" uid="uid://ce72yuepxgeab" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/bag_2.png" id="31_idju8"]
+[ext_resource type="Texture2D" uid="uid://bn8iqo5bjxpdc" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/door.png" id="32_tprod"]
+[ext_resource type="Texture2D" uid="uid://3gjowc562xda" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/flag_blue.png" id="33_exwng"]
+[ext_resource type="Texture2D" uid="uid://cq1fihaxyltvk" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/flag_red.png" id="34_s3prn"]
+[ext_resource type="Texture2D" uid="uid://b8h6o6hr52648" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/langdebeve.png" id="35_f85gm"]
+[ext_resource type="Texture2D" uid="uid://cv5xa7tn4gn2n" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/pole_axe.png" id="36_y88v4"]
+[ext_resource type="Texture2D" uid="uid://bdtldbwp5x4q8" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/potions_1.png" id="37_7t6nx"]
+[ext_resource type="Texture2D" uid="uid://45jro142mr22" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/potions_2.png" id="38_qcyoy"]
+[ext_resource type="Texture2D" uid="uid://btkxgp2l5dqij" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/potion_1.png" id="39_fw57s"]
+[ext_resource type="Texture2D" uid="uid://do62016ja66j2" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/potion_2.png" id="40_psavy"]
+[ext_resource type="Texture2D" uid="uid://088ofnr1vg0w" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/potion_3.png" id="41_t2vy4"]
+[ext_resource type="Texture2D" uid="uid://nrces124noyq" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/barrel.png" id="42_dgu85"]
+[ext_resource type="Texture2D" uid="uid://cn8gw71ruupfe" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/potion_4.png" id="43_oyaqi"]
+[ext_resource type="Texture2D" uid="uid://dcmd2ni32r2hy" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/scroll_1.png" id="44_p2r8k"]
+[ext_resource type="Texture2D" uid="uid://bgfs53cml3hvq" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/scroll_2.png" id="45_tpcjq"]
+[ext_resource type="Texture2D" uid="uid://dv2inixvrblxb" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/sword_1.png" id="46_svqsj"]
+[ext_resource type="Texture2D" uid="uid://id3deotwwpje" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/sword_2.png" id="47_qcn7d"]
+[ext_resource type="Texture2D" uid="uid://duulgkvkxjmg1" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/table_noshadow.png" id="48_vn15f"]
+[ext_resource type="Texture2D" uid="uid://duiq0klq74ts4" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/table_shadow.png" id="49_55ovr"]
+[ext_resource type="Texture2D" uid="uid://dqyloakbdd65d" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/weapon_rack.png" id="50_euk62"]
+[ext_resource type="Texture2D" uid="uid://dpca5rvvg2h57" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/wood_plank_1.png" id="51_n2cyw"]
+[ext_resource type="Texture2D" uid="uid://d06sx28vdesjx" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/wood_plank_2.png" id="52_fcxfv"]
+[ext_resource type="Texture2D" uid="uid://bqj6ikew3luw" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/barrel_damaged.png" id="53_oqmlk"]
+[ext_resource type="Texture2D" uid="uid://bsfcdcfhvghkk" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/wood_plank_3.png" id="54_2tpnp"]
+[ext_resource type="Texture2D" uid="uid://djxcplx2fcqm6" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/books.png" id="55_nhx8c"]
+[ext_resource type="Texture2D" uid="uid://c54e0iyynnjic" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/bookshelf_1.png" id="56_nmbjy"]
+[ext_resource type="Texture2D" uid="uid://u45vr20idth0" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/bookshelf_2.png" id="57_5136p"]
+[ext_resource type="Texture2D" uid="uid://cybvmwcsqbtbb" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/chair_1.png" id="58_0c4fg"]
+[ext_resource type="Texture2D" uid="uid://drh7adnmgaexm" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/chair_2.png" id="59_304xg"]
+[ext_resource type="Texture2D" uid="uid://cp58umotkggib" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_3.png" id="60_uk4gg"]
+[ext_resource type="Texture2D" uid="uid://dxslt3pn41qgl" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Animated Decorations/candelabrum_tall/candelabrum_tall_6.png" id="61_pf0kn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rn5w0"]
 texture = ExtResource("4_rv3r3")
@@ -1508,8 +1550,11 @@ texture = ExtResource("4_rv3r3")
 [sub_resource type="TileSet" id="TileSet_87wfq"]
 sources/0 = SubResource("TileSetAtlasSource_rn5w0")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rwand"]
+load_path = "res://.godot/imported/1.png-6b1c00ebc09ca5f530f25497c3dff52a.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d6fiu"]
-texture = ExtResource("4_vrid6")
+texture = SubResource("CompressedTexture2D_rwand")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w46nh"]
 texture = ExtResource("5_rv3r3")
@@ -3814,6 +3859,315 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ugot1"]
+texture = ExtResource("19_5cj5m")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_625bj"]
+texture = ExtResource("20_ku0kd")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y32kf"]
+texture = ExtResource("21_uk4gg")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_giisr"]
+texture = ExtResource("22_pf0kn")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_un0nn"]
+texture = ExtResource("23_rhq61")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4aubd"]
+texture = ExtResource("24_f3jur")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vjhe2"]
+texture = ExtResource("25_mbyvo")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oang8"]
+texture = ExtResource("26_bknsp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bges2"]
+texture = ExtResource("27_y5bcb")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vf5y4"]
+texture = ExtResource("28_64yuv")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_op7fj"]
+texture = ExtResource("29_f2jfh")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e0di8"]
+texture = ExtResource("30_11fmb")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_245aa"]
+texture = ExtResource("31_idju8")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a445h"]
+texture = ExtResource("32_tprod")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o4tqe"]
+texture = ExtResource("33_exwng")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mhi7x"]
+texture = ExtResource("34_s3prn")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h635"]
+texture = ExtResource("35_f85gm")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r5krt"]
+texture = ExtResource("36_y88v4")
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u6lx6"]
+texture = ExtResource("37_7t6nx")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5p8nv"]
+texture = ExtResource("38_qcyoy")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e4yde"]
+texture = ExtResource("39_fw57s")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mwm4a"]
+texture = ExtResource("40_psavy")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdoyo"]
+texture = ExtResource("41_t2vy4")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro6v7"]
+texture = ExtResource("42_dgu85")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2e1ux"]
+texture = ExtResource("43_oyaqi")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8sj8n"]
+texture = ExtResource("44_p2r8k")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vb0hc"]
+texture = ExtResource("45_tpcjq")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjowb"]
+texture = ExtResource("46_svqsj")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvkle"]
+texture = ExtResource("47_qcn7d")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gsour"]
+texture = ExtResource("48_vn15f")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_juslg"]
+texture = ExtResource("49_55ovr")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qayql"]
+texture = ExtResource("50_euk62")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ad1l"]
+texture = ExtResource("51_n2cyw")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mrxj6"]
+texture = ExtResource("52_fcxfv")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0ggj"]
+texture = ExtResource("53_oqmlk")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_36vvo"]
+texture = ExtResource("54_2tpnp")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srxqy"]
+texture = ExtResource("55_nhx8c")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4kwvi"]
+texture = ExtResource("56_nmbjy")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s6gpm"]
+texture = ExtResource("57_5136p")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c178d"]
+texture = ExtResource("58_0c4fg")
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_viu5l"]
+texture = ExtResource("59_304xg")
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1x08y"]
+sources/0 = SubResource("TileSetAtlasSource_ugot1")
+sources/1 = SubResource("TileSetAtlasSource_625bj")
+sources/2 = SubResource("TileSetAtlasSource_245aa")
+sources/3 = SubResource("TileSetAtlasSource_ro6v7")
+sources/4 = SubResource("TileSetAtlasSource_w0ggj")
+sources/5 = SubResource("TileSetAtlasSource_srxqy")
+sources/6 = SubResource("TileSetAtlasSource_4kwvi")
+sources/7 = SubResource("TileSetAtlasSource_s6gpm")
+sources/8 = SubResource("TileSetAtlasSource_c178d")
+sources/9 = SubResource("TileSetAtlasSource_viu5l")
+sources/10 = SubResource("TileSetAtlasSource_y32kf")
+sources/11 = SubResource("TileSetAtlasSource_giisr")
+sources/12 = SubResource("TileSetAtlasSource_un0nn")
+sources/13 = SubResource("TileSetAtlasSource_4aubd")
+sources/14 = SubResource("TileSetAtlasSource_vjhe2")
+sources/15 = SubResource("TileSetAtlasSource_oang8")
+sources/16 = SubResource("TileSetAtlasSource_bges2")
+sources/17 = SubResource("TileSetAtlasSource_vf5y4")
+sources/18 = SubResource("TileSetAtlasSource_op7fj")
+sources/19 = SubResource("TileSetAtlasSource_e0di8")
+sources/20 = SubResource("TileSetAtlasSource_a445h")
+sources/21 = SubResource("TileSetAtlasSource_o4tqe")
+sources/22 = SubResource("TileSetAtlasSource_mhi7x")
+sources/23 = SubResource("TileSetAtlasSource_0h635")
+sources/24 = SubResource("TileSetAtlasSource_r5krt")
+sources/25 = SubResource("TileSetAtlasSource_u6lx6")
+sources/26 = SubResource("TileSetAtlasSource_5p8nv")
+sources/27 = SubResource("TileSetAtlasSource_e4yde")
+sources/28 = SubResource("TileSetAtlasSource_mwm4a")
+sources/29 = SubResource("TileSetAtlasSource_qdoyo")
+sources/30 = SubResource("TileSetAtlasSource_2e1ux")
+sources/31 = SubResource("TileSetAtlasSource_8sj8n")
+sources/32 = SubResource("TileSetAtlasSource_vb0hc")
+sources/33 = SubResource("TileSetAtlasSource_hjowb")
+sources/34 = SubResource("TileSetAtlasSource_gvkle")
+sources/35 = SubResource("TileSetAtlasSource_gsour")
+sources/36 = SubResource("TileSetAtlasSource_juslg")
+sources/37 = SubResource("TileSetAtlasSource_qayql")
+sources/38 = SubResource("TileSetAtlasSource_4ad1l")
+sources/39 = SubResource("TileSetAtlasSource_mrxj6")
+sources/40 = SubResource("TileSetAtlasSource_36vvo")
+
 [node name="TileSet" type="Node2D"]
 position = Vector2(3, 0)
 
@@ -3856,21 +4210,6 @@ layer_0/tile_data = PackedInt32Array(3473356, 327681, 0, 3473357, 327681, 0, 347
 [node name="TileMap3" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5b7yr")
 format = 2
-
-[node name="Lamp6" type="Sprite2D" parent="TileMap3"]
-position = Vector2(1746.75, 361)
-scale = Vector2(2.8043478, 2.9473686)
-texture = ExtResource("6_6ptiq")
-
-[node name="Lamp5" type="Sprite2D" parent="TileMap3"]
-position = Vector2(1972, 167)
-scale = Vector2(2.5217378, 3.0175438)
-texture = ExtResource("6_6ptiq")
-
-[node name="Lamp4" type="Sprite2D" parent="TileMap3"]
-position = Vector2(2058, 549.75)
-scale = Vector2(2.9565241, 2.9385965)
-texture = ExtResource("6_6ptiq")
 
 [node name="Lamp" type="Sprite2D" parent="TileMap3"]
 position = Vector2(-506.00003, 755.99994)
@@ -3957,11 +4296,6 @@ position = Vector2(901, 812.00006)
 scale = Vector2(3.65, 3.590909)
 texture = ExtResource("10_aild5")
 
-[node name="Lamp3" type="Sprite2D" parent="TileMap3"]
-position = Vector2(1640, 737.25)
-scale = Vector2(3, 2.7456143)
-texture = ExtResource("6_6ptiq")
-
 [node name="player" parent="." instance=ExtResource("14_oadkd")]
 position = Vector2(-765, 730)
 
@@ -3983,3 +4317,97 @@ texture = ExtResource("7_bfy5m")
 position = Vector2(-427.25, 814.5)
 scale = Vector2(3.2777777, 2.5833333)
 texture = ExtResource("9_irqid")
+
+[node name="TileMap4" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_1x08y")
+format = 2
+
+[node name="FlagRed" type="Sprite2D" parent="."]
+position = Vector2(1521.0001, 737)
+scale = Vector2(2.3297873, 2.22549)
+texture = ExtResource("34_s3prn")
+
+[node name="FlagBlue" type="Sprite2D" parent="."]
+position = Vector2(1898, 738)
+scale = Vector2(2.973684, 1.8955222)
+texture = ExtResource("33_exwng")
+
+[node name="Door" type="Sprite2D" parent="."]
+position = Vector2(1745.75, 557.5)
+scale = Vector2(3.5731719, 2.525423)
+texture = ExtResource("32_tprod")
+
+[node name="Langdebeve" type="Sprite2D" parent="."]
+position = Vector2(1710, 734)
+scale = Vector2(5.000009, 3.1333346)
+texture = ExtResource("35_f85gm")
+
+[node name="Crate3Damaged" type="Sprite2D" parent="."]
+position = Vector2(2006.75, 611.5)
+scale = Vector2(1.8333334, 3.3888912)
+texture = ExtResource("26_bknsp")
+
+[node name="Crate2" type="Sprite2D" parent="."]
+position = Vector2(1434, 172.5)
+scale = Vector2(2.6891892, 3.0555556)
+texture = ExtResource("23_rhq61")
+
+[node name="Bookshelf1" type="Sprite2D" parent="."]
+position = Vector2(1812, 362)
+scale = Vector2(1.90625, 2.2597406)
+texture = ExtResource("56_nmbjy")
+
+[node name="Bookshelf2" type="Sprite2D" parent="."]
+position = Vector2(1946.5, 363)
+scale = Vector2(1.8593737, 2.2337663)
+texture = ExtResource("57_5136p")
+
+[node name="Axe" type="Sprite2D" parent="."]
+position = Vector2(2072, 741)
+scale = Vector2(3, 5.3846135)
+texture = ExtResource("19_5cj5m")
+
+[node name="Barrel" type="Sprite2D" parent="."]
+position = Vector2(2076, 219.5)
+scale = Vector2(2.125, 2.0294118)
+texture = ExtResource("42_dgu85")
+
+[node name="Bag2" type="Sprite2D" parent="."]
+position = Vector2(1983.5, 215.5)
+scale = Vector2(3.319996, 3.3809528)
+texture = ExtResource("31_idju8")
+
+[node name="CurtainBlue2" type="Sprite2D" parent="."]
+position = Vector2(1997.0001, 739)
+scale = Vector2(1.5, 1.4166665)
+texture = ExtResource("28_64yuv")
+
+[node name="CurtainBlue1" type="Sprite2D" parent="."]
+position = Vector2(1804.9999, 738)
+scale = Vector2(1.3723404, 1.4722221)
+texture = ExtResource("27_y5bcb")
+
+[node name="CurtainRed2" type="Sprite2D" parent="."]
+position = Vector2(1606, 737)
+scale = Vector2(1.1489364, 1.3703705)
+texture = ExtResource("30_11fmb")
+
+[node name="CurtainRed1" type="Sprite2D" parent="."]
+position = Vector2(1426.25, 737.5)
+scale = Vector2(1.1382979, 1.435185)
+texture = ExtResource("29_f2jfh")
+
+[node name="WeaponRack" type="Sprite2D" parent="."]
+position = Vector2(2060, 383.00003)
+scale = Vector2(2.8076923, 4.8399997)
+texture = ExtResource("50_euk62")
+
+[node name="CandelabrumTall3" type="Sprite2D" parent="."]
+position = Vector2(1664, 748.5)
+scale = Vector2(2.125, 1.8513516)
+texture = ExtResource("60_uk4gg")
+
+[node name="CandelabrumTall6" type="Sprite2D" parent="."]
+position = Vector2(2140, 748)
+scale = Vector2(2.0000057, 1.8648651)
+texture = ExtResource("61_pf0kn")

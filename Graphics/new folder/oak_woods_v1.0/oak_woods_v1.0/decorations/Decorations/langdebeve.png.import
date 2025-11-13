@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deluf3f3wytb3"
-path="res://.godot/imported/1.png-6b1c00ebc09ca5f530f25497c3dff52a.ctex"
+uid="uid://b8h6o6hr52648"
+path="res://.godot/imported/langdebeve.png-b092f9fc48e96155a705e9fbb9dae438.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/1.png"
-dest_files=["res://.godot/imported/1.png-6b1c00ebc09ca5f530f25497c3dff52a.ctex"]
+source_file="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/langdebeve.png"
+dest_files=["res://.godot/imported/langdebeve.png-b092f9fc48e96155a705e9fbb9dae438.ctex"]
 
 [params]
 
