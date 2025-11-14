@@ -12,6 +12,7 @@ config_version=5
 
 config/name="holdThePanch"
 run/main_scene="res://src/player.tscn"
+run/main_scene="uid://ds57yxa7g8e0g"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -82,6 +83,8 @@ defend={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(445, 11),"global_position":Vector2(454, 59),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [rendering]
 
