@@ -13,6 +13,7 @@ var is_defend: bool = false
 var is_hurting: bool = false
 var type_attack: int = 1
 var tween = null
+var is_died = false
 
 @onready var anim = $AnimatedSprite2D
 @onready var attack_area = $AttackArea
@@ -22,6 +23,9 @@ var tween = null
 
 
 func _physics_process(delta: float) -> void:
+	if is_died:
+		move_and_slide()
+		return
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
@@ -55,6 +59,8 @@ func _physics_process(delta: float) -> void:
 
 
 func attack():
+	if is_died:
+		return
 	is_attacking = true
 	attack_area.monitoring = true  
 
@@ -82,19 +88,19 @@ func defend():
 	defend_area.monitoring = false
 
 func take_damage(_damage):
-	if is_hurting or is_defend:
+	if is_hurting or is_defend or is_died:
 		return
 
 	is_hurting = true
 	hp -= _damage
 	update_helth_bar()
 	anim.play("Hurt")
-
+	if hp <= 0:
+		die()
 	await get_tree().create_timer(0.5).timeout
 	is_hurting = false
 
-	if hp <= 0:
-		die()
+
 
 
 func _on_attack_area_body_entered(body: Node2D):
@@ -103,10 +109,11 @@ func _on_attack_area_body_entered(body: Node2D):
 
 
 func die():
-	anim.play("Die")
+	is_died = true
+	anim.play("Died")
 	await anim.animation_finished
+	await get_tree().create_timer(2).timeout
 	queue_free()
-	
 	
 func update_helth_bar():
 	var scale_hp = clamp(float(hp)/float(max_hp), 0.0, 1.0)/2

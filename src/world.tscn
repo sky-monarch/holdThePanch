@@ -4,25 +4,31 @@
 [ext_resource type="PackedScene" uid="uid://cjlwmi86owhys" path="res://src/golem_blue.tscn" id="1_xlegt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ktcc2"]
-size = Vector2(987, 46)
+size = Vector2(2231, 46)
 
 [node name="world" type="Node2D"]
 
 [node name="testPlatform" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testPlatform"]
-position = Vector2(545, 311)
+position = Vector2(710.5, 311)
 shape = SubResource("RectangleShape2D_ktcc2")
 
 [node name="ColorRect" type="ColorRect" parent="testPlatform"]
-offset_left = 50.0
+offset_left = -396.0
 offset_top = 289.0
-offset_right = 1040.0
+offset_right = 1758.0
 offset_bottom = 333.0
 color = Color(0.7372549, 0, 0.050980393, 1)
 
 [node name="player" parent="." instance=ExtResource("1_tp5op")]
-position = Vector2(163, 228)
+position = Vector2(-21, 226)
 
 [node name="Golem_blue" parent="." instance=ExtResource("1_xlegt")]
-position = Vector2(789, 183)
+position = Vector2(1195, 186)
+
+[node name="Golem_blue2" parent="." instance=ExtResource("1_xlegt")]
+position = Vector2(438, 183)
+
+[node name="Golem_blue3" parent="." instance=ExtResource("1_xlegt")]
+position = Vector2(757, 184)
