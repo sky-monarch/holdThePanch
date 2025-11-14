@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="holdThePanch"
-run/main_scene="res://src/player.tscn"
+run/main_scene="uid://itim7t886ocy"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
