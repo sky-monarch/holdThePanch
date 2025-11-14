@@ -25,7 +25,7 @@ func _ready() -> void:
 	detection_area.body_exited.connect(_on_detection_body_exited)
 	attack_area.body_entered.connect(_on_attack_body_entered)
 	attack_area.body_exited.connect(_on_attack_body_exited)
-	anim.play("Idle")
+	
 
 
 func _physics_process(_delta: float) -> void:

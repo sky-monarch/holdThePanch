@@ -104,7 +104,7 @@ func take_damage(_damage):
 
 
 func _on_attack_area_body_entered(body: Node2D):
-	if body.has_method("take_damage") and not body.is_in_group("player"):  # Не бьём защищающегося
+	if body.has_method("take_damage") and not body.is_in_group("player"):
 		body.take_damage(damage)
 
 
