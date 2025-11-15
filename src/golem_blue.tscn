@@ -371,6 +371,7 @@ size = Vector2(69.00001, 33.333336)
 [node name="Golem_blue" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_t5dxf")
+max_hp = 50
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 2)
