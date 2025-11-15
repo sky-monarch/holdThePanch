@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://drvc6e78shxy2" path="res://resourse/sprites/helth/Pixel1_Healthbar_0002_pixel1_border.png" id="1_jbkxs"]
 [ext_resource type="Texture2D" uid="uid://cpbh6g4ygx41p" path="res://resourse/sprites/NightBorneBoss/NightBorne.png" id="1_mycdv"]
-[ext_resource type="Script" uid="uid://dkfy16de4v7ba" path="res://src/night_borne.gd" id="1_w03dt"]
+[ext_resource type="Script" uid="uid://dkfy16de4v7ba" path="res://scripts/night_borne.gd" id="1_w03dt"]
 [ext_resource type="Texture2D" uid="uid://3ie0ir08wrks" path="res://resourse/sprites/helth/Pixel1_Healthbar_0001_pixel1_healthbar.png" id="2_mycdv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mycdv"]

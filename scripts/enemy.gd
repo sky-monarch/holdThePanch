@@ -75,22 +75,16 @@ func _attack() -> void:
 	is_attacking = true
 	anim.play("Attack")
 
-	# Ждем начала анимации перед нанесением урона
-	await get_tree().create_timer(0.3).timeout  # Время до момента удара в анимации
-	
-	# Проверяем все условия перед нанесением урона
+	await get_tree().create_timer(0.3).timeout
 	if is_attacking and can_attack and player and player.has_method("take_damage") and not player.is_defend:
 		var bodies_in_range = attack_area.get_overlapping_bodies()
 		for body_attack in bodies_in_range:
 			if body_attack.is_in_group("player"):
 				player.take_damage(damage)
-				break  # Наносим урон только одному игроку
-
-	# Ждем окончания анимации атаки
+				break 
 	await anim.animation_finished
 	is_attacking = false
 
-	# КД после атаки
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
@@ -106,7 +100,6 @@ func take_damage(amount: int) -> void:
 	
 	anim.play("Hurt")
 	
-	# Ждем окончания анимации получения урона
 	await anim.animation_finished
 	
 	if hp <= 0:
@@ -114,8 +107,6 @@ func take_damage(amount: int) -> void:
 		return
 	
 	is_hurting = false
-	
-	# Краткая неуязвимость после получения урона
 	await get_tree().create_timer(0.5).timeout
 	can_take_damage = true
 	can_attack = true
