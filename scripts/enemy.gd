@@ -12,7 +12,7 @@ var is_dead: bool = false
 var can_attack: bool = false
 var is_attacking: bool = false
 var is_hurting: bool = false
-var can_attaking = true
+var can_take_damage = true
 var tween = null
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
@@ -27,8 +27,6 @@ func _ready() -> void:
 	detection_area.body_exited.connect(_on_detection_body_exited)
 	attack_area.body_entered.connect(_on_attack_body_entered)
 	attack_area.body_exited.connect(_on_attack_body_exited)
-	
-
 
 func _physics_process(_delta: float) -> void:
 	if is_dead:
@@ -43,7 +41,7 @@ func _physics_process(_delta: float) -> void:
 		velocity.x = dir.x * speed
 		anim.flip_h = dir.x < 0
 		var players_in_attack_range = attack_area.get_overlapping_bodies().filter(func(body): return body.is_in_group("player"))
-		if can_attack and players_in_attack_range.size()>0:
+		if can_attack and players_in_attack_range.size() > 0 and not is_attacking:
 			velocity.x = 0
 			_attack()
 		else:
@@ -77,38 +75,56 @@ func _attack() -> void:
 	is_attacking = true
 	anim.play("Attack")
 
-	await get_tree().create_timer(0.8).timeout
-	if can_attack and player and player.has_method("take_damage") and not player.is_defend:
-		var bodyes = attack_area.get_overlapping_bodies()
-		for body_attak in bodyes:
-			if body_attak.is_in_group("player"):
+	# Ждем начала анимации перед нанесением урона
+	await get_tree().create_timer(0.3).timeout  # Время до момента удара в анимации
+	
+	# Проверяем все условия перед нанесением урона
+	if is_attacking and can_attack and player and player.has_method("take_damage") and not player.is_defend:
+		var bodies_in_range = attack_area.get_overlapping_bodies()
+		for body_attack in bodies_in_range:
+			if body_attack.is_in_group("player"):
 				player.take_damage(damage)
+				break  # Наносим урон только одному игроку
 
+	# Ждем окончания анимации атаки
 	await anim.animation_finished
 	is_attacking = false
 
+	# КД после атаки
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
 func take_damage(amount: int) -> void:
-	if is_dead or is_hurting or not can_attaking:
+	if is_dead or is_hurting or not can_take_damage:
 		return
+	
 	hp -= amount
 	update_helth_bar()
 	is_hurting = true
 	can_attack = false
-	can_attaking = false
+	can_take_damage = false
+	
 	anim.play("Hurt")
+	
+	# Ждем окончания анимации получения урона
 	await anim.animation_finished
+	
 	if hp <= 0:
 		die()
-	can_attack = true
+		return
+	
 	is_hurting = false
-	await get_tree().create_timer(1).timeout
-	can_attaking = true
+	
+	# Краткая неуязвимость после получения урона
+	await get_tree().create_timer(0.5).timeout
+	can_take_damage = true
+	can_attack = true
 
 func die() -> void:
 	is_dead = true
+	can_attack = false
+	can_take_damage = false
+	
 	anim.play("Die")
 	await anim.animation_finished
 	queue_free()
