@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 @export var speed: float = 100
-@export var max_hp: int = 50
+@export var max_hp: int = 30
 @export var damage: int = 10
-@export var attack_cooldown: float = 5
+@export var attack_cooldown: float = 1
 
 var hp: int
 var player: Node2D = null
@@ -11,6 +11,7 @@ var is_dead: bool = false
 var can_attack: bool = false
 var is_attacking: bool = false
 var is_hurting: bool = false
+var can_attaking = true
 var tween = null
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
@@ -40,8 +41,8 @@ func _physics_process(_delta: float) -> void:
 		var dir = (player.global_position - global_position).normalized()
 		velocity.x = dir.x * speed
 		anim.flip_h = dir.x < 0
-
-		if can_attack:
+		var players_in_attack_range = attack_area.get_overlapping_bodies().filter(func(body): return body.is_in_group("player"))
+		if can_attack and players_in_attack_range.size()>0:
 			velocity.x = 0
 			_attack()
 		else:
@@ -69,7 +70,7 @@ func _on_attack_body_exited(body: Node) -> void:
 		can_attack = false
 
 func _attack() -> void:
-	if is_attacking or is_dead or not player or is_hurting:
+	if is_attacking or is_dead or player == null or is_hurting:
 		return
 
 	is_attacking = true
@@ -77,7 +78,10 @@ func _attack() -> void:
 
 	await get_tree().create_timer(0.8).timeout
 	if can_attack and player and player.has_method("take_damage") and not player.is_defend:
-		player.take_damage(damage)
+		var bodyes = attack_area.get_overlapping_bodies()
+		for body_attak in bodyes:
+			if body_attak.is_in_group("player"):
+				player.take_damage(damage)
 
 	await anim.animation_finished
 	is_attacking = false
@@ -86,19 +90,21 @@ func _attack() -> void:
 	can_attack = true
 
 func take_damage(amount: int) -> void:
-	if is_dead or is_hurting:
+	if is_dead or is_hurting or not can_attaking:
 		return
 	hp -= amount
 	update_helth_bar()
 	is_hurting = true
 	can_attack = false
+	can_attaking = false
 	anim.play("Hurt")
 	await anim.animation_finished
 	if hp <= 0:
 		die()
-	await get_tree().create_timer(1).timeout
-	is_hurting = false
 	can_attack = true
+	is_hurting = false
+	await get_tree().create_timer(1).timeout
+	can_attaking = true
 
 func die() -> void:
 	is_dead = true
