@@ -1,9 +1,10 @@
-[gd_scene load_steps=122 format=3 uid="uid://dr176xyhdun12"]
+[gd_scene load_steps=123 format=3 uid="uid://dr176xyhdun12"]
 
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/blocky/oak_woods_tileset.png" id="1_k2e5y"]
 [ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/background/background_layer_1.png" id="2_4nfeb"]
 [ext_resource type="Texture2D" uid="uid://bvg7vttqldruv" path="res://Graphics/background/background_layer_2.png" id="3_hei82"]
 [ext_resource type="Texture2D" uid="uid://deggl3p4l1xo8" path="res://Graphics/background/background_layer_3.png" id="4_e1sii"]
+[ext_resource type="Texture2D" uid="uid://dirg4f7qgbyum" path="res://Graphics/background/111.png" id="4_xk5h7"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="5_aq5od"]
 [ext_resource type="Texture2D" uid="uid://tqtg5gdurs0u" path="res://Graphics/dicorations/fence_1.png" id="6_gi0s2"]
 [ext_resource type="Texture2D" uid="uid://0cchyxnnfuhf" path="res://Graphics/dicorations/fence_2.png" id="7_nargl"]
@@ -4189,6 +4190,26 @@ position = Vector2(-5, 5)
 position = Vector2(984.9999, 163.25003)
 scale = Vector2(17.1375, 8.113889)
 texture = ExtResource("4_e1sii")
+
+[node name="111" type="Sprite2D" parent="."]
+position = Vector2(1846.0001, 740)
+scale = Vector2(0.8375, 0.41111112)
+texture = ExtResource("4_xk5h7")
+
+[node name="112" type="Sprite2D" parent="."]
+position = Vector2(1858.4999, 156)
+scale = Vector2(0.8308332, 0.48)
+texture = ExtResource("4_xk5h7")
+
+[node name="113" type="Sprite2D" parent="."]
+position = Vector2(1854.5, 356)
+scale = Vector2(0.8175, 0.40444446)
+texture = ExtResource("4_xk5h7")
+
+[node name="114" type="Sprite2D" parent="."]
+position = Vector2(1848.5, 557)
+scale = Vector2(0.83416665, 0.49777785)
+texture = ExtResource("4_xk5h7")
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_87wfq")

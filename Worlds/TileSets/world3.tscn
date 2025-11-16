@@ -1,20 +1,20 @@
 [gd_scene load_steps=21 format=3 uid="uid://cs7mb14l0amo2"]
 
-[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://Worlds/manager.gd" id="1_d3351"]
-[ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/background/layer_1.png" id="1_ice6i"]
-[ext_resource type="Texture2D" uid="uid://ba2ipoxdakr1q" path="res://Graphics/background/layer_2.png" id="2_qgna4"]
-[ext_resource type="Texture2D" uid="uid://cjd7vl4vn6y0m" path="res://Graphics/background/old-dark-castle-interior-background.png" id="3_qgna4"]
-[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/blocky/main_lev_build.png" id="3_wkeey"]
-[ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="4_6bgni"]
-[ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/background/plx-1.png" id="5_2fnf1"]
-[ext_resource type="Texture2D" uid="uid://duulgkvkxjmg1" path="res://Graphics/dicorations/table_noshadow.png" id="7_1yvj2"]
-[ext_resource type="Texture2D" uid="uid://cq1fihaxyltvk" path="res://Graphics/dicorations/flag_red.png" id="8_d3351"]
-[ext_resource type="Texture2D" uid="uid://b8h6o6hr52648" path="res://Graphics/dicorations/langdebeve.png" id="9_b7pjd"]
-[ext_resource type="Texture2D" uid="uid://bn8iqo5bjxpdc" path="res://Graphics/dicorations/door.png" id="12_wj4dv"]
-[ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://pause_menu.tscn" id="16_b7pjd"]
+[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://Worlds/manager.gd" id="1_murjb"]
+[ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/background/layer_1.png" id="2_nhuwt"]
+[ext_resource type="Texture2D" uid="uid://ba2ipoxdakr1q" path="res://Graphics/background/layer_2.png" id="3_xevyl"]
+[ext_resource type="Texture2D" uid="uid://cjd7vl4vn6y0m" path="res://Graphics/background/old-dark-castle-interior-background.png" id="4_qmi1q"]
+[ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/background/plx-1.png" id="5_0t53o"]
+[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/blocky/main_lev_build.png" id="6_4pw7c"]
+[ext_resource type="Texture2D" uid="uid://duulgkvkxjmg1" path="res://Graphics/dicorations/table_noshadow.png" id="7_h55pd"]
+[ext_resource type="Texture2D" uid="uid://cq1fihaxyltvk" path="res://Graphics/dicorations/flag_red.png" id="8_881vr"]
+[ext_resource type="Texture2D" uid="uid://b8h6o6hr52648" path="res://Graphics/dicorations/langdebeve.png" id="9_b7e8s"]
+[ext_resource type="Texture2D" uid="uid://bn8iqo5bjxpdc" path="res://Graphics/dicorations/door.png" id="10_e7bkl"]
+[ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="11_6knpy"]
+[ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://pause_menu.tscn" id="12_hcjim"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48gvn"]
-texture = ExtResource("3_wkeey")
+texture = ExtResource("6_4pw7c")
 91:2/0 = 0
 2:3/0 = 0
 3:3/0 = 0
@@ -2208,37 +2208,37 @@ animations = [{
 
 [node name="Manager" type="Node" parent="."]
 process_mode = 3
-script = ExtResource("1_d3351")
+script = ExtResource("1_murjb")
 
 [node name="Layer1" type="Sprite2D" parent="."]
 position = Vector2(949.5001, -354.00006)
 scale = Vector2(19.153124, 10.755556)
-texture = ExtResource("1_ice6i")
+texture = ExtResource("2_nhuwt")
 
 [node name="Layer2" type="Sprite2D" parent="."]
 position = Vector2(950.50006, 137.75006)
 scale = Vector2(19.146875, 7.28626)
-texture = ExtResource("2_qgna4")
+texture = ExtResource("3_xevyl")
 
 [node name="OldDarkCastleInteriorBackground" type="Sprite2D" parent="."]
 position = Vector2(1226, -259.375)
 scale = Vector2(0.28541654, 1.234375)
-texture = ExtResource("3_qgna4")
+texture = ExtResource("4_qmi1q")
 
 [node name="OldDarkCastleInteriorBackground2" type="Sprite2D" parent="."]
 position = Vector2(2186, 31.000002)
 scale = Vector2(0.9104167, 0.6151316)
-texture = ExtResource("3_qgna4")
+texture = ExtResource("4_qmi1q")
 
 [node name="Plx1" type="Sprite2D" parent="."]
 position = Vector2(253, 296)
 scale = Vector2(1.3281251, 2.5740743)
-texture = ExtResource("5_2fnf1")
+texture = ExtResource("5_0t53o")
 
 [node name="Plx2" type="Sprite2D" parent="."]
 position = Vector2(-600.664, 465.3241)
 scale = Vector2(2.6996663, 1.3733714)
-texture = ExtResource("5_2fnf1")
+texture = ExtResource("5_0t53o")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dtnva")
@@ -2258,17 +2258,17 @@ texture = SubResource("CompressedTexture2D_2fnf1")
 [node name="TableNoshadow" type="Sprite2D" parent="TileMap"]
 position = Vector2(2343, -11.749999)
 scale = Vector2(1.6428595, 1.6578948)
-texture = ExtResource("7_1yvj2")
+texture = ExtResource("7_h55pd")
 
 [node name="FlagRed" type="Sprite2D" parent="TileMap"]
 position = Vector2(2344.25, 32.5)
 scale = Vector2(1.5638299, 1.8627452)
-texture = ExtResource("8_d3351")
+texture = ExtResource("8_881vr")
 
 [node name="Langdebeve2" type="Sprite2D" parent="TileMap"]
 position = Vector2(2180, 54.000004)
 scale = Vector2(2.9285715, 1.8666666)
-texture = ExtResource("9_b7pjd")
+texture = ExtResource("9_b7e8s")
 
 [node name="CandleBlue32" type="Sprite2D" parent="TileMap"]
 position = Vector2(2046, 58)
@@ -2288,12 +2288,12 @@ texture = SubResource("CompressedTexture2D_dqj1u")
 [node name="Door" type="Sprite2D" parent="TileMap"]
 position = Vector2(2243, 43)
 scale = Vector2(1.9390244, 1.8559322)
-texture = ExtResource("12_wj4dv")
+texture = ExtResource("10_e7bkl")
 
 [node name="Langdebeve" type="Sprite2D" parent="TileMap"]
 position = Vector2(2295.0002, 54.000004)
 scale = Vector2(2.9285774, 1.8888887)
-texture = ExtResource("9_b7pjd")
+texture = ExtResource("9_b7e8s")
 
 [node name="TorchSmallBlue2" type="Sprite2D" parent="TileMap"]
 position = Vector2(1968, 27)
@@ -2303,7 +2303,7 @@ texture = SubResource("CompressedTexture2D_1yvj2")
 position = Vector2(1989, 25)
 texture = SubResource("CompressedTexture2D_1yvj2")
 
-[node name="player" parent="." instance=ExtResource("4_6bgni")]
+[node name="player" parent="." instance=ExtResource("11_6knpy")]
 position = Vector2(-687, 147)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player"]
@@ -2313,7 +2313,7 @@ animation = &"Idle"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("16_b7pjd")]
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("12_hcjim")]
 process_mode = 2
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager" method="_on_button_pressed"]
