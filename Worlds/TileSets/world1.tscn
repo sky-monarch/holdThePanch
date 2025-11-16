@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://cah61mokfrd7d"]
+[gd_scene load_steps=13 format=3 uid="uid://cah61mokfrd7d"]
 
-[ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/blocky/oak_woods_tileset.png" id="1_djyau"]
-[ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/background/background_layer_1.png" id="2_hhscl"]
-[ext_resource type="Texture2D" uid="uid://bvg7vttqldruv" path="res://Graphics/background/background_layer_2.png" id="3_ue4mh"]
-[ext_resource type="Texture2D" uid="uid://deggl3p4l1xo8" path="res://Graphics/background/background_layer_3.png" id="4_bfr66"]
+[ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="1_djyau"]
+[ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="2_hhscl"]
+[ext_resource type="Texture2D" uid="uid://bvg7vttqldruv" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_2.png" id="3_ue4mh"]
+[ext_resource type="Texture2D" uid="uid://deggl3p4l1xo8" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_3.png" id="4_bfr66"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="5_u62il"]
+[ext_resource type="PackedScene" uid="uid://byjf7wqtxgg2u" path="res://src/skelet.tscn" id="6_hhscl"]
+[ext_resource type="PackedScene" uid="uid://dwa4p7u5pxvjr" path="res://src/skelet_ver_two.tscn" id="7_bfr66"]
+[ext_resource type="PackedScene" uid="uid://cmhrewwsmp7h5" path="res://src/mushroom.tscn" id="8_u62il"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qbwb"]
 texture = ExtResource("1_djyau")
@@ -479,7 +482,7 @@ scale = Vector2(12.481251, 5.075)
 texture = ExtResource("4_bfr66")
 
 [node name="player" parent="." instance=ExtResource("5_u62il")]
-position = Vector2(2235, 555)
+position = Vector2(295, 594)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player"]
 position = Vector2(2.6666667, 51.666668)
@@ -489,3 +492,15 @@ animation = &"Idle"
 [node name="Дикорации" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_k2e5y")
 format = 2
+
+[node name="skelet" parent="." instance=ExtResource("6_hhscl")]
+position = Vector2(904, 596)
+
+[node name="skeletVerTwo" parent="." instance=ExtResource("7_bfr66")]
+position = Vector2(1224, 590)
+
+[node name="skelet2" parent="." instance=ExtResource("6_hhscl")]
+position = Vector2(1494, 598)
+
+[node name="Mushroom" parent="." instance=ExtResource("8_u62il")]
+position = Vector2(2044, 569)
