@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://itim7t886ocy"]
 
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="1_tp5op"]
-[ext_resource type="PackedScene" uid="uid://cjlwmi86owhys" path="res://src/golem_blue.tscn" id="1_xlegt"]
+[ext_resource type="PackedScene" uid="uid://c31ph8n8ip0hy" path="res://src/samurai.tscn" id="2_xlegt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ktcc2"]
 size = Vector2(2231, 46)
@@ -22,13 +22,7 @@ offset_bottom = 333.0
 color = Color(0.7372549, 0, 0.050980393, 1)
 
 [node name="player" parent="." instance=ExtResource("1_tp5op")]
-position = Vector2(-21, 226)
+position = Vector2(-33, 232)
 
-[node name="Golem_blue" parent="." instance=ExtResource("1_xlegt")]
-position = Vector2(1195, 186)
-
-[node name="Golem_blue2" parent="." instance=ExtResource("1_xlegt")]
-position = Vector2(438, 183)
-
-[node name="Golem_blue3" parent="." instance=ExtResource("1_xlegt")]
-position = Vector2(757, 184)
+[node name="samurai" parent="." instance=ExtResource("2_xlegt")]
+position = Vector2(662.00006, 223.00002)

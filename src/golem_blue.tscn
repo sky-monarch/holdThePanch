@@ -1,6 +1,6 @@
 [gd_scene load_steps=59 format=3 uid="uid://cjlwmi86owhys"]
 
-[ext_resource type="Script" uid="uid://yevmy8sjwjl0" path="res://src/golem_blue.gd" id="1_t5dxf"]
+[ext_resource type="Script" uid="uid://2kuc0fqblmpo" path="res://scripts/golem_blue.gd" id="1_t5dxf"]
 [ext_resource type="Texture2D" uid="uid://baq05wtx4ggvn" path="res://resourse/sprites/Golem_blue/Golem_1_attack.png" id="2_fech2"]
 [ext_resource type="Texture2D" uid="uid://bpf38palp4orn" path="res://resourse/sprites/Golem_blue/Golem_1_die.png" id="3_csbyb"]
 [ext_resource type="Texture2D" uid="uid://c3q400liwmpi1" path="res://resourse/sprites/Golem_blue/Golem_1_hurt.png" id="4_hgx8b"]
@@ -363,7 +363,7 @@ animations = [{
 size = Vector2(38, 32.666668)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ikqo"]
-size = Vector2(189, 139)
+size = Vector2(346, 185)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7rag"]
 size = Vector2(69.00001, 33.333336)
@@ -371,6 +371,7 @@ size = Vector2(69.00001, 33.333336)
 [node name="Golem_blue" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_t5dxf")
+max_hp = 50
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 2)
@@ -385,7 +386,7 @@ shape = SubResource("RectangleShape2D_rm7dp")
 [node name="DetectionArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-position = Vector2(-0.5, 19.5)
+position = Vector2(0, 16.5)
 shape = SubResource("RectangleShape2D_5ikqo")
 
 [node name="AttackArea" type="Area2D" parent="."]
