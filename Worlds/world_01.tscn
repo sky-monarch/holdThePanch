@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://g2s47nodw1vr"]
+[gd_scene load_steps=3 format=3 uid="uid://g2s47nodw1vr"]
+
+[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://scripts/manager.gd" id="1_xbhmt"]
+[ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="2_yuk4u"]
 
 [node name="World_01" type="Node2D"]
+
+[node name="Manager" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("1_xbhmt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("2_yuk4u")]
+process_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button3" to="Manager" method="_on_button_3_pressed"]
+
+[editable path="CanvasLayer/PauseMenu"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://cs7mb14l0amo2"]
 
-[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://Worlds/manager.gd" id="1_d3351"]
+[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://scripts/manager.gd" id="1_d3351"]
 [ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_1.png" id="1_ice6i"]
 [ext_resource type="Texture2D" uid="uid://ba2ipoxdakr1q" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_2.png" id="2_qgna4"]
 [ext_resource type="Texture2D" uid="uid://cjd7vl4vn6y0m" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/old-dark-castle-interior-background.png" id="3_qgna4"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://d14nkjvbgckoh" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Animated Decorations/torch_big_blue/torch_big_blue_1.png" id="11_mllcy"]
 [ext_resource type="Texture2D" uid="uid://bn8iqo5bjxpdc" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/door.png" id="12_wj4dv"]
 [ext_resource type="Texture2D" uid="uid://b6r3npgpy1ocs" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Animated Decorations/torch_small_blue/torch_small_blue_2.png" id="13_dqj1u"]
-[ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://pause_menu.tscn" id="16_b7pjd"]
+[ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="16_b7pjd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48gvn"]
 texture = ExtResource("3_wkeey")
@@ -2231,6 +2231,7 @@ animation = &"Idle"
 process_mode = 2
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager" method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button3" to="Manager" method="_on_button_3_pressed"]
 
 [editable path="CanvasLayer/PauseMenu"]
