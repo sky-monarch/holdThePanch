@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dro0n7oa8ll4g"]
+
+[ext_resource type="AudioStream" uid="uid://caos3dy26x3ud" path="res://resourse/data for the main menu/iron-resolve_91561.mp3" id="1_gqu61"]
+
+[node name="Node" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_gqu61")
+autoplay = true
+bus = &"Music"
