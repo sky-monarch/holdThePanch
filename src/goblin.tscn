@@ -249,7 +249,7 @@ script = ExtResource("1_0nqkn")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.33333334, 0)
 sprite_frames = SubResource("SpriteFrames_hakkv")
-animation = &"Die"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.50000066, 8.25)

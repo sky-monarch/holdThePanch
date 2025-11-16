@@ -1,1 +1,1 @@
-extends "res://scripts/enemy.gd"
+extends EnemyGrav
