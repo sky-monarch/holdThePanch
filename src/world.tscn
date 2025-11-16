@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://itim7t886ocy"]
+[gd_scene load_steps=9 format=3 uid="uid://itim7t886ocy"]
 
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="1_tp5op"]
+[ext_resource type="PackedScene" uid="uid://cjlwmi86owhys" path="res://src/golem_blue.tscn" id="1_xlegt"]
 [ext_resource type="PackedScene" uid="uid://cmhrewwsmp7h5" path="res://src/mushroom.tscn" id="2_xlegt"]
+[ext_resource type="PackedScene" uid="uid://byjf7wqtxgg2u" path="res://src/skelet.tscn" id="3_0qwtu"]
+[ext_resource type="PackedScene" uid="uid://chwufra1bnjhc" path="res://src/goblin.tscn" id="3_jvefd"]
+[ext_resource type="PackedScene" uid="uid://ctttacpjxylco" path="res://src/night_borne.tscn" id="6_53egh"]
+[ext_resource type="PackedScene" uid="uid://dwa4p7u5pxvjr" path="res://src/skelet_ver_two.tscn" id="7_dotkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ktcc2"]
 size = Vector2(2231, 46)
@@ -25,4 +30,19 @@ color = Color(0.7372549, 0, 0.050980393, 1)
 position = Vector2(-33, 232)
 
 [node name="Mushroom" parent="." instance=ExtResource("2_xlegt")]
-position = Vector2(527, 204)
+position = Vector2(450, 210)
+
+[node name="goblin" parent="." instance=ExtResource("3_jvefd")]
+position = Vector2(707, 206)
+
+[node name="skelet" parent="." instance=ExtResource("3_0qwtu")]
+position = Vector2(956, 232)
+
+[node name="Golem_blue" parent="." instance=ExtResource("1_xlegt")]
+position = Vector2(1250, 182)
+
+[node name="NightBorne" parent="." instance=ExtResource("6_53egh")]
+position = Vector2(1513, 178)
+
+[node name="skeletVerTwo" parent="." instance=ExtResource("7_dotkg")]
+position = Vector2(1664, 223)
