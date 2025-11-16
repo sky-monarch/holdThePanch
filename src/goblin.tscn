@@ -1,6 +1,6 @@
 [gd_scene load_steps=41 format=3 uid="uid://chwufra1bnjhc"]
 
-[ext_resource type="Script" uid="uid://bsxqgokahd1kc" path="res://goblin.gd" id="1_0nqkn"]
+[ext_resource type="Script" uid="uid://bsxqgokahd1kc" path="res://scripts/goblin.gd" id="1_0nqkn"]
 [ext_resource type="Texture2D" uid="uid://dyinvx0ahycui" path="res://resourse/sprites/Goblin/Attack.png" id="1_um3q2"]
 [ext_resource type="Texture2D" uid="uid://d0i3j3hg6lea5" path="res://resourse/sprites/Goblin/Death.png" id="2_0nqkn"]
 [ext_resource type="Texture2D" uid="uid://uwi52h6wgs6o" path="res://resourse/sprites/Goblin/Take Hit.png" id="3_b77sp"]
