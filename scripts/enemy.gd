@@ -74,16 +74,22 @@ func _attack() -> void:
 		return
 
 	is_attacking = true
+	can_attack = false
 	anim.play("Attack")
 
 	await get_tree().create_timer(0.3).timeout
-	if is_attacking and can_attack and player and player.has_method("take_damage") and not player.is_defend:
+	
+	if is_attacking and player and player.has_method("take_damage") and not player.is_defend:
 		var bodies_in_range = attack_area.get_overlapping_bodies()
 		for body_attack in bodies_in_range:
 			if body_attack.is_in_group("player"):
 				player.take_damage(damage)
 				break 
-	await anim.animation_finished
+	var animation_timeout = get_tree().create_timer(2.0)
+	var animation_finished = anim.animation_finished
+	
+	@warning_ignore("standalone_expression")
+	await animation_finished or animation_timeout.timeout
 	is_attacking = false
 
 	await get_tree().create_timer(attack_cooldown).timeout
