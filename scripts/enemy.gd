@@ -6,6 +6,7 @@ class_name Enemy
 @export var damage: int = 10
 @export var attack_cooldown: float = 1
 
+
 var hp: int
 var player: Node2D = null
 var is_dead: bool = false

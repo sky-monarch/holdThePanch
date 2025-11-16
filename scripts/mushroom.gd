@@ -1,1 +1,1 @@
-extends EnemyGrav
+extends Enemy
