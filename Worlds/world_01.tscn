@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://g2s47nodw1vr"]
 
-[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://scripts/manager.gd" id="1_xbhmt"]
+[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://scripts/sripts_for_pause_menu/manager.gd" id="1_xbhmt"]
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="2_yuk4u"]
 
 [node name="World_01" type="Node2D"]

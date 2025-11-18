@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cah61mokfrd7d"]
 
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="1_djyau"]
-[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://scripts/manager.gd" id="1_n4p4r"]
+[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://scripts/sripts_for_pause_menu/manager.gd" id="1_n4p4r"]
 [ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="2_hhscl"]
 [ext_resource type="Texture2D" uid="uid://bvg7vttqldruv" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_2.png" id="3_ue4mh"]
 [ext_resource type="Texture2D" uid="uid://deggl3p4l1xo8" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_3.png" id="4_bfr66"]
