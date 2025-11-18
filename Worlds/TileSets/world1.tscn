@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://cah61mokfrd7d"]
+[gd_scene load_steps=15 format=3 uid="uid://cah61mokfrd7d"]
 
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="1_djyau"]
+[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://scripts/manager.gd" id="1_n4p4r"]
 [ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="2_hhscl"]
 [ext_resource type="Texture2D" uid="uid://bvg7vttqldruv" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_2.png" id="3_ue4mh"]
 [ext_resource type="Texture2D" uid="uid://deggl3p4l1xo8" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_3.png" id="4_bfr66"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://byjf7wqtxgg2u" path="res://src/skelet.tscn" id="6_hhscl"]
 [ext_resource type="PackedScene" uid="uid://dwa4p7u5pxvjr" path="res://src/skelet_ver_two.tscn" id="7_bfr66"]
 [ext_resource type="PackedScene" uid="uid://cmhrewwsmp7h5" path="res://src/mushroom.tscn" id="8_u62il"]
+[ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="10_e7c56"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qbwb"]
 texture = ExtResource("1_djyau")
@@ -452,6 +454,10 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Manager" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("1_n4p4r")
+
 [node name="Земля" type="TileMap" parent="."]
 position = Vector2(1, -1)
 tile_set = SubResource("TileSet_bcda8")
@@ -504,3 +510,14 @@ position = Vector2(1494, 598)
 
 [node name="Mushroom" parent="." instance=ExtResource("8_u62il")]
 position = Vector2(2044, 569)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("10_e7c56")]
+process_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button3" to="Manager" method="_on_button_3_pressed"]
+
+[editable path="CanvasLayer/PauseMenu"]

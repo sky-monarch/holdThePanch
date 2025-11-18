@@ -1,17 +1,17 @@
 [gd_scene load_steps=21 format=3 uid="uid://cs7mb14l0amo2"]
 
-[ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://Worlds/manager.gd" id="1_murjb"]
-[ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/background/layer_1.png" id="2_nhuwt"]
-[ext_resource type="Texture2D" uid="uid://ba2ipoxdakr1q" path="res://Graphics/background/layer_2.png" id="3_xevyl"]
-[ext_resource type="Texture2D" uid="uid://cjd7vl4vn6y0m" path="res://Graphics/background/old-dark-castle-interior-background.png" id="4_qmi1q"]
-[ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/background/plx-1.png" id="5_0t53o"]
-[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/blocky/main_lev_build.png" id="6_4pw7c"]
-[ext_resource type="Texture2D" uid="uid://duulgkvkxjmg1" path="res://Graphics/dicorations/table_noshadow.png" id="7_h55pd"]
-[ext_resource type="Texture2D" uid="uid://cq1fihaxyltvk" path="res://Graphics/dicorations/flag_red.png" id="8_881vr"]
-[ext_resource type="Texture2D" uid="uid://b8h6o6hr52648" path="res://Graphics/dicorations/langdebeve.png" id="9_b7e8s"]
-[ext_resource type="Texture2D" uid="uid://bn8iqo5bjxpdc" path="res://Graphics/dicorations/door.png" id="10_e7bkl"]
+[ext_resource type="Script" uid="uid://ddmvwqtkbivo" path="res://scripts/manager_3.gd" id="1_murjb"]
+[ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_1.png" id="2_nhuwt"]
+[ext_resource type="Texture2D" uid="uid://ba2ipoxdakr1q" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_2.png" id="3_xevyl"]
+[ext_resource type="Texture2D" uid="uid://cjd7vl4vn6y0m" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/old-dark-castle-interior-background.png" id="4_qmi1q"]
+[ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-1.png" id="5_0t53o"]
+[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/new folder/main_lev_build.png" id="6_4pw7c"]
+[ext_resource type="Texture2D" uid="uid://duulgkvkxjmg1" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/table_noshadow.png" id="7_h55pd"]
+[ext_resource type="Texture2D" uid="uid://cq1fihaxyltvk" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/flag_red.png" id="8_881vr"]
+[ext_resource type="Texture2D" uid="uid://b8h6o6hr52648" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/langdebeve.png" id="9_b7e8s"]
+[ext_resource type="Texture2D" uid="uid://bn8iqo5bjxpdc" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/door.png" id="10_e7bkl"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="11_6knpy"]
-[ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://pause_menu.tscn" id="12_hcjim"]
+[ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="12_hcjim"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48gvn"]
 texture = ExtResource("6_4pw7c")
@@ -2206,8 +2206,7 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Manager" type="Node" parent="."]
-process_mode = 3
+[node name="Manager3" type="Node" parent="."]
 script = ExtResource("1_murjb")
 
 [node name="Layer1" type="Sprite2D" parent="."]
@@ -2304,7 +2303,7 @@ position = Vector2(1989, 25)
 texture = SubResource("CompressedTexture2D_1yvj2")
 
 [node name="player" parent="." instance=ExtResource("11_6knpy")]
-position = Vector2(-687, 147)
+position = Vector2(104, -153)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player"]
 position = Vector2(2.6666667, 51.666668)
@@ -2316,7 +2315,8 @@ animation = &"Idle"
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("12_hcjim")]
 process_mode = 2
 
-[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager" method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button3" to="Manager" method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager3" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager3" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button3" to="Manager3" method="_on_button_3_pressed"]
 
 [editable path="CanvasLayer/PauseMenu"]
