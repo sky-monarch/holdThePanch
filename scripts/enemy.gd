@@ -4,7 +4,7 @@ class_name Enemy
 @export var speed: float = 100
 @export var max_hp: int = 30
 @export var damage: int = 10
-@export var attack_cooldown: float = 1
+@export var attack_cooldown: float = 2.0
 
 
 var hp: int
@@ -28,6 +28,7 @@ func _ready() -> void:
 	detection_area.body_exited.connect(_on_detection_body_exited)
 	attack_area.body_entered.connect(_on_attack_body_entered)
 	attack_area.body_exited.connect(_on_attack_body_exited)
+	add_to_group("enemies")
 
 func _physics_process(_delta: float) -> void:
 	if is_dead:
@@ -42,7 +43,7 @@ func _physics_process(_delta: float) -> void:
 		velocity.x = dir.x * speed
 		anim.flip_h = dir.x < 0
 		var players_in_attack_range = attack_area.get_overlapping_bodies().filter(func(body): return body.is_in_group("player"))
-		if can_attack and players_in_attack_range.size() > 0 and not is_attacking:
+		if can_attack and players_in_attack_range.size() > 0 and not is_attacking and not is_hurting:
 			velocity.x = 0
 			_attack()
 		else:
@@ -114,7 +115,7 @@ func take_damage(amount: int) -> void:
 		return
 	
 	is_hurting = false
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1.0).timeout
 	can_take_damage = true
 	can_attack = true
 

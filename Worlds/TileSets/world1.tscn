@@ -1,4 +1,5 @@
-[gd_scene load_steps=17 format=3 uid="uid://cah61mokfrd7d"]
+
+[gd_scene load_steps=14 format=3 uid="uid://cah61mokfrd7d"]
 
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="1_djyau"]
 [ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://scripts/sripts_for_pause_menu/manager.gd" id="1_n4p4r"]
@@ -12,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="10_e7c56"]
 [ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="11_7lo2i"]
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="12_tps8d"]
+[ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="9_u62il"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qbwb"]
 texture = ExtResource("1_djyau")
@@ -512,7 +514,6 @@ position = Vector2(1494, 598)
 
 [node name="Mushroom" parent="." instance=ExtResource("8_u62il")]
 position = Vector2(2044, 569)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("10_e7c56")]
@@ -531,3 +532,4 @@ script = ExtResource("11_7lo2i")
 
 [editable path="CanvasLayer/PauseMenu"]
 [editable path="CanvasLayer2/DeathMenu"]
+[node name="PortalManager" parent="." instance=ExtResource("9_u62il")]
