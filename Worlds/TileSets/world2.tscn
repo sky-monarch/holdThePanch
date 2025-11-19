@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=3 uid="uid://dr176xyhdun12"]
+[gd_scene load_steps=132 format=3 uid="uid://dr176xyhdun12"]
 
 [ext_resource type="Script" uid="uid://cwcsxfpwbhvls" path="res://scripts/sripts_for_pause_menu/manager_2.gd" id="1_574sj"]
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="1_k2e5y"]
@@ -62,6 +62,11 @@
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="60_gi0s2"]
 [ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="61_nargl"]
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="62_7r3xk"]
+[ext_resource type="PackedScene" uid="uid://chwufra1bnjhc" path="res://src/goblin.tscn" id="63_pl0ss"]
+[ext_resource type="PackedScene" uid="uid://dgwbk2yxel34m" path="res://src/flying_eye.tscn" id="64_feert"]
+[ext_resource type="PackedScene" uid="uid://dwa4p7u5pxvjr" path="res://src/skelet_ver_two.tscn" id="65_6m4w0"]
+[ext_resource type="PackedScene" uid="uid://c31ph8n8ip0hy" path="res://src/samurai.tscn" id="66_t4q7o"]
+[ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="67_feert"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bu4p3"]
 
@@ -4441,6 +4446,35 @@ process_mode = 2
 script = ExtResource("61_nargl")
 
 [node name="DeathMenu" parent="CanvasLayer2" instance=ExtResource("62_7r3xk")]
+
+[node name="goblin" parent="." instance=ExtResource("63_pl0ss")]
+position = Vector2(-154, 746)
+max_hp = 40
+
+[node name="Flying_eye" parent="." instance=ExtResource("64_feert")]
+position = Vector2(121, 661)
+max_hp = 20
+damage = 5
+
+[node name="skeletVerTwo" parent="." instance=ExtResource("65_6m4w0")]
+position = Vector2(1745.0001, 753.00006)
+
+[node name="goblin2" parent="." instance=ExtResource("63_pl0ss")]
+position = Vector2(1634.0001, 552)
+max_hp = 40
+
+[node name="Flying_eye2" parent="." instance=ExtResource("64_feert")]
+position = Vector2(1852, 326)
+max_hp = 20
+damage = 5
+
+[node name="samurai" parent="." instance=ExtResource("66_t4q7o")]
+position = Vector2(1512.0001, 189.00002)
+max_hp = 60
+
+[node name="PortalManager" parent="." instance=ExtResource("67_feert")]
+level_portal_type = "orange"
+next_level_path = "res://Worlds/TileSets/world3.tscn"
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager2" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager2" method="_on_button_2_pressed"]
