@@ -36,6 +36,7 @@ func _on_body_entered(body):
 	if body.is_in_group("player"):
 		start_teleport(body)
 
+@warning_ignore("unused_parameter")
 func start_teleport(player):
 	# Блокируем повторный вход
 	set_deferred("monitoring", false)

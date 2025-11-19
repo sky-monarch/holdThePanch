@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://bqwsbrhs7gg2h"]
+
+[ext_resource type="Texture2D" uid="uid://c5yklyaf04cvg" path="res://resourse/sprites/poЗ╞o vermelha.png" id="1_0bx6c"]
+[ext_resource type="Script" uid="uid://de2xyv4aolqny" path="res://scripts/potion.gd" id="1_bfjrt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfjrt"]
+atlas = ExtResource("1_0bx6c")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w8c0"]
+atlas = ExtResource("1_0bx6c")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_821vj"]
+atlas = ExtResource("1_0bx6c")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80ent"]
+atlas = ExtResource("1_0bx6c")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lx0sv"]
+atlas = ExtResource("1_0bx6c")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmq20"]
+atlas = ExtResource("1_0bx6c")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txu8j"]
+atlas = ExtResource("1_0bx6c")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olvdb"]
+atlas = ExtResource("1_0bx6c")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ykn8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfjrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0w8c0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_821vj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80ent")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lx0sv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmq20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txu8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olvdb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5bmj"]
+size = Vector2(45, 46)
+
+[node name="potion" type="Area2D"]
+script = ExtResource("1_bfjrt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ykn8c")
+animation = &"Idle"
+frame_progress = 0.08801805
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_t5bmj")

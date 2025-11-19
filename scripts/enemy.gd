@@ -6,6 +6,10 @@ class_name Enemy
 @export var damage: int = 10
 @export var attack_cooldown: float = 2.0
 
+@export_category("Loot Settings")
+@export var drop_potion_chance: float = 0.7
+@export var potion_scene: PackedScene = preload("res://src/potion.tscn")
+
 
 var hp: int
 var player: Node2D = null
@@ -126,6 +130,8 @@ func die() -> void:
 	
 	anim.play("Die")
 	await anim.animation_finished
+	try_drop_potion()
+	emit_signal("died")
 	queue_free()
 	
 func update_helth_bar():
@@ -135,3 +141,9 @@ func update_helth_bar():
 	tween = create_tween()
 	tween.tween_property(helth_bar, "scale:x", scale_hp, 0.2)
 	tween.tween_property(empty_bar, "scale:x", scale_hp, 0.2)
+	
+func try_drop_potion():
+	if potion_scene and randf() <= drop_potion_chance:
+		var potion = potion_scene.instantiate()
+		potion.global_position = global_position
+		get_tree().current_scene.add_child(potion)
