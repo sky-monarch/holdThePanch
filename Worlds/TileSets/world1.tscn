@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cah61mokfrd7d"]
+[gd_scene load_steps=14 format=3 uid="uid://cah61mokfrd7d"]
 
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="1_djyau"]
 [ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="2_hhscl"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://byjf7wqtxgg2u" path="res://src/skelet.tscn" id="6_hhscl"]
 [ext_resource type="PackedScene" uid="uid://dwa4p7u5pxvjr" path="res://src/skelet_ver_two.tscn" id="7_bfr66"]
 [ext_resource type="PackedScene" uid="uid://cmhrewwsmp7h5" path="res://src/mushroom.tscn" id="8_u62il"]
+[ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="9_u62il"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qbwb"]
 texture = ExtResource("1_djyau")
@@ -504,3 +505,5 @@ position = Vector2(1494, 598)
 
 [node name="Mushroom" parent="." instance=ExtResource("8_u62il")]
 position = Vector2(2044, 569)
+
+[node name="PortalManager" parent="." instance=ExtResource("9_u62il")]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyjxx1jluq8gp"]
+
+[ext_resource type="Script" uid="uid://bn3lc17v6kkem" path="res://scripts/portal_manager.gd" id="1_msefw"]
+[ext_resource type="PackedScene" uid="uid://dgjet3yn5fa80" path="res://src/portal.tscn" id="2_25bgy"]
+
+[node name="PortalManager" type="Node2D"]
+script = ExtResource("1_msefw")
+portal_scene = ExtResource("2_25bgy")
