@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dwa4p7u5pxvjr" path="res://src/skelet_ver_two.tscn" id="7_bfr66"]
 [ext_resource type="PackedScene" uid="uid://cmhrewwsmp7h5" path="res://src/mushroom.tscn" id="8_u62il"]
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="10_e7c56"]
-[ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://Worlds/TileSets/deathplayer.gd" id="11_7lo2i"]
+[ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="11_7lo2i"]
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="12_tps8d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qbwb"]
