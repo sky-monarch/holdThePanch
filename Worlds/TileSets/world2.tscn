@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-[gd_scene load_steps=130 format=4 uid="uid://dr176xyhdun12"]
-=======
 [gd_scene load_steps=132 format=3 uid="uid://dr176xyhdun12"]
->>>>>>> 019dea4b02f21d52496016ceb619f2b89cf4cdd4
+
 
 [ext_resource type="Script" uid="uid://cwcsxfpwbhvls" path="res://scripts/sripts_for_pause_menu/manager_2.gd" id="1_574sj"]
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="1_k2e5y"]
@@ -66,16 +63,12 @@
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="60_gi0s2"]
 [ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="61_nargl"]
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="62_7r3xk"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/blocky/oak_woods_tileset.png" id="63_7r3xk"]
-=======
 [ext_resource type="PackedScene" uid="uid://chwufra1bnjhc" path="res://src/goblin.tscn" id="63_pl0ss"]
 [ext_resource type="PackedScene" uid="uid://dgwbk2yxel34m" path="res://src/flying_eye.tscn" id="64_feert"]
 [ext_resource type="PackedScene" uid="uid://dwa4p7u5pxvjr" path="res://src/skelet_ver_two.tscn" id="65_6m4w0"]
 [ext_resource type="PackedScene" uid="uid://c31ph8n8ip0hy" path="res://src/samurai.tscn" id="66_t4q7o"]
 [ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="67_feert"]
->>>>>>> 019dea4b02f21d52496016ceb619f2b89cf4cdd4
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bu4p3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rn5w0"]
@@ -4868,11 +4861,9 @@ script = ExtResource("61_nargl")
 
 [node name="DeathMenu" parent="CanvasLayer2" instance=ExtResource("62_7r3xk")]
 
-<<<<<<< HEAD
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AADJ/xwAAAAGAAcAAADJ/x0AAAAGAAcAAADJ/x4AAAAGAAcAAADJ/x8AAAAGAAcAAADJ/yAAAAAGAAcAAADJ/yEAAAAGAAcAAADJ/yIAAAAGAAcAAADJ/yMAAAAGAAcAAADJ/yQAAAAGAAcAAADJ/yUAAAAGAAcAAADJ/yYAAAAGAAcAAADJ/ycAAAAGAAcAAADJ/ygAAAAGAAcAAADJ/ykAAAAGAAcAAADJ/yoAAAAGAAcAAADJ/ysAAAAGAAcAAADJ/ywAAAAGAAcAAADJ/y0AAAAGAAcAAADJ/y4AAAAGAAcAAADJ/y8AAAAGAAcAAADJ/zAAAAAGAAcAAADJ/zEAAAAGAAcAAADJ/zIAAAAGAAcAAADJ/zMAAAAGAAcAAADK/xwAAAAGAAcAAADK/x0AAAAGAAcAAADK/x4AAAAGAAcAAADK/x8AAAAGAAcAAADK/yAAAAAGAAcAAADK/yEAAAAGAAcAAADK/yIAAAAGAAcAAADK/yMAAAAGAAcAAADK/yQAAAAGAAcAAADK/yUAAAAGAAcAAADK/yYAAAAGAAcAAADK/ycAAAAGAAcAAADK/ygAAAAGAAcAAADK/ykAAAAGAAcAAADK/yoAAAAGAAcAAADK/ysAAAAGAAcAAADK/ywAAAAGAAcAAADK/y0AAAAGAAcAAADK/y4AAAAGAAcAAADK/y8AAAAGAAcAAADK/zAAAAAGAAcAAADK/zEAAAAGAAcAAADK/zIAAAAGAAcAAADK/zMAAAAGAAcAAAA=")
 tile_set = SubResource("TileSet_4ivtp")
-=======
 [node name="goblin" parent="." instance=ExtResource("63_pl0ss")]
 position = Vector2(-154, 746)
 max_hp = 40
@@ -4901,7 +4892,6 @@ max_hp = 60
 [node name="PortalManager" parent="." instance=ExtResource("67_feert")]
 level_portal_type = "orange"
 next_level_path = "res://Worlds/TileSets/world3.tscn"
->>>>>>> 019dea4b02f21d52496016ceb619f2b89cf4cdd4
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager2" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager2" method="_on_button_2_pressed"]
