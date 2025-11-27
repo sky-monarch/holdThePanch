@@ -1,12 +1,11 @@
-[gd_scene load_steps=27 format=4 uid="uid://cs7mb14l0amo2"]
+[gd_scene load_steps=26 format=4 uid="uid://cs7mb14l0amo2"]
 
 [ext_resource type="Script" uid="uid://ddmvwqtkbivo" path="res://scripts/sripts_for_pause_menu/manager_3.gd" id="1_murjb"]
 [ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_1.png" id="2_nhuwt"]
 [ext_resource type="Texture2D" uid="uid://ba2ipoxdakr1q" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_2.png" id="3_xevyl"]
 [ext_resource type="Texture2D" uid="uid://cjd7vl4vn6y0m" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/old-dark-castle-interior-background.png" id="4_qmi1q"]
 [ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-1.png" id="5_0t53o"]
-[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/new folder/main_lev_build.png" id="6_4pw7c"]
-[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/blocky/main_lev_build.png" id="7_0t53o"]
+[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/new folder/main_lev_build.png" id="7_0t53o"]
 [ext_resource type="Texture2D" uid="uid://cvtdr44v1ixgs" path="res://Graphics/background/i (1).jpg" id="7_4pw7c"]
 [ext_resource type="Texture2D" uid="uid://duulgkvkxjmg1" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/table_noshadow.png" id="7_h55pd"]
 [ext_resource type="Texture2D" uid="uid://cq1fihaxyltvk" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/flag_red.png" id="8_881vr"]
@@ -57,7 +56,9 @@ texture = ExtResource("7_0t53o")
 53:3/0 = 0
 54:3/0 = 0
 56:3/0 = 0
+56:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 57:3/0 = 0
+57:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, 1.978447, 8, 8, -8, 8)
 68:3/0 = 0
 72:3/0 = 0
 73:3/0 = 0
@@ -1816,7 +1817,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4pw7c")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48gvn"]
-texture = ExtResource("6_4pw7c")
+texture = ExtResource("7_0t53o")
 91:2/0 = 0
 2:3/0 = 0
 3:3/0 = 0
@@ -1861,9 +1862,9 @@ texture = ExtResource("6_4pw7c")
 54:3/0 = 0
 54:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 56:3/0 = 0
-56:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+56:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.935337, 8, 2.1583061, 8, 8, -8, 8)
 57:3/0 = 0
-57:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+57:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.935337, 8, 2.1583061, 8, 8, -8, 8)
 68:3/0 = 0
 72:3/0 = 0
 73:3/0 = 0
@@ -4115,7 +4116,7 @@ position = Vector2(1989, 25)
 texture = SubResource("CompressedTexture2D_1yvj2")
 
 [node name="player" parent="." instance=ExtResource("11_6knpy")]
-position = Vector2(95, -431)
+position = Vector2(2412, -148)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player"]
 position = Vector2(2.6666667, 51.666668)
