@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://c5cnfr5o2okyl"]
+[gd_scene load_steps=60 format=4 uid="uid://c5cnfr5o2okyl"]
 
 [ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-1.png" id="1_1h8uk"]
 [ext_resource type="Texture2D" uid="uid://dion7cg7gkpoj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-2.png" id="2_logn0"]
@@ -42,10 +42,11 @@
 [ext_resource type="Texture2D" uid="uid://do62016ja66j2" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/potion_2.png" id="40_jop2c"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="41_x122o"]
 [ext_resource type="PackedScene" uid="uid://cjlwmi86owhys" path="res://src/golem_blue.tscn" id="42_n5y53"]
-[ext_resource type="PackedScene" uid="uid://chwufra1bnjhc" path="res://src/goblin.tscn" id="43_2chyr"]
+[ext_resource type="PackedScene" uid="uid://cje8au1s6wlon" path="res://src/bandito.tscn" id="44_2chyr"]
 [ext_resource type="PackedScene" uid="uid://dgwbk2yxel34m" path="res://src/flying_eye.tscn" id="44_f8342"]
-[ext_resource type="PackedScene" uid="uid://byjf7wqtxgg2u" path="res://src/skelet.tscn" id="45_p6ldy"]
-[ext_resource type="PackedScene" uid="uid://dwa4p7u5pxvjr" path="res://src/skelet_ver_two.tscn" id="46_0qdwd"]
+[ext_resource type="PackedScene" uid="uid://dpxmt4drm683h" path="res://src/bandito_ver_2.tscn" id="45_f8342"]
+[ext_resource type="PackedScene" uid="uid://c85dgywydnwos" path="res://src/warior.tscn" id="46_p6ldy"]
+[ext_resource type="PackedScene" uid="uid://bm2fsfqb71kdi" path="res://src/cyclop.tscn" id="47_0qdwd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ht48s"]
 texture = ExtResource("7_2chyr")
@@ -7201,7 +7202,7 @@ scale = Vector2(2.4, 2.2368422)
 texture = ExtResource("40_jop2c")
 
 [node name="player" parent="." instance=ExtResource("41_x122o")]
-position = Vector2(3082, 31)
+position = Vector2(-721, -11)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player"]
 position = Vector2(2.6666667, 51.666668)
@@ -7209,19 +7210,25 @@ sprite_frames = SubResource("SpriteFrames_rw2x7")
 animation = &"Idle"
 
 [node name="Golem_blue" parent="." instance=ExtResource("42_n5y53")]
-position = Vector2(-586, -47)
-
-[node name="goblin" parent="." instance=ExtResource("43_2chyr")]
-position = Vector2(116, -202)
+position = Vector2(989, -58.000008)
 
 [node name="Flying_eye" parent="." instance=ExtResource("44_f8342")]
-position = Vector2(609, -306)
+position = Vector2(992, -310)
 
-[node name="goblin2" parent="." instance=ExtResource("43_2chyr")]
-position = Vector2(2022, -582)
+[node name="bandito" parent="." instance=ExtResource("44_2chyr")]
+position = Vector2(-9, -188)
 
-[node name="skelet" parent="." instance=ExtResource("45_p6ldy")]
-position = Vector2(3301, -476.00003)
+[node name="bandito_ver2" parent="." instance=ExtResource("45_f8342")]
+position = Vector2(2006, -574)
 
-[node name="skeletVerTwo" parent="." instance=ExtResource("46_0qdwd")]
-position = Vector2(2729, -133)
+[node name="bandito2" parent="." instance=ExtResource("44_2chyr")]
+position = Vector2(3150, -483)
+
+[node name="bandito_ver3" parent="." instance=ExtResource("45_f8342")]
+position = Vector2(2932, -130)
+
+[node name="Warior" parent="." instance=ExtResource("46_p6ldy")]
+position = Vector2(2561, -317)
+
+[node name="cyclop" parent="." instance=ExtResource("47_0qdwd")]
+position = Vector2(4493, 181)
