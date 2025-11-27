@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bvg7vttqldruv" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_2.png" id="3_hei82"]
 [ext_resource type="Texture2D" uid="uid://deggl3p4l1xo8" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_3.png" id="4_e1sii"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="5_aq5od"]
-[ext_resource type="PackedScene" uid="uid://dpxmt4drm683h" path="res://src/bandito_ver_2.tscn" id="7_aq5od"]
+[ext_resource type="PackedScene" uid="uid://bm2fsfqb71kdi" path="res://src/cyclop.tscn" id="7_aq5od"]
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="7_e1sii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qbwb"]
@@ -492,12 +492,12 @@ position = Vector2(2.6666667, 51.666668)
 sprite_frames = SubResource("SpriteFrames_usgi2")
 animation = &"Idle"
 
+[node name="cyclop" parent="." instance=ExtResource("7_aq5od")]
+position = Vector2(980, 494)
+
 [node name="Дикорации" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_k2e5y")
 format = 2
-
-[node name="bandito_ver2" parent="." instance=ExtResource("7_aq5od")]
-position = Vector2(1078, 562)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
