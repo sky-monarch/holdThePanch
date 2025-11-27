@@ -1,6 +1,5 @@
-[gd_scene load_steps=21 format=4 uid="uid://cah61mokfrd7d"]
+[gd_scene load_steps=20 format=4 uid="uid://cah61mokfrd7d"]
 
-[ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/blocky/oak_woods_tileset.png" id="1_c6nit"]
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="1_djyau"]
 [ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://scripts/sripts_for_pause_menu/manager.gd" id="1_n4p4r"]
 [ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="2_hhscl"]
@@ -16,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="12_tps8d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcikr"]
-texture = ExtResource("1_c6nit")
+texture = ExtResource("1_djyau")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
