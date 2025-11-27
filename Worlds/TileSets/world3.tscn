@@ -1,12 +1,11 @@
-[gd_scene load_steps=27 format=4 uid="uid://cs7mb14l0amo2"]
+[gd_scene load_steps=31 format=4 uid="uid://cs7mb14l0amo2"]
 
 [ext_resource type="Script" uid="uid://ddmvwqtkbivo" path="res://scripts/sripts_for_pause_menu/manager_3.gd" id="1_murjb"]
 [ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_1.png" id="2_nhuwt"]
 [ext_resource type="Texture2D" uid="uid://ba2ipoxdakr1q" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_2.png" id="3_xevyl"]
 [ext_resource type="Texture2D" uid="uid://cjd7vl4vn6y0m" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/old-dark-castle-interior-background.png" id="4_qmi1q"]
 [ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-1.png" id="5_0t53o"]
-[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/new folder/main_lev_build.png" id="6_4pw7c"]
-[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/blocky/main_lev_build.png" id="7_0t53o"]
+[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/new folder/main_lev_build.png" id="7_0t53o"]
 [ext_resource type="Texture2D" uid="uid://cvtdr44v1ixgs" path="res://Graphics/background/i (1).jpg" id="7_4pw7c"]
 [ext_resource type="Texture2D" uid="uid://duulgkvkxjmg1" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/table_noshadow.png" id="7_h55pd"]
 [ext_resource type="Texture2D" uid="uid://cq1fihaxyltvk" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/flag_red.png" id="8_881vr"]
@@ -16,6 +15,11 @@
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="12_hcjim"]
 [ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="13_xevyl"]
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="14_qmi1q"]
+[ext_resource type="PackedScene" uid="uid://byjf7wqtxgg2u" path="res://src/skelet.tscn" id="16_881vr"]
+[ext_resource type="PackedScene" uid="uid://dwa4p7u5pxvjr" path="res://src/skelet_ver_two.tscn" id="17_b7e8s"]
+[ext_resource type="PackedScene" uid="uid://c31ph8n8ip0hy" path="res://src/samurai.tscn" id="18_e7bkl"]
+[ext_resource type="PackedScene" uid="uid://dgwbk2yxel34m" path="res://src/flying_eye.tscn" id="19_6knpy"]
+[ext_resource type="PackedScene" uid="uid://cjlwmi86owhys" path="res://src/golem_blue.tscn" id="20_b7e8s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4pw7c"]
 texture = ExtResource("7_0t53o")
@@ -1816,7 +1820,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4pw7c")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48gvn"]
-texture = ExtResource("6_4pw7c")
+texture = ExtResource("7_0t53o")
 91:2/0 = 0
 2:3/0 = 0
 3:3/0 = 0
@@ -4115,7 +4119,7 @@ position = Vector2(1989, 25)
 texture = SubResource("CompressedTexture2D_1yvj2")
 
 [node name="player" parent="." instance=ExtResource("11_6knpy")]
-position = Vector2(95, -431)
+position = Vector2(176, -110)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player"]
 position = Vector2(2.6666667, 51.666668)
@@ -4131,6 +4135,33 @@ process_mode = 2
 script = ExtResource("13_xevyl")
 
 [node name="DeathMenu" parent="CanvasLayer2" instance=ExtResource("14_qmi1q")]
+
+[node name="skelet" parent="." instance=ExtResource("16_881vr")]
+position = Vector2(2247, 15)
+
+[node name="skeletVerTwo" parent="." instance=ExtResource("17_b7e8s")]
+position = Vector2(2058, 29.000004)
+
+[node name="skeletVerTwo2" parent="." instance=ExtResource("17_b7e8s")]
+position = Vector2(2405, -152.00002)
+
+[node name="samurai" parent="." instance=ExtResource("18_e7bkl")]
+position = Vector2(1265, -151.00002)
+
+[node name="Flying_eye2" parent="." instance=ExtResource("19_6knpy")]
+position = Vector2(1752, -671)
+scale = Vector2(9, 9)
+
+[node name="Flying_eye" parent="." instance=ExtResource("19_6knpy")]
+position = Vector2(691, -383)
+
+[node name="Flying_eye4" parent="." instance=ExtResource("19_6knpy")]
+position = Vector2(-118.00018, -779)
+scale = Vector2(10, 10)
+
+[node name="Golem_blue" parent="." instance=ExtResource("20_b7e8s")]
+position = Vector2(-998, 56.000004)
+scale = Vector2(6, 6)
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager3" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager3" method="_on_button_2_pressed"]
