@@ -1,6 +1,7 @@
-[gd_scene load_steps=60 format=4 uid="uid://c5cnfr5o2okyl"]
+[gd_scene load_steps=64 format=4 uid="uid://c5cnfr5o2okyl"]
 
 [ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-1.png" id="1_1h8uk"]
+[ext_resource type="Script" uid="uid://cske10rkrdtsj" path="res://scripts/sripts_for_pause_menu/manager_4.gd" id="1_6tb2k"]
 [ext_resource type="Texture2D" uid="uid://dion7cg7gkpoj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-2.png" id="2_logn0"]
 [ext_resource type="Texture2D" uid="uid://h7m0guf5m8o3" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-3.png" id="3_qr077"]
 [ext_resource type="Texture2D" uid="uid://cqq42prb82w3a" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-4.png" id="4_oa45w"]
@@ -47,6 +48,9 @@
 [ext_resource type="PackedScene" uid="uid://dpxmt4drm683h" path="res://src/bandito_ver_2.tscn" id="45_f8342"]
 [ext_resource type="PackedScene" uid="uid://c85dgywydnwos" path="res://src/warior.tscn" id="46_p6ldy"]
 [ext_resource type="PackedScene" uid="uid://bm2fsfqb71kdi" path="res://src/cyclop.tscn" id="47_0qdwd"]
+[ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="48_p6ldy"]
+[ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="49_0qdwd"]
+[ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="51_4hhkf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ht48s"]
 texture = ExtResource("7_2chyr")
@@ -6930,6 +6934,10 @@ animations = [{
 
 [node name="Word4" type="Node2D"]
 
+[node name="manager4" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("1_6tb2k")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Plx1" type="Sprite2D" parent="Sprite2D"]
@@ -7232,3 +7240,23 @@ position = Vector2(2561, -317)
 
 [node name="cyclop" parent="." instance=ExtResource("47_0qdwd")]
 position = Vector2(4493, 181)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+script = ExtResource("48_p6ldy")
+
+[node name="DeathMenu" parent="CanvasLayer2" instance=ExtResource("49_0qdwd")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("51_4hhkf")]
+process_mode = 2
+
+[connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button" to="CanvasLayer2" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button3" to="player" method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button3" to="CanvasLayer2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="manager4" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="manager4" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button3" to="manager4" method="_on_button_3_pressed"]
+
+[editable path="CanvasLayer2/DeathMenu"]
+[editable path="CanvasLayer/PauseMenu"]
