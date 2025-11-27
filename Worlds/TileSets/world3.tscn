@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=33 format=4 uid="uid://cs7mb14l0amo2"]
+
 
 [ext_resource type="Script" uid="uid://ddmvwqtkbivo" path="res://scripts/sripts_for_pause_menu/manager_3.gd" id="1_murjb"]
 [ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_1.png" id="2_nhuwt"]
@@ -62,7 +64,9 @@ texture = ExtResource("7_0t53o")
 53:3/0 = 0
 54:3/0 = 0
 56:3/0 = 0
+56:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 57:3/0 = 0
+57:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, 1.978447, 8, 8, -8, 8)
 68:3/0 = 0
 72:3/0 = 0
 73:3/0 = 0
@@ -1866,9 +1870,9 @@ texture = ExtResource("7_0t53o")
 54:3/0 = 0
 54:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 56:3/0 = 0
-56:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+56:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.935337, 8, 2.1583061, 8, 8, -8, 8)
 57:3/0 = 0
-57:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+57:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.935337, 8, 2.1583061, 8, 8, -8, 8)
 68:3/0 = 0
 72:3/0 = 0
 73:3/0 = 0
