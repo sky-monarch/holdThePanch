@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://cs7mb14l0amo2"]
+[gd_scene load_steps=36 format=4 uid="uid://cs7mb14l0amo2"]
 
 [ext_resource type="Script" uid="uid://ddmvwqtkbivo" path="res://scripts/sripts_for_pause_menu/manager_3.gd" id="1_murjb"]
 [ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_1.png" id="2_nhuwt"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://cjlwmi86owhys" path="res://src/golem_blue.tscn" id="20_b7e8s"]
 [ext_resource type="Script" uid="uid://dgyce1dtmf7se" path="res://scripts/death_zone.gd" id="21_e7bkl"]
 [ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="22_6knpy"]
+[ext_resource type="Script" uid="uid://c74hor5hodanl" path="res://scripts/show_level.gd" id="23_j6cox"]
+[ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="24_4jgx4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4pw7c"]
 texture = ExtResource("7_0t53o")
@@ -4180,6 +4182,24 @@ shape = SubResource("RectangleShape2D_6knpy")
 [node name="PortalManager" parent="." instance=ExtResource("22_6knpy")]
 level_portal_type = "purple"
 next_level_path = "res://Worlds/TileSets/world4.tscn"
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+script = ExtResource("23_j6cox")
+
+[node name="Label" type="Label" parent="CanvasLayer3"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -212.5
+offset_top = 79.0
+offset_right = 212.5
+offset_bottom = 143.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("24_4jgx4")
+theme_override_font_sizes/font_size = 38
+text = "3 уровень! Удачи!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager3" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager3" method="_on_button_2_pressed"]

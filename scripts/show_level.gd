@@ -6,7 +6,7 @@ func _ready():
 	level_label.visible = true
 	
 	# Ждем 10 секунд
-	await get_tree().create_timer(10.0).timeout
+	await get_tree().create_timer(5.0).timeout
 	
 	# Плавно исчезает за 1 секунду
 	var tween = create_tween()

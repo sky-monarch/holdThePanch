@@ -52,7 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="49_0qdwd"]
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="51_4hhkf"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="52_4hhkf"]
-[ext_resource type="Script" uid="uid://c74hor5hodanl" path="res://Worlds/TileSets/show_level.gd" id="52_aiw4u"]
+[ext_resource type="Script" uid="uid://c74hor5hodanl" path="res://scripts/show_level.gd" id="52_aiw4u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ht48s"]
 texture = ExtResource("7_2chyr")
