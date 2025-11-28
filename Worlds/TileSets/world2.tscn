@@ -1,4 +1,4 @@
-[gd_scene load_steps=136 format=4 uid="uid://dr176xyhdun12"]
+[gd_scene load_steps=137 format=4 uid="uid://dr176xyhdun12"]
 
 [ext_resource type="Script" uid="uid://cwcsxfpwbhvls" path="res://scripts/sripts_for_pause_menu/manager_2.gd" id="1_574sj"]
 [ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="2_4nfeb"]
@@ -69,6 +69,7 @@
 [ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="67_feert"]
 [ext_resource type="Script" uid="uid://c74hor5hodanl" path="res://scripts/show_level.gd" id="68_t4q7o"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="69_616dx"]
+[ext_resource type="Script" uid="uid://c26fcwby3vrj" path="res://scripts/current_level.gd" id="70_616dx"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bu4p3"]
 
@@ -4910,6 +4911,18 @@ grow_horizontal = 2
 theme_override_fonts/font = ExtResource("69_616dx")
 theme_override_font_sizes/font_size = 38
 text = "2 уровень! Удачи!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="."]
+script = ExtResource("70_616dx")
+
+[node name="Label" type="Label" parent="CanvasLayer4"]
+offset_right = 265.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("69_616dx")
+theme_override_font_sizes/font_size = 26
+text = "level 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://cs7mb14l0amo2"]
+[gd_scene load_steps=37 format=4 uid="uid://cs7mb14l0amo2"]
 
 [ext_resource type="Script" uid="uid://ddmvwqtkbivo" path="res://scripts/sripts_for_pause_menu/manager_3.gd" id="1_murjb"]
 [ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_1.png" id="2_nhuwt"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="22_6knpy"]
 [ext_resource type="Script" uid="uid://c74hor5hodanl" path="res://scripts/show_level.gd" id="23_j6cox"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="24_4jgx4"]
+[ext_resource type="Script" uid="uid://c26fcwby3vrj" path="res://scripts/current_level.gd" id="25_4jgx4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4pw7c"]
 texture = ExtResource("7_0t53o")
@@ -4198,6 +4199,18 @@ grow_horizontal = 2
 theme_override_fonts/font = ExtResource("24_4jgx4")
 theme_override_font_sizes/font_size = 38
 text = "3 уровень! Удачи!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="."]
+script = ExtResource("25_4jgx4")
+
+[node name="Label" type="Label" parent="CanvasLayer4"]
+offset_right = 265.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("24_4jgx4")
+theme_override_font_sizes/font_size = 26
+text = "level 3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
