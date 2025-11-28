@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://c5cnfr5o2okyl"]
+[gd_scene load_steps=67 format=4 uid="uid://c5cnfr5o2okyl"]
 
 [ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-1.png" id="1_1h8uk"]
 [ext_resource type="Script" uid="uid://cske10rkrdtsj" path="res://scripts/sripts_for_pause_menu/manager_4.gd" id="1_6tb2k"]
@@ -53,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="51_4hhkf"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="52_4hhkf"]
 [ext_resource type="Script" uid="uid://c74hor5hodanl" path="res://scripts/show_level.gd" id="52_aiw4u"]
+[ext_resource type="Script" uid="uid://c26fcwby3vrj" path="res://Worlds/TileSets/current_level.gd" id="54_f5npl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ht48s"]
 texture = ExtResource("7_2chyr")
@@ -7268,6 +7269,18 @@ grow_horizontal = 2
 theme_override_fonts/font = ExtResource("52_4hhkf")
 theme_override_font_sizes/font_size = 38
 text = "4 уровень! Удачи!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="."]
+script = ExtResource("54_f5npl")
+
+[node name="Label" type="Label" parent="CanvasLayer4"]
+offset_right = 265.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("52_4hhkf")
+theme_override_font_sizes/font_size = 26
+text = "level 4"
 horizontal_alignment = 1
 vertical_alignment = 1
 
