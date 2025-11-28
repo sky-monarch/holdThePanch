@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=37 format=4 uid="uid://cs7mb14l0amo2"]
 
 [ext_resource type="Script" uid="uid://ddmvwqtkbivo" path="res://scripts/sripts_for_pause_menu/manager_3.gd" id="1_murjb"]
@@ -4018,7 +4019,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6knpy"]
-size = Vector2(6156, 5665)
+size = Vector2(6156, 165.5)
 
 [node name="Node2D" type="Node2D"]
 
@@ -4129,7 +4130,7 @@ position = Vector2(1989, 25)
 texture = SubResource("CompressedTexture2D_1yvj2")
 
 [node name="player" parent="." instance=ExtResource("11_6knpy")]
-position = Vector2(176, -110)
+position = Vector2(149, -142.00003)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player"]
 position = Vector2(2.6666667, 51.666668)
@@ -4159,14 +4160,14 @@ position = Vector2(2405, -152.00002)
 position = Vector2(1265, -151.00002)
 
 [node name="Flying_eye2" parent="." instance=ExtResource("19_6knpy")]
-position = Vector2(1752, -671)
+position = Vector2(1728, -543)
 scale = Vector2(9, 9)
 
 [node name="Flying_eye" parent="." instance=ExtResource("19_6knpy")]
 position = Vector2(691, -383)
 
 [node name="Flying_eye4" parent="." instance=ExtResource("19_6knpy")]
-position = Vector2(-118.00018, -779)
+position = Vector2(-57.000004, -868)
 scale = Vector2(10, 10)
 
 [node name="Golem_blue" parent="." instance=ExtResource("20_b7e8s")]
@@ -4177,7 +4178,7 @@ scale = Vector2(6, 6)
 script = ExtResource("21_e7bkl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
-position = Vector2(940, 3434.5)
+position = Vector2(1290, 373)
 shape = SubResource("RectangleShape2D_6knpy")
 
 [node name="PortalManager" parent="." instance=ExtResource("22_6knpy")]
