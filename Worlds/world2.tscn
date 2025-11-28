@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bvg7vttqldruv" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_2.png" id="3_hei82"]
 [ext_resource type="Texture2D" uid="uid://deggl3p4l1xo8" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_3.png" id="4_e1sii"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="5_aq5od"]
-[ext_resource type="PackedScene" uid="uid://c85dgywydnwos" path="res://src/warior.tscn" id="6_e1sii"]
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="7_e1sii"]
+[ext_resource type="PackedScene" uid="uid://ctttacpjxylco" path="res://src/night_borne.tscn" id="8_e1sii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qbwb"]
 texture = ExtResource("1_k2e5y")
@@ -480,9 +480,6 @@ position = Vector2(1661.9999, 143)
 scale = Vector2(16.91875, 5.7611113)
 texture = ExtResource("4_e1sii")
 
-[node name="Warior" parent="." instance=ExtResource("6_e1sii")]
-position = Vector2(1027, 545)
-
 [node name="player" parent="." instance=ExtResource("5_aq5od")]
 position = Vector2(291, 491)
 
@@ -503,10 +500,13 @@ format = 2
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_e1sii")]
 process_mode = 2
-offset_left = 254.0
-offset_top = 611.0
-offset_right = 254.0
-offset_bottom = 611.0
+offset_left = -606.0
+offset_top = -119.0
+offset_right = -606.0
+offset_bottom = -119.0
+
+[node name="NightBorne" parent="." instance=ExtResource("8_e1sii")]
+position = Vector2(755, 548)
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager" method="_on_button_2_pressed"]
