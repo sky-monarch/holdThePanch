@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://c5cnfr5o2okyl"]
+[gd_scene load_steps=66 format=4 uid="uid://c5cnfr5o2okyl"]
 
 [ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-1.png" id="1_1h8uk"]
 [ext_resource type="Script" uid="uid://cske10rkrdtsj" path="res://scripts/sripts_for_pause_menu/manager_4.gd" id="1_6tb2k"]
@@ -51,6 +51,8 @@
 [ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="48_p6ldy"]
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="49_0qdwd"]
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="51_4hhkf"]
+[ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="52_4hhkf"]
+[ext_resource type="Script" uid="uid://c74hor5hodanl" path="res://Worlds/TileSets/show_level.gd" id="52_aiw4u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ht48s"]
 texture = ExtResource("7_2chyr")
@@ -7250,6 +7252,24 @@ script = ExtResource("48_p6ldy")
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("51_4hhkf")]
 process_mode = 2
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+script = ExtResource("52_aiw4u")
+
+[node name="Label" type="Label" parent="CanvasLayer3"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -212.5
+offset_top = 79.0
+offset_right = 212.5
+offset_bottom = 143.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("52_4hhkf")
+theme_override_font_sizes/font_size = 38
+text = "4 уровень! Удачи!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button" to="CanvasLayer2" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button3" to="player" method="_on_button_3_pressed"]
