@@ -5,6 +5,7 @@ class_name Enemy
 @export var max_hp: int = 30
 @export var damage: int = 10
 @export var attack_cooldown: float = 2.0
+@export var sprite_direction = 1;
 
 @export_category("Loot Settings")
 @export var drop_potion_chance: float = 0.7
@@ -45,7 +46,7 @@ func _physics_process(_delta: float) -> void:
 	if player:
 		var dir = (player.global_position - global_position).normalized()
 		velocity.x = dir.x * speed
-		anim.flip_h = dir.x < 0
+		anim.flip_h = dir.x*sprite_direction < 0
 		var players_in_attack_range = attack_area.get_overlapping_bodies().filter(func(body): return body.is_in_group("player"))
 		if can_attack and players_in_attack_range.size() > 0 and not is_attacking and not is_hurting:
 			velocity.x = 0

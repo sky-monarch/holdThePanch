@@ -6,7 +6,6 @@ extends Node
 @export var next_level_path: String = "res://Worlds/TileSets/world2.tscn"
 
 func _ready():
-	# Ждем пока все враги будут убиты
 	check_enemies_periodically()
 
 func check_enemies_periodically():
@@ -20,7 +19,6 @@ func is_all_enemies_defeated() -> bool:
 	var enemies = get_tree().get_nodes_in_group("enemies")
 	return enemies.size() == 0
 
-# В PortalManager.gd
 func spawn_portal():
 	var portal = portal_scene.instantiate()
 	portal.level_type = level_portal_type
@@ -31,7 +29,7 @@ func spawn_portal():
 		# Просто ставим портал на той же высоте что игрок, но выше
 		portal.global_position = Vector2(
 			player.global_position.x + 150,
-			player.global_position.y - 100  # Выше игрока
+			player.global_position.y - 50  # Выше игрока
 		)
 	else:
 		portal.global_position = Vector2(500, 300)
