@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-[gd_scene load_steps=33 format=4 uid="uid://cs7mb14l0amo2"]
-=======
+
 [gd_scene load_steps=34 format=4 uid="uid://cs7mb14l0amo2"]
->>>>>>> 2d4eb2ec8a7c217ac2efb1d7e3fc4350511e8b1a
 
 [ext_resource type="Script" uid="uid://ddmvwqtkbivo" path="res://scripts/sripts_for_pause_menu/manager_3.gd" id="1_murjb"]
 [ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_1.png" id="2_nhuwt"]

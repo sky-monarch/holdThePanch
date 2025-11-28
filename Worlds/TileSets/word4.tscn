@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-[gd_scene load_steps=54 format=4 uid="uid://c5cnfr5o2okyl"]
 
-[ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-1.png" id="1_1h8uk"]
-=======
 [gd_scene load_steps=64 format=4 uid="uid://c5cnfr5o2okyl"]
 
 [ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-1.png" id="1_1h8uk"]
 [ext_resource type="Script" uid="uid://cske10rkrdtsj" path="res://scripts/sripts_for_pause_menu/manager_4.gd" id="1_6tb2k"]
->>>>>>> 2d4eb2ec8a7c217ac2efb1d7e3fc4350511e8b1a
 [ext_resource type="Texture2D" uid="uid://dion7cg7gkpoj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-2.png" id="2_logn0"]
 [ext_resource type="Texture2D" uid="uid://h7m0guf5m8o3" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-3.png" id="3_qr077"]
 [ext_resource type="Texture2D" uid="uid://cqq42prb82w3a" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-4.png" id="4_oa45w"]
@@ -48,8 +43,6 @@
 [ext_resource type="Texture2D" uid="uid://dd6h0ncjgfhvo" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/curtain_blue_1.png" id="39_8e5hl"]
 [ext_resource type="Texture2D" uid="uid://do62016ja66j2" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/potion_2.png" id="40_jop2c"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="41_x122o"]
-<<<<<<< HEAD
-=======
 [ext_resource type="PackedScene" uid="uid://cjlwmi86owhys" path="res://src/golem_blue.tscn" id="42_n5y53"]
 [ext_resource type="PackedScene" uid="uid://cje8au1s6wlon" path="res://src/bandito.tscn" id="44_2chyr"]
 [ext_resource type="PackedScene" uid="uid://dgwbk2yxel34m" path="res://src/flying_eye.tscn" id="44_f8342"]
@@ -59,8 +52,6 @@
 [ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="48_p6ldy"]
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="49_0qdwd"]
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="51_4hhkf"]
->>>>>>> 2d4eb2ec8a7c217ac2efb1d7e3fc4350511e8b1a
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ht48s"]
 texture = ExtResource("7_2chyr")
 91:2/0 = 0
@@ -7219,11 +7210,7 @@ scale = Vector2(2.4, 2.2368422)
 texture = ExtResource("40_jop2c")
 
 [node name="player" parent="." instance=ExtResource("41_x122o")]
-<<<<<<< HEAD
-position = Vector2(-559, -80)
-=======
 position = Vector2(-721, -11)
->>>>>>> 2d4eb2ec8a7c217ac2efb1d7e3fc4350511e8b1a
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player"]
 position = Vector2(2.6666667, 51.666668)
