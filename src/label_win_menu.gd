@@ -1,4 +1,4 @@
-extends RichTextLabel
+extends Label
 @onready var text_label = $"."
 
 func _ready():
@@ -7,7 +7,7 @@ func _ready():
 	text_label.modulate.a = 0.0
 	
 	# Ждем 5 секунд
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	
 	# Показываем и плавно появляемся
 	text_label.visible = true
