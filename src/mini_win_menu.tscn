@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddgw18gyfiago"]
+[gd_scene load_steps=10 format=3 uid="uid://ddgw18gyfiago"]
 
 [ext_resource type="Script" uid="uid://cphtimcngxtna" path="res://scripts/mini_win_menu.gd" id="1_0wexb"]
 [ext_resource type="Texture2D" uid="uid://b5g7tukpbk7rb" path="res://resourse/data for the main menu/background.png" id="1_odvd6"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="1_onm2f"]
+[ext_resource type="Script" uid="uid://bgh80hktfi0yo" path="res://src/rich_text_label.gd" id="4_763mr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wexb"]
 texture = ExtResource("1_odvd6")
@@ -134,6 +135,7 @@ theme_override_font_sizes/normal_font_size = 21
 theme_override_font_sizes/bold_font_size = 16
 text = "Зло повержено. Много дней мир провел во тьме, ожидая этого момента. Немногие дошли до конца... но те из нас, кто остался в живых берут на себя огромную ответственность по восстановлению порядка на земле. Пока народ ликует и благословит героя, он  дает обет - покончить с тьмой и разобраться, как монстры тут оказались и куда еще могут вести их порталы..."
 horizontal_alignment = 3
+script = ExtResource("4_763mr")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
