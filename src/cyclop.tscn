@@ -1,9 +1,10 @@
-[gd_scene load_steps=48 format=3 uid="uid://bm2fsfqb71kdi"]
+[gd_scene load_steps=49 format=3 uid="uid://bm2fsfqb71kdi"]
 
 [ext_resource type="Script" uid="uid://em71tnqppeei" path="res://scripts/cyclop.gd" id="1_trtet"]
 [ext_resource type="Texture2D" uid="uid://balbaxj4p1y8c" path="res://resourse/sprites/cyclops/Bringer-of-Death-SpritSheet.png" id="2_lenkh"]
 [ext_resource type="Texture2D" uid="uid://drvc6e78shxy2" path="res://resourse/sprites/helth/Pixel1_Healthbar_0002_pixel1_border.png" id="3_6pt1d"]
 [ext_resource type="Texture2D" uid="uid://3ie0ir08wrks" path="res://resourse/sprites/helth/Pixel1_Healthbar_0001_pixel1_healthbar.png" id="4_34k80"]
+[ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="5_lenkh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trtet"]
 atlas = ExtResource("2_lenkh")
@@ -358,3 +359,13 @@ position = Vector2(13.000002, -45.999992)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_34k80")
 centered = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 11.0
+offset_top = -29.333332
+offset_right = 60.0
+offset_bottom = -20.333332
+theme_override_colors/font_color = Color(0.88883054, 0.39371285, 0.21035564, 1)
+theme_override_fonts/font = ExtResource("5_lenkh")
+theme_override_font_sizes/font_size = 8
+text = "Циклоп"
