@@ -8,3 +8,4 @@
 stream = ExtResource("1_gqu61")
 autoplay = true
 bus = &"Music"
+parameters/looping = true
