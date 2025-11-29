@@ -431,8 +431,8 @@ size = Vector2(69.00001, 33.333336)
 [node name="NightBorne" type="CharacterBody2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_w03dt")
-speed = 150.0
-max_hp = 200
+speed = 1000.0
+max_hp = 250
 damage = 30
 attack_cooldown = 1.2
 

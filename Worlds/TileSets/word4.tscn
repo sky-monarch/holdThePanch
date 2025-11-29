@@ -7229,6 +7229,7 @@ position = Vector2(992, -310)
 
 [node name="bandito" parent="." instance=ExtResource("44_2chyr")]
 position = Vector2(-9, -188)
+damage = 33
 
 [node name="bandito_ver2" parent="." instance=ExtResource("45_f8342")]
 position = Vector2(2006, -574)

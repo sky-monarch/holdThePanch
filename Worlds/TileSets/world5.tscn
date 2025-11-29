@@ -2344,7 +2344,6 @@ animation = &"Idle"
 
 [node name="NightBorne" parent="." instance=ExtResource("6_1vgxl")]
 position = Vector2(1279, -145)
-max_hp = 10
 
 [node name="potion" parent="." instance=ExtResource("7_r1fxi")]
 position = Vector2(1752, -66)

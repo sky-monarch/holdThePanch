@@ -4869,11 +4869,9 @@ tile_set = SubResource("TileSet_4ivtp")
 
 [node name="goblin" parent="." instance=ExtResource("63_pl0ss")]
 position = Vector2(-154, 746)
-max_hp = 40
 
 [node name="Flying_eye" parent="." instance=ExtResource("64_feert")]
 position = Vector2(121, 661)
-max_hp = 20
 damage = 5
 
 [node name="skeletVerTwo" parent="." instance=ExtResource("65_6m4w0")]
@@ -4881,16 +4879,12 @@ position = Vector2(1745.0001, 753.00006)
 
 [node name="goblin2" parent="." instance=ExtResource("63_pl0ss")]
 position = Vector2(1634.0001, 552)
-max_hp = 40
 
 [node name="Flying_eye2" parent="." instance=ExtResource("64_feert")]
 position = Vector2(1852, 326)
-max_hp = 20
-damage = 5
 
 [node name="samurai" parent="." instance=ExtResource("66_t4q7o")]
 position = Vector2(1512.0001, 189.00002)
-max_hp = 60
 
 [node name="PortalManager" parent="." instance=ExtResource("67_feert")]
 level_portal_type = "orange"

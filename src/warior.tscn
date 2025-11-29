@@ -295,6 +295,8 @@ size = Vector2(74.333336, 52.333336)
 [node name="Warior" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_ufvtj")
+max_hp = 75
+damage = 20
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bo8id")

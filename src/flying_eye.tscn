@@ -272,6 +272,7 @@ size = Vector2(61, 39.333336)
 [node name="Flying_eye" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_h0u67")
+damage = 15
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8jak4")

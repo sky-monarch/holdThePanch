@@ -245,6 +245,7 @@ size = Vector2(61, 39.333336)
 [node name="goblin" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_0nqkn")
+max_hp = 40
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.33333334, 0)

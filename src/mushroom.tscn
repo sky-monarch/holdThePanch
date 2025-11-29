@@ -246,6 +246,7 @@ size = Vector2(61, 39.333336)
 [node name="Mushroom" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_pnswy")
+max_hp = 40
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4rdvw")

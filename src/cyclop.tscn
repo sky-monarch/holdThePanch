@@ -318,6 +318,8 @@ size = Vector2(83, 56.333336)
 [node name="cyclop" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_trtet")
+max_hp = 150
+damage = 30
 sprite_direction = -1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

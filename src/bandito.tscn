@@ -339,6 +339,8 @@ size = Vector2(60.666668, 38.666668)
 [node name="bandito" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_h58td")
+max_hp = 50
+damage = 20
 sprite_direction = -1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

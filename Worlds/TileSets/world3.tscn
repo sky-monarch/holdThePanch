@@ -4157,6 +4157,7 @@ position = Vector2(2405, -152.00002)
 [node name="Flying_eye2" parent="." instance=ExtResource("19_6knpy")]
 position = Vector2(1765, -672)
 scale = Vector2(9, 9)
+max_hp = 50
 
 [node name="Flying_eye" parent="." instance=ExtResource("19_6knpy")]
 position = Vector2(691, -383)
@@ -4164,6 +4165,7 @@ position = Vector2(691, -383)
 [node name="Flying_eye4" parent="." instance=ExtResource("19_6knpy")]
 position = Vector2(-57.000004, -868)
 scale = Vector2(10, 10)
+max_hp = 50
 
 [node name="Golem_blue" parent="." instance=ExtResource("20_b7e8s")]
 position = Vector2(-998, 56.000004)
@@ -4178,7 +4180,7 @@ shape = SubResource("RectangleShape2D_6knpy")
 
 [node name="PortalManager" parent="." instance=ExtResource("22_6knpy")]
 level_portal_type = "purple"
-next_level_path = "res://Worlds/TileSets/word4.tscnd"
+next_level_path = "res://Worlds/TileSets/word4.tscn"
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
 script = ExtResource("23_j6cox")

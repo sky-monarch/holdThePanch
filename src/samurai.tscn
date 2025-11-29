@@ -274,6 +274,8 @@ size = Vector2(92, 53.666668)
 [node name="samurai" type="CharacterBody2D"]
 scale = Vector2(2.5, 2.5)
 script = ExtResource("1_se4ij")
+max_hp = 70
+damage = 20
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.6666667, 3)
