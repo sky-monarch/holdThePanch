@@ -1,0 +1,111 @@
+[gd_scene load_steps=11 format=3 uid="uid://b8u02lssslba0"]
+
+[ext_resource type="Script" uid="uid://dwpr1q0rxf6gg" path="res://src/developers.gd" id="1_qccqi"]
+[ext_resource type="Texture2D" uid="uid://b5g7tukpbk7rb" path="res://resourse/data for the main menu/background.png" id="1_u00xc"]
+[ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="2_qccqi"]
+[ext_resource type="Script" uid="uid://m1msx5wqovhn" path="res://src/exit_win_menu.gd" id="3_1vmhe"]
+[ext_resource type="Script" uid="uid://baybu7a7lalmv" path="res://src/label_win_menu.gd" id="5_odmqf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8q405"]
+texture = ExtResource("1_u00xc")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03qy1"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu40n"]
+bg_color = Color(0.5132329, 0.5132329, 0.5132329, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lfgk"]
+bg_color = Color(0.74138474, 0.7413847, 0.74138457, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8kula"]
+
+[node name="developers" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qccqi")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8q405")
+
+[node name="Panel" type="Panel" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button2" type="Button" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.0
+offset_top = -103.0
+offset_right = 95.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qccqi")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_03qy1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uu40n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0lfgk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8kula")
+text = "ВЫХОД"
+script = ExtResource("3_1vmhe")
+
+[node name="Label" type="Label" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -323.0
+offset_top = 52.0
+offset_right = 323.0
+offset_bottom = 141.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_qccqi")
+theme_override_font_sizes/font_size = 53
+text = "Разработчики:"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_odmqf")
+
+[connection signal="pressed" from="Panel2/Panel/Button2" to="." method="_on_button_2_pressed"]
