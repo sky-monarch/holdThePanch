@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cxii858s25guu"]
+[gd_scene load_steps=20 format=4 uid="uid://cxii858s25guu"]
 
 [ext_resource type="Script" uid="uid://cusjyenq3718f" path="res://scripts/sripts_for_pause_menu/manager_5.gd" id="1_o8sh0"]
 [ext_resource type="Texture2D" uid="uid://cuolqlv01xb2l" path="res://Graphics/background/d68f2bb70bf5cd8b740b7719004c9b3e.png" id="1_ykocd"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="9_jxy6o"]
 [ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="11_egykp"]
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="12_sqeca"]
+[ext_resource type="Script" uid="uid://c74hor5hodanl" path="res://scripts/show_level.gd" id="13_5ko86"]
+[ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="14_kfskb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxy6o"]
 texture = ExtResource("2_s0ljk")
@@ -2389,6 +2391,24 @@ process_mode = 2
 script = ExtResource("11_egykp")
 
 [node name="DeathMenu" parent="CanvasLayer2" instance=ExtResource("12_sqeca")]
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+script = ExtResource("13_5ko86")
+
+[node name="Label" type="Label" parent="CanvasLayer3"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -212.5
+offset_top = 79.0
+offset_right = 212.5
+offset_bottom = 143.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("14_kfskb")
+theme_override_font_sizes/font_size = 38
+text = "ФИНАЛ! Убей босса!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="manager5" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="manager5" method="_on_button_2_pressed"]
