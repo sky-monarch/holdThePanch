@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cxii858s25guu"]
+[gd_scene load_steps=18 format=4 uid="uid://cxii858s25guu"]
 
 [ext_resource type="Script" uid="uid://cusjyenq3718f" path="res://scripts/sripts_for_pause_menu/manager_5.gd" id="1_o8sh0"]
 [ext_resource type="Texture2D" uid="uid://cuolqlv01xb2l" path="res://Graphics/background/d68f2bb70bf5cd8b740b7719004c9b3e.png" id="1_ykocd"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bqwsbrhs7gg2h" path="res://src/potion.tscn" id="7_r1fxi"]
 [ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="8_83ans"]
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="9_jxy6o"]
+[ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="11_egykp"]
+[ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="12_sqeca"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxy6o"]
 texture = ExtResource("2_s0ljk")
@@ -2383,8 +2385,16 @@ next_level_path = "res://src/mini_win_menu.tscn"
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("9_jxy6o")]
 process_mode = 2
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+script = ExtResource("11_egykp")
+
+[node name="DeathMenu" parent="CanvasLayer2" instance=ExtResource("12_sqeca")]
+
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="manager5" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="manager5" method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button3" to="manager5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button" to="CanvasLayer2" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button3" to="CanvasLayer2" method="_on_button_3_pressed"]
 
 [editable path="CanvasLayer/PauseMenu"]
+[editable path="CanvasLayer2/DeathMenu"]
