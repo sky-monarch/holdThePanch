@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=4 uid="uid://cxii858s25guu"]
+[gd_scene load_steps=14 format=4 uid="uid://cxii858s25guu"]
 
 [ext_resource type="Texture2D" uid="uid://cuolqlv01xb2l" path="res://Graphics/background/d68f2bb70bf5cd8b740b7719004c9b3e.png" id="1_ykocd"]
-[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/blocky/main_lev_build.png" id="2_s0ljk"]
-[ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/blocky/oak_woods_tileset.png" id="3_1vgxl"]
-[ext_resource type="Texture2D" uid="uid://cqddl0ar4npq0" path="res://Graphics/blocky/tileset.png" id="4_r1fxi"]
+[ext_resource type="Texture2D" uid="uid://bisla02njvg3s" path="res://Graphics/new folder/main_lev_build.png" id="2_s0ljk"]
+[ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="3_1vgxl"]
+[ext_resource type="Texture2D" uid="uid://cqddl0ar4npq0" path="res://Graphics/new folder/tileset.png" id="4_r1fxi"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="5_83ans"]
+[ext_resource type="PackedScene" uid="uid://ctttacpjxylco" path="res://src/night_borne.tscn" id="6_1vgxl"]
+[ext_resource type="PackedScene" uid="uid://bqwsbrhs7gg2h" path="res://src/potion.tscn" id="7_r1fxi"]
+[ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="8_83ans"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxy6o"]
 texture = ExtResource("2_s0ljk")
@@ -2332,9 +2335,40 @@ tile_map_data = PackedByteArray("AACb//3/AQAIAA0AAACc//3/AQAJAA0AAACd//3/AQAKAA0
 tile_set = SubResource("TileSet_egykp")
 
 [node name="player" parent="." instance=ExtResource("5_83ans")]
-position = Vector2(-656, -156)
+position = Vector2(293, -108)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="player"]
 position = Vector2(2.6666667, 51.666668)
 sprite_frames = SubResource("SpriteFrames_sqeca")
 animation = &"Idle"
+
+[node name="NightBorne" parent="." instance=ExtResource("6_1vgxl")]
+position = Vector2(1279, -145)
+max_hp = 10
+
+[node name="potion" parent="." instance=ExtResource("7_r1fxi")]
+position = Vector2(1752, -66)
+
+[node name="potion2" parent="." instance=ExtResource("7_r1fxi")]
+position = Vector2(-647, -112)
+
+[node name="potion3" parent="." instance=ExtResource("7_r1fxi")]
+position = Vector2(-1245, -114)
+
+[node name="potion4" parent="." instance=ExtResource("7_r1fxi")]
+position = Vector2(-953, -113)
+
+[node name="potion5" parent="." instance=ExtResource("7_r1fxi")]
+position = Vector2(1986, -68)
+
+[node name="potion6" parent="." instance=ExtResource("7_r1fxi")]
+position = Vector2(2243, -78)
+
+[node name="potion7" parent="." instance=ExtResource("7_r1fxi")]
+position = Vector2(2510, -81)
+
+[node name="potion8" parent="." instance=ExtResource("7_r1fxi")]
+position = Vector2(-1466, -119)
+
+[node name="PortalManager" parent="." instance=ExtResource("8_83ans")]
+next_level_path = "res://src/mini_win_menu.tscn"

@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=67 format=4 uid="uid://c5cnfr5o2okyl"]
-
+[gd_scene load_steps=68 format=4 uid="uid://c5cnfr5o2okyl"]
 
 [ext_resource type="Texture2D" uid="uid://cghsuc2omt8oj" path="res://Graphics/new folder/Jungle Asset Pack/Jungle Asset Pack/parallax background/plx-1.png" id="1_1h8uk"]
 [ext_resource type="Script" uid="uid://cske10rkrdtsj" path="res://scripts/sripts_for_pause_menu/manager_4.gd" id="1_6tb2k"]
@@ -56,6 +54,8 @@
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="52_4hhkf"]
 [ext_resource type="Script" uid="uid://c74hor5hodanl" path="res://scripts/show_level.gd" id="52_aiw4u"]
 [ext_resource type="Script" uid="uid://c26fcwby3vrj" path="res://scripts/current_level.gd" id="54_f5npl"]
+[ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="55_opnyi"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ht48s"]
 texture = ExtResource("7_2chyr")
 91:2/0 = 0
@@ -7284,6 +7284,10 @@ theme_override_font_sizes/font_size = 26
 text = "level 4"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PortalManager" parent="." instance=ExtResource("55_opnyi")]
+level_portal_type = "green"
+next_level_path = "res://Worlds/TileSets/world5.tscn"
 
 [connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button" to="CanvasLayer2" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button3" to="player" method="_on_button_3_pressed"]

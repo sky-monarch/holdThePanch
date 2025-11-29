@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=37 format=4 uid="uid://cs7mb14l0amo2"]
+[gd_scene load_steps=36 format=4 uid="uid://cs7mb14l0amo2"]
 
 [ext_resource type="Script" uid="uid://ddmvwqtkbivo" path="res://scripts/sripts_for_pause_menu/manager_3.gd" id="1_murjb"]
 [ext_resource type="Texture2D" uid="uid://bpwg4p5u6utng" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/decorations/Decorations/Background/layer_1.png" id="2_nhuwt"]
@@ -4179,7 +4178,7 @@ shape = SubResource("RectangleShape2D_6knpy")
 
 [node name="PortalManager" parent="." instance=ExtResource("22_6knpy")]
 level_portal_type = "purple"
-next_level_path = "res://Worlds/TileSets/world4.tscn"
+next_level_path = "res://Worlds/TileSets/word4.tscnd"
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
 script = ExtResource("23_j6cox")
@@ -4210,6 +4209,7 @@ theme_override_font_sizes/font_size = 26
 text = "level 3"
 horizontal_alignment = 1
 vertical_alignment = 1
+
 [node name="skeletVerTwo3" parent="." instance=ExtResource("17_b7e8s")]
 position = Vector2(1330, -142)
 

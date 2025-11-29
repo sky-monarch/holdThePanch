@@ -128,13 +128,5 @@ func update_helth_bar():
 func heal(amount: int):
 	hp = min(hp + amount, max_hp)
 	update_helth_bar()
-	play_heal_effect()
-
-func play_heal_effect():
-	@warning_ignore("shadowed_variable")
-	var tween = create_tween()
-	tween.parallel().tween_property($Sprite2D, "modulate", Color.GREEN, 0.2)
-	tween.parallel().tween_property($Sprite2D, "modulate", Color.WHITE, 0.2)
-	
 	
 	

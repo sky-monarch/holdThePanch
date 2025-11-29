@@ -26,10 +26,9 @@ func spawn_portal():
 	
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
-		# Просто ставим портал на той же высоте что игрок, но выше
 		portal.global_position = Vector2(
 			player.global_position.x + 150,
-			player.global_position.y - 50  # Выше игрока
+			player.global_position.y - 50 
 		)
 	else:
 		portal.global_position = Vector2(500, 300)
