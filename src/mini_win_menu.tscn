@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://b5g7tukpbk7rb" path="res://resourse/data for the main menu/background.png" id="1_odvd6"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="1_onm2f"]
 [ext_resource type="Script" uid="uid://bgh80hktfi0yo" path="res://src/rich_text_label.gd" id="4_763mr"]
-[ext_resource type="Script" uid="uid://m1msx5wqovhn" path="res://src/exit_win_menu.gd" id="4_cf7ms"]
-[ext_resource type="Script" uid="uid://baybu7a7lalmv" path="res://src/label_win_menu.gd" id="5_jdxuv"]
+[ext_resource type="Script" uid="uid://m1msx5wqovhn" path="res://scripts/exit_win_menu.gd" id="4_cf7ms"]
+[ext_resource type="Script" uid="uid://baybu7a7lalmv" path="res://scripts/label_win_menu.gd" id="5_jdxuv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wexb"]
 texture = ExtResource("1_odvd6")
