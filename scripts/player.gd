@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var jump_force: float = -500
 @export var damage: int = 10
 @export var max_hp: int = 100
+@export var change_crit_damade = 0.3
+@export var crit_damage = 2
 
 var hp: int = max_hp
 var is_attacking: bool = false
@@ -107,7 +109,11 @@ func take_damage(_damage):
 
 func _on_attack_area_body_entered(body: Node2D):
 	if body.has_method("take_damage") and not body.is_in_group("player"):
-		body.take_damage(damage)
+		if randf() < change_crit_damade:
+			body.take_damage(damage * crit_damage)
+		else:
+			body.take_damage(damage)
+		
 
 
 func die():
