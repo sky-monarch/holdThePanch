@@ -313,11 +313,11 @@ texture = ExtResource("8_kfsqo")
 centered = false
 
 [node name="Label" type="Label" parent="."]
-offset_left = -29.599998
-offset_top = -53.6
-offset_right = 48.4
-offset_bottom = -30.599998
+offset_left = -19.199999
+offset_top = -52.399998
+offset_right = 20.800001
+offset_bottom = -42.399998
 theme_override_colors/font_color = Color(0, 0.8317562, 0.41285428, 1)
 theme_override_fonts/font = ExtResource("9_cclru")
 theme_override_font_sizes/font_size = 9
-text = "Самурай"
+text = "minay"

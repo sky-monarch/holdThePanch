@@ -284,10 +284,10 @@ texture = ExtResource("7_g6d2y")
 centered = false
 
 [node name="Label" type="Label" parent="."]
-offset_left = -30.0
-offset_top = -31.666666
-offset_right = 36.0
-offset_bottom = -22.666666
+offset_left = -20.0
+offset_top = -32.0
+offset_right = 22.0
+offset_bottom = -23.0
 theme_override_fonts/font = ExtResource("9_aqe5s")
 theme_override_font_sizes/font_size = 8
-text = "злой гриб"
+text = "makar"

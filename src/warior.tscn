@@ -315,7 +315,7 @@ shape = SubResource("RectangleShape2D_f6q61")
 [node name="AttackArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(0.16666698, -1.499999)
+position = Vector2(0.33333334, -2)
 shape = SubResource("RectangleShape2D_tp1t1")
 
 [node name="HelthBar" type="Node2D" parent="."]
@@ -334,11 +334,11 @@ texture = ExtResource("7_uod2f")
 centered = false
 
 [node name="Label" type="Label" parent="."]
-offset_left = -23.0
-offset_top = -43.333336
-offset_right = 21.0
-offset_bottom = -20.333336
+offset_left = -11.333332
+offset_top = -43.0
+offset_right = 12.666668
+offset_bottom = -20.0
 theme_override_colors/font_color = Color(0.1065738, 0.15044564, 0.99999994, 1)
 theme_override_fonts/font = ExtResource("9_gxv5c")
 theme_override_font_sizes/font_size = 8
-text = "Шторм"
+text = "sky"

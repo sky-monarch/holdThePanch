@@ -471,11 +471,11 @@ texture = ExtResource("2_mycdv")
 centered = false
 
 [node name="Label" type="Label" parent="."]
-offset_left = -23.75
+offset_left = -26.25
 offset_top = -36.25
-offset_right = 25.25
+offset_right = 27.75
 offset_bottom = -27.25
 theme_override_colors/font_color = Color(0.56023806, 0.022237225, 0.16121611, 1)
 theme_override_fonts/font = ExtResource("5_0vrw7")
 theme_override_font_sizes/font_size = 8
-text = "яровой"
+text = "Yarovoy"
