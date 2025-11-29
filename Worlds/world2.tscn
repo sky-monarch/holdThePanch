@@ -480,9 +480,6 @@ position = Vector2(1661.9999, 143)
 scale = Vector2(16.91875, 5.7611113)
 texture = ExtResource("4_e1sii")
 
-[node name="Warior" parent="." instance=ExtResource("6_e1sii")]
-position = Vector2(1027, 545)
-
 [node name="player" parent="." instance=ExtResource("5_aq5od")]
 position = Vector2(291, 491)
 
@@ -503,10 +500,13 @@ format = 2
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_e1sii")]
 process_mode = 2
-offset_left = 254.0
-offset_top = 611.0
-offset_right = 254.0
-offset_bottom = 611.0
+offset_left = -606.0
+offset_top = -119.0
+offset_right = -606.0
+offset_bottom = -119.0
+
+[node name="Warior" parent="." instance=ExtResource("6_e1sii")]
+position = Vector2(869, 574)
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager" method="_on_button_2_pressed"]

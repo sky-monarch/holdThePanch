@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cmhrewwsmp7h5"]
+[gd_scene load_steps=42 format=3 uid="uid://cmhrewwsmp7h5"]
 
 [ext_resource type="Texture2D" uid="uid://dqtcggiowwqtj" path="res://resourse/sprites/Mushroom/Attack.png" id="1_8525o"]
 [ext_resource type="Script" uid="uid://x64i0bs7w7al" path="res://scripts/mushroom.gd" id="1_pnswy"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bcbd5eanf171c" path="res://resourse/sprites/Mushroom/Run.png" id="5_4mnpj"]
 [ext_resource type="Texture2D" uid="uid://drvc6e78shxy2" path="res://resourse/sprites/helth/Pixel1_Healthbar_0002_pixel1_border.png" id="6_o7dbc"]
 [ext_resource type="Texture2D" uid="uid://3ie0ir08wrks" path="res://resourse/sprites/helth/Pixel1_Healthbar_0001_pixel1_healthbar.png" id="7_g6d2y"]
+[ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="9_aqe5s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwkf2"]
 atlas = ExtResource("1_8525o")
@@ -257,7 +258,7 @@ shape = SubResource("RectangleShape2D_qe61x")
 [node name="DetectionArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-position = Vector2(0, 8)
+position = Vector2(0, 6.6666665)
 shape = SubResource("RectangleShape2D_pldoj")
 
 [node name="AttackArea" type="Area2D" parent="."]
@@ -280,3 +281,12 @@ position = Vector2(-29, -41)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_g6d2y")
 centered = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = -30.0
+offset_top = -31.666666
+offset_right = 36.0
+offset_bottom = -22.666666
+theme_override_fonts/font = ExtResource("9_aqe5s")
+theme_override_font_sizes/font_size = 8
+text = "злой гриб"

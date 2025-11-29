@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cjlwmi86owhys"]
+[gd_scene load_steps=60 format=3 uid="uid://cjlwmi86owhys"]
 
 [ext_resource type="Script" uid="uid://2kuc0fqblmpo" path="res://scripts/golem_blue.gd" id="1_t5dxf"]
 [ext_resource type="Texture2D" uid="uid://baq05wtx4ggvn" path="res://resourse/sprites/Golem_blue/Golem_1_attack.png" id="2_fech2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://betlqlhcka4tv" path="res://resourse/sprites/Golem_blue/Golem_1_walk.png" id="6_83cme"]
 [ext_resource type="Texture2D" uid="uid://drvc6e78shxy2" path="res://resourse/sprites/helth/Pixel1_Healthbar_0002_pixel1_border.png" id="7_csbyb"]
 [ext_resource type="Texture2D" uid="uid://3ie0ir08wrks" path="res://resourse/sprites/helth/Pixel1_Healthbar_0001_pixel1_healthbar.png" id="8_hgx8b"]
+[ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="9_hgx8b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1q6o1"]
 atlas = ExtResource("2_fech2")
@@ -408,3 +409,13 @@ position = Vector2(-25.333334, -35.666668)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_hgx8b")
 centered = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = -21.0
+offset_top = -20.333334
+offset_right = 19.0
+offset_bottom = -11.333334
+theme_override_colors/font_color = Color(0.5294118, 0.34901962, 0.9254902, 1)
+theme_override_fonts/font = ExtResource("9_hgx8b")
+theme_override_font_sizes/font_size = 8
+text = "Голем"

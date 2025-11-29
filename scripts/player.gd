@@ -62,6 +62,7 @@ func attack():
 	if is_died:
 		return
 	is_attacking = true
+	is_defend = true
 	attack_area.monitoring = true  
 
 	match type_attack:
@@ -78,6 +79,7 @@ func attack():
 	await get_tree().create_timer(1.0).timeout
 	is_attacking = false
 	attack_area.monitoring = false 
+	is_defend = false
 
 func defend():
 	is_defend = true

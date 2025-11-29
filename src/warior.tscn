@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c85dgywydnwos"]
+[gd_scene load_steps=49 format=3 uid="uid://c85dgywydnwos"]
 
 [ext_resource type="Texture2D" uid="uid://dgbjf4sdll03d" path="res://resourse/sprites/yarovoy/Attack2.png" id="1_byl0u"]
 [ext_resource type="Script" uid="uid://crcdsb34d87uo" path="res://scripts/warior.gd" id="1_ufvtj"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://m3j5ae52flwj" path="res://resourse/sprites/yarovoy/Run.png" id="5_s28pd"]
 [ext_resource type="Texture2D" uid="uid://drvc6e78shxy2" path="res://resourse/sprites/helth/Pixel1_Healthbar_0002_pixel1_border.png" id="6_qla38"]
 [ext_resource type="Texture2D" uid="uid://3ie0ir08wrks" path="res://resourse/sprites/helth/Pixel1_Healthbar_0001_pixel1_healthbar.png" id="7_uod2f"]
+[ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="9_gxv5c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mcprk"]
 atlas = ExtResource("1_byl0u")
@@ -329,3 +330,13 @@ position = Vector2(-24.666666, -59.666664)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_uod2f")
 centered = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = -23.0
+offset_top = -43.333336
+offset_right = 21.0
+offset_bottom = -20.333336
+theme_override_colors/font_color = Color(0.1065738, 0.15044564, 0.99999994, 1)
+theme_override_fonts/font = ExtResource("9_gxv5c")
+theme_override_font_sizes/font_size = 8
+text = "Шторм"
