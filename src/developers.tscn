@@ -1,13 +1,16 @@
-[gd_scene load_steps=39 format=3 uid="uid://b8u02lssslba0"]
+[gd_scene load_steps=42 format=3 uid="uid://b8u02lssslba0"]
 
 [ext_resource type="Script" uid="uid://dwpr1q0rxf6gg" path="res://scripts/developers.gd" id="1_qccqi"]
 [ext_resource type="Texture2D" uid="uid://b5g7tukpbk7rb" path="res://resourse/data for the main menu/background.png" id="1_u00xc"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="2_qccqi"]
 [ext_resource type="Script" uid="uid://m1msx5wqovhn" path="res://scripts/exit_win_menu.gd" id="3_1vmhe"]
 [ext_resource type="Script" uid="uid://baybu7a7lalmv" path="res://scripts/label_win_menu.gd" id="5_odmqf"]
+[ext_resource type="Script" uid="uid://c3q0vv7q07igx" path="res://scripts/developer_name.gd" id="6_odmqf"]
 [ext_resource type="Texture2D" uid="uid://bomhvrm3qkd01" path="res://resourse/sprites/Mushroom/Idle.png" id="6_qccqi"]
 [ext_resource type="Texture2D" uid="uid://w83u1gxv885b" path="res://resourse/sprites/Samurai/Idle.png" id="7_op5bp"]
+[ext_resource type="Script" uid="uid://gh3b6dnjvhvl" path="res://scripts/miany_name.gd" id="8_8q405"]
 [ext_resource type="Texture2D" uid="uid://bylp36h6ner6" path="res://resourse/sprites/yarovoy/Idle.png" id="8_odmqf"]
+[ext_resource type="Script" uid="uid://dbo3l0t6bky8" path="res://scripts/sky_name.gd" id="10_03qy1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8q405"]
 texture = ExtResource("1_u00xc")
@@ -310,6 +313,7 @@ theme_override_fonts/font = ExtResource("2_qccqi")
 theme_override_font_sizes/font_size = 36
 text = "Makar
 (Макаров)"
+script = ExtResource("6_odmqf")
 
 [node name="Makar" type="AnimatedSprite2D" parent="Makar_name"]
 position = Vector2(-87.00002, 3.000002)
@@ -335,6 +339,7 @@ theme_override_fonts/font = ExtResource("2_qccqi")
 theme_override_font_sizes/font_size = 36
 text = "Minay
 (Минайленко)"
+script = ExtResource("8_8q405")
 
 [node name="Minay" type="AnimatedSprite2D" parent="Miany_name"]
 position = Vector2(472, 36)
@@ -360,6 +365,7 @@ theme_override_fonts/font = ExtResource("2_qccqi")
 theme_override_font_sizes/font_size = 36
 text = "Sky
 (Скытев)"
+script = ExtResource("10_03qy1")
 
 [node name="Sky" type="AnimatedSprite2D" parent="Sky_name"]
 position = Vector2(-95, 35)
