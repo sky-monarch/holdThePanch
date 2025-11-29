@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ds57yxa7g8e0g"]
+[gd_scene load_steps=18 format=3 uid="uid://ds57yxa7g8e0g"]
 
 [ext_resource type="Script" uid="uid://taw55627j3vx" path="res://scripts/sripts_for_main_menu/main_menu.gd" id="1_ln5vx"]
 [ext_resource type="Texture2D" uid="uid://b5g7tukpbk7rb" path="res://resourse/data for the main menu/background.png" id="2_l71uw"]
@@ -39,6 +39,35 @@ shadow_offset = Vector2(0, 4)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vrkn"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ji5wi"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln5vx"]
+bg_color = Color(0.5132329, 0.5132329, 0.5132329, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l71uw"]
+bg_color = Color(0.74138474, 0.7413847, 0.74138457, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rpcbn"]
+
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_jix8l"]
 color = Color(1, 1, 1, 0)
 thickness = 6
@@ -66,7 +95,6 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
 
 [node name="MainButton" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3550347
@@ -109,6 +137,21 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
 text = "НАСТРОЙКИ
 "
 
+[node name="Button4" type="Button" parent="MainButton"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rpcbn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ji5wi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ln5vx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l71uw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rpcbn")
+text = "О СОздателях"
+
 [node name="Button3" type="Button" parent="MainButton"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -149,6 +192,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Options" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.21093753
@@ -271,6 +315,7 @@ script = ExtResource("7_vwpwm")
 
 [connection signal="pressed" from="MainButton/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButton/Button2" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainButton/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="MainButton/Button3" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Options/Back" to="." method="_on_back_options_pressed"]
 [connection signal="value_changed" from="Options/VBoxContainer/HBoxContainer/AudioControl" to="Options/VBoxContainer/HBoxContainer/AudioControl" method="_on_value_changed"]
