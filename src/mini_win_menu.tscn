@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddgw18gyfiago"]
+[gd_scene load_steps=9 format=3 uid="uid://ddgw18gyfiago"]
 
+[ext_resource type="Script" uid="uid://cphtimcngxtna" path="res://scripts/mini_win_menu.gd" id="1_0wexb"]
 [ext_resource type="Texture2D" uid="uid://b5g7tukpbk7rb" path="res://resourse/data for the main menu/background.png" id="1_odvd6"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="1_onm2f"]
 
@@ -42,6 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0wexb")
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 1
@@ -148,3 +150,6 @@ theme_override_font_sizes/font_size = 66
 text = "ПОБЕДА!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]
