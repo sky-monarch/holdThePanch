@@ -46,14 +46,15 @@ animations = [{
 size = Vector2(29, 26)
 
 [node name="HealthCrystal" type="Area2D"]
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
+collision_layer = 16
 script = ExtResource("1_xjqff")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mp3so")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.9939221
+frame_progress = 0.487751
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)

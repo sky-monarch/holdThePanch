@@ -4,10 +4,11 @@ extends CharacterBody2D
 @export var run_speed: float = 700
 @export var gravity: float = 900
 @export var jump_force: float = -500
-@export var damage: int = 10
+@export var base_damage: int = 10
 @export var base_max_hp: int = 100
 var max_hp: int
 var hp: int
+var damage: int
 var health_crystals_collected: int = 0
 @export var change_crit_damade = 0.3
 @export var crit_damage = 2
@@ -28,6 +29,7 @@ var is_died = false
 func _ready():
 	max_hp = base_max_hp
 	hp = max_hp
+	damage = base_damage
 	update_helth_bar()
 
 func _physics_process(delta: float) -> void:
@@ -155,3 +157,6 @@ func increase_max_health(amount: int):
 	
 	# Обновляем UI
 	update_helth_bar()
+	
+func increase_damage(_damage_bonus):
+	damage+=_damage_bonus
