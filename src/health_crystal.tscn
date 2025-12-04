@@ -1,0 +1,60 @@
+[gd_scene load_steps=12 format=3 uid="uid://cwdqntnqfc1v8"]
+
+[ext_resource type="Script" uid="uid://djobtxvc5spmn" path="res://scripts/health_crystal.gd" id="1_xjqff"]
+[ext_resource type="Texture2D" uid="uid://h1oxbynanism" path="res://resourse/sprites/gem_large/frame0000.png" id="2_d3te0"]
+[ext_resource type="Texture2D" uid="uid://bxgwb6dq5tjf" path="res://resourse/sprites/gem_large/frame0001.png" id="3_5xk2e"]
+[ext_resource type="Texture2D" uid="uid://dwbt4gsmh5aon" path="res://resourse/sprites/gem_large/frame0002.png" id="4_mmm66"]
+[ext_resource type="Texture2D" uid="uid://clm28vaqui0xp" path="res://resourse/sprites/gem_large/frame0003.png" id="5_5dytc"]
+[ext_resource type="Texture2D" uid="uid://dcdexw3ueucmm" path="res://resourse/sprites/gem_large/frame0004.png" id="6_46xs7"]
+[ext_resource type="Texture2D" uid="uid://oov7dxq2xmj1" path="res://resourse/sprites/gem_large/frame0005.png" id="7_6s8rv"]
+[ext_resource type="Texture2D" uid="uid://cnlgdhmrt65v6" path="res://resourse/sprites/gem_large/frame0006.png" id="8_nrt73"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jca07"]
+atlas = ExtResource("2_d3te0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mp3so"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jca07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5xk2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mmm66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5dytc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_46xs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6s8rv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nrt73")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhggo"]
+size = Vector2(29, 26)
+
+[node name="HealthCrystal" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_xjqff")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mp3so")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.9939221
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_vhggo")

@@ -5,11 +5,13 @@ extends CharacterBody2D
 @export var gravity: float = 900
 @export var jump_force: float = -500
 @export var damage: int = 10
-@export var max_hp: int = 100
+@export var base_max_hp: int = 100
+var max_hp: int
+var hp: int
+var health_crystals_collected: int = 0
 @export var change_crit_damade = 0.3
 @export var crit_damage = 2
 
-var hp: int = max_hp
 var is_attacking: bool = false
 var is_defend: bool = false
 var is_hurting: bool = false
@@ -23,6 +25,10 @@ var is_died = false
 @onready var helth_bar = $HelthBar/FullHelthBar
 @onready var empty_bar = $HelthBar/EmptyHelthBar
 
+func _ready():
+	max_hp = base_max_hp
+	hp = max_hp
+	update_helth_bar()
 
 func _physics_process(delta: float) -> void:
 	if is_died:
@@ -136,3 +142,16 @@ func heal(amount: int):
 	update_helth_bar()
 	
 	
+func increase_max_health(amount: int):
+	# Увеличиваем максимальное здоровье
+	var old_max_hp = max_hp
+	max_hp += amount
+	
+	# Также восстанавливаем текущее здоровье пропорционально
+	var health_percentage = float(hp) / float(old_max_hp)
+	hp = int(max_hp * health_percentage) + amount
+	
+	health_crystals_collected += 1
+	
+	# Обновляем UI
+	update_helth_bar()

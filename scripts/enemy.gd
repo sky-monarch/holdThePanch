@@ -9,7 +9,9 @@ class_name Enemy
 
 @export_category("Loot Settings")
 @export var drop_potion_chance: float = 0.7
+@export var drop_crystal_chance: float = 1  # 15% шанс
 @export var potion_scene: PackedScene = preload("res://src/potion.tscn")
+@export var health_crystal_scene: PackedScene = preload("res://src/health_crystal.tscn")
 
 
 var hp: int
@@ -26,6 +28,7 @@ var tween = null
 @onready var attack_area: Area2D = $AttackArea
 @onready var helth_bar = $HelthBar/FullHelthBar
 @onready var empty_bar = $HelthBar/EmptyHelthBar
+signal died
 
 func _ready() -> void:
 	hp = max_hp
@@ -131,7 +134,7 @@ func die() -> void:
 	
 	anim.play("Die")
 	await anim.animation_finished
-	try_drop_potion()
+	try_drop_loot()
 	emit_signal("died")
 	queue_free()
 	
@@ -143,8 +146,23 @@ func update_helth_bar():
 	tween.tween_property(helth_bar, "scale:x", scale_hp, 0.2)
 	tween.tween_property(empty_bar, "scale:x", scale_hp, 0.2)
 	
-func try_drop_potion():
+func try_drop_loot():
+	# Зелье
 	if potion_scene and randf() <= drop_potion_chance:
-		var potion = potion_scene.instantiate()
-		potion.global_position = global_position
-		get_tree().current_scene.add_child(potion)
+		drop_item(potion_scene)
+	
+	# Кристалл здоровья
+	if health_crystal_scene and randf() <= drop_crystal_chance:
+		drop_item(health_crystal_scene)
+		
+func drop_item(item_scene: PackedScene):
+	var item = item_scene.instantiate()
+	
+	# Случайное смещение от центра врага
+	var offset = Vector2(
+		randf_range(-15, 15),
+		randf_range(-15, 15)
+	)
+	item.global_position = global_position + offset
+	
+	get_tree().current_scene.add_child(item)
