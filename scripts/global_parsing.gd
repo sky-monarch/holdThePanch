@@ -6,7 +6,6 @@ const SAVE_FILE_PATH = "res://savegame.json"
 # Данные для сохранения
 var game_data = {
 	"difficulty": 2,
-	"time": 0.0,
 	"player1": {
 		"max_health": 100,
 		"current_health": 100,
