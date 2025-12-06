@@ -1,40 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://djrpqwxuu7lfe"]
+[gd_scene load_steps=7 format=3 uid="uid://djrpqwxuu7lfe"]
 
 [ext_resource type="Script" uid="uid://c7m30cko2jxf1" path="res://play_mode.gd" id="1_p3xef"]
 [ext_resource type="Texture2D" uid="uid://b5g7tukpbk7rb" path="res://resourse/data for the main menu/background.png" id="1_yyb2u"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="2_m6ob1"]
+[ext_resource type="Script" uid="uid://baybu7a7lalmv" path="res://scripts/label_win_menu.gd" id="4_t5pym"]
+[ext_resource type="Script" uid="uid://dhx7iq2mr7unb" path="res://panel.gd" id="5_aqcpk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6ob1"]
 texture = ExtResource("1_yyb2u")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3xef"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_size = 8
-shadow_offset = Vector2(0, 4)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e145"]
-bg_color = Color(0.5132329, 0.5132329, 0.5132329, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_size = 8
-shadow_offset = Vector2(0, 4)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5pym"]
-bg_color = Color(0.74138474, 0.7413847, 0.74138457, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_size = 8
-shadow_offset = Vector2(0, 4)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqcpk"]
 
 [node name="play_Mode" type="Control"]
 layout_mode = 3
@@ -71,61 +44,71 @@ theme_override_font_sizes/font_size = 33
 text = "ВЫБЕРИТЕ ИГРОВОЙ РЕЖИМ:"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("4_t5pym")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button2" type="Button" parent="Panel"]
+[node name="Panel2" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -441.0
-offset_top = -129.0
-offset_right = -142.0
-offset_bottom = -78.0
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -196.0
+offset_right = 552.0
+offset_bottom = 311.0
 grow_horizontal = 2
-grow_vertical = 0
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_m6ob1")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_p3xef")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7e145")
-theme_override_styles/hover = SubResource("StyleBoxFlat_t5pym")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_aqcpk")
-text = "ВЫБРАТЬ"
+grow_vertical = 2
+script = ExtResource("5_aqcpk")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button3" type="Button" parent="Panel"]
+[node name="Label" type="Label" parent="Panel2"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.95390624
+anchors_preset = 12
 anchor_top = 1.0
-anchor_right = 0.95390624
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -441.0
-offset_top = -129.0
-offset_right = -142.0
-offset_bottom = -78.0
+offset_top = -87.0
 grow_horizontal = 2
 grow_vertical = 0
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_m6ob1")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_p3xef")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7e145")
-theme_override_styles/hover = SubResource("StyleBoxFlat_t5pym")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_aqcpk")
-text = "ВЫБРАТЬ"
+theme_override_font_sizes/font_size = 25
+text = "Многопользовательский
+режим"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -580.0
+offset_top = -196.0
+offset_right = -38.0
+offset_bottom = 311.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_aqcpk")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]
+[node name="Label" type="Label" parent="Panel3"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -87.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_m6ob1")
+theme_override_font_sizes/font_size = 25
+text = "одиночный режим"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gui_input" from="Panel2" to="." method="_on_panel_2_gui_input"]
+[connection signal="gui_input" from="Panel3" to="." method="_on_panel_gui_input"]
