@@ -9,7 +9,7 @@ extends CharacterBody2D
 var max_hp: int
 var hp: int
 var damage: int
-var health_crystals_collected: int = 0
+var kills = 0
 @export var change_crit_damade = 0.3
 @export var crit_damage = 2
 
@@ -162,7 +162,6 @@ func increase_max_health(amount: int):
 	var health_percentage = float(hp) / float(old_max_hp)
 	hp = int(max_hp * health_percentage) + amount
 	
-	health_crystals_collected += 1
 	
 	# Обновляем UI
 	update_helth_bar()
@@ -170,4 +169,17 @@ func increase_max_health(amount: int):
 func increase_damage(_damage_bonus):
 	damage+=_damage_bonus
 	
-	
+
+func get_save_data() -> Dictionary:
+	return {
+		"max_health": max_hp,
+		"current_health": hp,
+		"damage": damage,
+		"kills": kills,
+	}
+
+func load_save_data(data: Dictionary):
+	max_hp = data.get("max_health",max_hp)
+	hp = data.get("current_health", hp)
+	damage = data.get("damage", damage)
+	kills = data.get("kills", kills)

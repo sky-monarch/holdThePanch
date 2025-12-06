@@ -90,7 +90,6 @@ func save_exists() -> bool:
 func delete_save() -> bool:
 	if save_exists():
 		DirAccess.remove_absolute(SAVE_FILE_PATH)
-		print("Сохранение удалено")
 		return true
 	return false
 
@@ -100,8 +99,6 @@ func update_player_data(player_num: int, data: Dictionary):
 	if game_data.has(player_key):
 		for key in data:
 			game_data[player_key][key] = data[key]
-	else:
-		print("Ошибка: игрок ", player_num, " не найден в данных")
 
 func get_player_data(player_num: int) -> Dictionary:
 	var player_key = "player" + str(player_num)
@@ -113,25 +110,6 @@ func set_difficulty(difficulty: int):
 func get_difficulty() -> int:
 	return game_data.get("difficulty", 1)
 
-func add_kill(player_num: int):
-	var player_key = "player" + str(player_num)
-	if game_data.has(player_key):
-		game_data[player_key]["kills"] = game_data[player_key].get("kills", 0) + 1
-
-func get_kills(player_num: int) -> int:
-	var player_key = "player" + str(player_num)
-	return game_data.get(player_key, {}).get("kills", 0)
-
-func save_player_position(player_num: int, position: Vector2):
-	var player_key = "player" + str(player_num)
-	if game_data.has(player_key):
-		game_data[player_key]["position_x"] = position.x
-		game_data[player_key]["position_y"] = position.y
-
-func get_player_position(player_num: int) -> Vector2:
-	var player_key = "player" + str(player_num)
-	var data = game_data.get(player_key, {})
-	return Vector2(data.get("position_x", 0.0), data.get("position_y", 0.0))
 
 # метод для создания новой игры
 func new_game(difficulty: int = 1):
