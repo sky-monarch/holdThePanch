@@ -1,0 +1,126 @@
+[gd_scene load_steps=8 format=3 uid="uid://djrpqwxuu7lfe"]
+
+[ext_resource type="Texture2D" uid="uid://b5g7tukpbk7rb" path="res://resourse/data for the main menu/background.png" id="1_yyb2u"]
+[ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="2_m6ob1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6ob1"]
+texture = ExtResource("1_yyb2u")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3xef"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e145"]
+bg_color = Color(0.5132329, 0.5132329, 0.5132329, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5pym"]
+bg_color = Color(0.74138474, 0.7413847, 0.74138457, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqcpk"]
+
+[node name="play_Mode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m6ob1")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49296874
+anchor_top = 0.020833334
+anchor_right = 0.49296874
+anchor_bottom = 0.020833334
+offset_left = -389.0
+offset_top = 32.0
+offset_right = 395.0
+offset_bottom = 116.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_m6ob1")
+theme_override_font_sizes/font_size = 33
+text = "ВЫБЕРИТЕ ИГРОВОЙ РЕЖИМ:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -441.0
+offset_top = -129.0
+offset_right = -142.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_m6ob1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_p3xef")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7e145")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t5pym")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aqcpk")
+text = "ВЫБРАТЬ"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.95390624
+anchor_top = 1.0
+anchor_right = 0.95390624
+anchor_bottom = 1.0
+offset_left = -441.0
+offset_top = -129.0
+offset_right = -142.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_m6ob1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_p3xef")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7e145")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t5pym")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aqcpk")
+text = "ВЫБРАТЬ"
+metadata/_edit_use_anchors_ = true
