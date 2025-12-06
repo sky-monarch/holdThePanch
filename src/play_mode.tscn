@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="3_stkbs"]
 [ext_resource type="Script" uid="uid://baybu7a7lalmv" path="res://scripts/label_win_menu.gd" id="4_rfcqe"]
 [ext_resource type="Script" uid="uid://chpan362hn4kf" path="res://src/load.gd" id="5_8ykrq"]
-[ext_resource type="Script" uid="uid://dhx7iq2mr7unb" path="res://scripts/panel.gd" id="5_jgylt"]
+[ext_resource type="Script" path="res://scripts/panel.gd" id="5_jgylt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6ob1"]
 texture = ExtResource("2_8ykrq")
@@ -163,3 +163,4 @@ vertical_alignment = 1
 
 [connection signal="gui_input" from="Panel2" to="." method="_on_panel_2_gui_input"]
 [connection signal="gui_input" from="Panel3" to="." method="_on_panel_gui_input"]
+[connection signal="pressed" from="Panel3/Button2" to="Panel3/Button2" method="_on_pressed"]

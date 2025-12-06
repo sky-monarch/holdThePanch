@@ -19,6 +19,14 @@ var screen_shake_timer: float = 0.0
 func _ready():
 	if camera:
 		camera.make_current()
+	if SaveSystem.is_load:
+		SaveSystem.load_game()
+		var players = get_tree().get_nodes_in_group("player")
+		players[0].load_save_data()
+		players[1].load_save_data()
+		SaveSystem.is_load = false
+		
+		
 
 func _process(delta):
 	if not camera or not player1 or not player2:

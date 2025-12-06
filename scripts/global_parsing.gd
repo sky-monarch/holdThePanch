@@ -28,6 +28,7 @@ var game_data = {
 }
 
 var difficulty = 2
+var is_load = false
 
 func save_game() -> bool:
 	# Проверяем, есть ли уже timestamp (создано ли сохранение)

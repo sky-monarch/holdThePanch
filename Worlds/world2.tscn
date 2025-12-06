@@ -487,14 +487,7 @@ position = Vector2(865, 487)
 
 [node name="player" parent="." instance=ExtResource("5_aq5od")]
 position = Vector2(291, 491)
-speed = null
-run_speed = null
-gravity = null
-jump_force = null
-base_damage = null
-base_max_hp = null
-change_crit_damade = null
-crit_damage = null
+base_max_hp = 100
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="player"]
 position = Vector2(-2.3333435, 2)
