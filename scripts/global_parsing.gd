@@ -1,7 +1,7 @@
 extends Node
 
 # Константы
-const SAVE_FILE_PATH = "user://savegame.dat"
+const SAVE_FILE_PATH = "res://savegame.json"
 
 # Данные для сохранения
 var game_data = {
@@ -49,6 +49,7 @@ func save_game() -> bool:
 	var json_data = JSON.stringify(game_data, "\t")
 	file.store_string(json_data)
 	file.close()
+	print("УСПЕХ")
 	
 	return true
 
@@ -102,12 +103,12 @@ func get_player_data(player_num: int) -> Dictionary:
 	var player_key = "player" + str(player_num)
 	return game_data.get(player_key, {}).duplicate(true)
 
-func set_difficulty(_difficulty: int):
+func set_difficulty(_difficulty: float):
 	game_data["difficulty"] = _difficulty
 	difficulty = _difficulty
 	print("Изменена сложность на"+str(_difficulty))
 
-func get_difficulty() -> int:
+func get_difficulty() -> float:
 	return game_data.get("difficulty", 2)
 
 
@@ -115,7 +116,6 @@ func get_difficulty() -> int:
 func new_game():
 	game_data = {
 		"difficulty": difficulty,
-		"time": 0.0,
 		"player1": {
 			"max_health": 100,
 			"current_health": 100,

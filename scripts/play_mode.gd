@@ -19,4 +19,4 @@ func _on_panel_gui_input(event: InputEvent) -> void:
 func _on_panel_2_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			get_tree().change_scene_to_file("res://Worlds/TileSets/world1.tscn")
+			get_tree().change_scene_to_file("res://Worlds/world2.tscn")

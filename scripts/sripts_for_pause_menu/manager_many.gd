@@ -1,8 +1,8 @@
 extends Node
-@onready var pause_menu = $"../CanvasLayer/PauseMenu"
+@onready var pause_menu = $"../CanvasLayer/pause_menu_many"
 var game_paused: bool = false
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		game_paused = !game_paused
 		
@@ -23,7 +23,10 @@ func _on_button_3_pressed() -> void:
 	get_tree().paused = false
 	get_tree(). change_scene_to_file("res://src/scenes_for_main_menu/main_menu.tscn")
 
-# замена на сохранение игры.
-#func _on_button_2_pressed() -> void:
-#	get_tree().paused = false
-#	get_tree(). change_scene_to_file("res://Worlds/TileSets/world2.tscn")
+
+func _on_button_2_pressed() -> void:
+	
+	var players = get_tree().get_nodes_in_group("player")
+	players[0].save_data()
+	players[1].save_data()
+	SaveSystem.save_game()
