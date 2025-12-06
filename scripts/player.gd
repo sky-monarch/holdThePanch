@@ -25,12 +25,21 @@ var is_died = false
 @onready var defend_area = $DefendArea
 @onready var helth_bar = $HelthBar/FullHelthBar
 @onready var empty_bar = $HelthBar/EmptyHelthBar
+@onready var camera = $Camera2D
 
 func _ready():
 	max_hp = base_max_hp
 	hp = max_hp
 	damage = base_damage
 	update_helth_bar()
+	# Автоматически выключаем камеру если она не нужна
+	if should_disable_camera():
+		camera.enabled = false
+
+func should_disable_camera() -> bool:
+	# Проверяем нужна ли камера в текущей сцене
+	var current_scene = get_tree().current_scene.name
+	return current_scene in "MainCamera"
 
 func _physics_process(delta: float) -> void:
 	if is_died:
@@ -160,3 +169,5 @@ func increase_max_health(amount: int):
 	
 func increase_damage(_damage_bonus):
 	damage+=_damage_bonus
+	
+	

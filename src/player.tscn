@@ -567,7 +567,6 @@ position = Vector2(0, 1.5000004)
 shape = SubResource("RectangleShape2D_ehvfd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 offset = Vector2(0, -120)
 
 [node name="DefendArea" type="Area2D" parent="."]
