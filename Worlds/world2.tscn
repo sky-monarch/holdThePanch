@@ -513,10 +513,6 @@ offset_bottom = 51.0
 [node name="MainCamera" type="Camera2D" parent="."]
 position = Vector2(639, 349)
 
-[node name="ScreenDivider" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager" method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button3" to="Manager" method="_on_button_3_pressed"]
