@@ -25,21 +25,12 @@ var is_died = false
 @onready var defend_area = $DefendArea
 @onready var helth_bar = $HelthBar/FullHelthBar
 @onready var empty_bar = $HelthBar/EmptyHelthBar
-@onready var camera = $Camera2D
 
 func _ready():
 	max_hp = base_max_hp
 	hp = max_hp
 	damage = base_damage
 	update_helth_bar()
-	# Автоматически выключаем камеру если она не нужна
-	if should_disable_camera():
-		camera.enabled = false
-
-func should_disable_camera() -> bool:
-	# Проверяем нужна ли камера в текущей сцене
-	var current_scene = get_tree().current_scene.name
-	return current_scene in "MainCamera"
 
 func _physics_process(delta: float) -> void:
 	if is_died:
@@ -53,11 +44,11 @@ func _physics_process(delta: float) -> void:
 	if is_attacking or is_defend or is_hurting:
 		velocity.x = 0
 	else:
-		var direction = Input.get_axis("left", "right")
-		var is_running = Input.is_action_pressed("run")
+		var direction = Input.get_axis("left_two", "right_two")
+		var is_running = Input.is_action_pressed("run_two")
 		velocity.x = direction * (run_speed if is_running else speed)
 
-		if Input.is_action_just_pressed("jump") and is_on_floor():
+		if Input.is_action_just_pressed("jump_two") and is_on_floor():
 			velocity.y = jump_force
 
 		if not is_on_floor():
@@ -68,10 +59,10 @@ func _physics_process(delta: float) -> void:
 		else:
 			anim.play("Idle")
 
-	if Input.is_action_just_pressed("attack") and not (is_attacking or is_defend or is_hurting):
+	if Input.is_action_just_pressed("attack_two") and not (is_attacking or is_defend or is_hurting):
 		attack()
 
-	if Input.is_action_just_pressed("defend") and not (is_attacking or is_hurting):
+	if Input.is_action_just_pressed("defend_two") and not (is_attacking or is_hurting):
 		defend()
 
 	move_and_slide()
@@ -162,14 +153,11 @@ func increase_max_health(amount: int):
 	var health_percentage = float(hp) / float(old_max_hp)
 	hp = int(max_hp * health_percentage) + amount
 	
-	
 	# Обновляем UI
 	update_helth_bar()
 	
 func increase_damage(_damage_bonus):
 	damage+=_damage_bonus
-	
-
 func save_data():
 	@warning_ignore("unused_variable")
 	var data =  {
@@ -180,12 +168,12 @@ func save_data():
 		"position_x": global_position.x,
 		"position_y": global_position.y,
 	}
-	SaveSystem.update_player_data(1, data)
+	SaveSystem.update_player_data(2, data)
 
 func load_save_data(data: Dictionary):
 	if data.is_empty() and Engine.has_singleton("SaveSystem"):
 		# Автоматическая загрузка из SaveSystem
-		data = SaveSystem.get_player_data(1)
+		data = SaveSystem.get_player_data(2)
 	# Загружаем данные
 	max_hp = data.get("max_health", max_hp)
 	hp = data.get("current_health", hp)
