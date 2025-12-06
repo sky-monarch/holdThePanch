@@ -1,13 +1,43 @@
-[gd_scene load_steps=7 format=3 uid="uid://djrpqwxuu7lfe"]
+[gd_scene load_steps=12 format=3 uid="uid://djrpqwxuu7lfe"]
 
 [ext_resource type="Script" uid="uid://c7m30cko2jxf1" path="res://scripts/play_mode.gd" id="1_sh7tn"]
 [ext_resource type="Texture2D" uid="uid://b5g7tukpbk7rb" path="res://resourse/data for the main menu/background.png" id="2_8ykrq"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="3_stkbs"]
 [ext_resource type="Script" uid="uid://baybu7a7lalmv" path="res://scripts/label_win_menu.gd" id="4_rfcqe"]
+[ext_resource type="Script" uid="uid://chpan362hn4kf" path="res://src/load.gd" id="5_8ykrq"]
 [ext_resource type="Script" uid="uid://dhx7iq2mr7unb" path="res://scripts/panel.gd" id="5_jgylt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6ob1"]
 texture = ExtResource("2_8ykrq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sh7tn"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ykrq"]
+bg_color = Color(0.5132329, 0.5132329, 0.5132329, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stkbs"]
+bg_color = Color(0.74138474, 0.7413847, 0.74138457, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rfcqe"]
 
 [node name="play_Mode" type="Control"]
 layout_mode = 3
@@ -94,6 +124,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_jgylt")
 metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="Panel3"]
+layout_mode = 0
+offset_left = 729.0
+offset_top = 24.0
+offset_right = 997.0
+offset_bottom = 57.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_stkbs")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_sh7tn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ykrq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_stkbs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rfcqe")
+text = "загрузка
+"
+script = ExtResource("5_8ykrq")
 
 [node name="Label" type="Label" parent="Panel3"]
 layout_mode = 1
