@@ -9,7 +9,7 @@ extends CharacterBody2D
 var max_hp: int
 var hp: int
 var damage: int
-var health_crystals_collected: int = 0
+var kills = 0
 @export var change_crit_damade = 0.3
 @export var crit_damage = 2
 
@@ -153,10 +153,33 @@ func increase_max_health(amount: int):
 	var health_percentage = float(hp) / float(old_max_hp)
 	hp = int(max_hp * health_percentage) + amount
 	
-	health_crystals_collected += 1
-	
 	# Обновляем UI
 	update_helth_bar()
 	
 func increase_damage(_damage_bonus):
 	damage+=_damage_bonus
+func save_data():
+	@warning_ignore("unused_variable")
+	var data =  {
+		"max_health": max_hp,
+		"current_health": hp,
+		"damage": damage,
+		"kills": kills,
+		"position_x": global_position.x,
+		"position_y": global_position.y,
+	}
+	SaveSystem.update_player_data(2, data)
+
+func load_save_data(data: Dictionary):
+	if data.is_empty() and Engine.has_singleton("SaveSystem"):
+		# Автоматическая загрузка из SaveSystem
+		data = SaveSystem.get_player_data(2)
+	# Загружаем данные
+	max_hp = data.get("max_health", max_hp)
+	hp = data.get("current_health", hp)
+	damage = data.get("damage", damage)
+	kills = data.get("kills", kills)
+	# Позиция
+	var pos_x = data.get("position_x", global_position.x)
+	var pos_y = data.get("position_y", global_position.y)
+	global_position = Vector2(pos_x, pos_y)

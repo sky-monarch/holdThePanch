@@ -1,6 +1,4 @@
-# SaveSystem.gd
 extends Node
-class_name SaveSystem
 
 # Константы
 const SAVE_FILE_PATH = "user://savegame.dat"
@@ -16,7 +14,6 @@ var game_data = {
 		"kills": 0,
 		"position_x": 0.0,
 		"position_y": 0.0,
-		"collected_items": []
 	},
 	"player2": {
 		"max_health": 100,
@@ -25,7 +22,6 @@ var game_data = {
 		"kills": 0,
 		"position_x": 100.0,
 		"position_y": 0.0,
-		"collected_items": []
 	},
 	"timestamp": "", 
 	"last_saved": ""  
@@ -113,9 +109,6 @@ func get_difficulty() -> int:
 
 # метод для создания новой игры
 func new_game(difficulty: int = 1):
-	"""
-	Создает новое сохранение (сбрасывает timestamp)
-	"""
 	game_data = {
 		"difficulty": difficulty,
 		"time": 0.0,

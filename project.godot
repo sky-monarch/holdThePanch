@@ -22,6 +22,7 @@ buses/default_bus_layout="res://resourse/data for the main menu/default_bus_layo
 [autoload]
 
 GlobalMusic="*res://src/GlobalMusic.tscn"
+SaveSystem="*res://scripts/global_parsing.gd"
 
 [display]
 

@@ -170,16 +170,28 @@ func increase_damage(_damage_bonus):
 	damage+=_damage_bonus
 	
 
-func get_save_data() -> Dictionary:
-	return {
+func save_data():
+	@warning_ignore("unused_variable")
+	var data =  {
 		"max_health": max_hp,
 		"current_health": hp,
 		"damage": damage,
 		"kills": kills,
+		"position_x": global_position.x,
+		"position_y": global_position.y,
 	}
+	SaveSystem.update_player_data(1, data)
 
 func load_save_data(data: Dictionary):
-	max_hp = data.get("max_health",max_hp)
+	if data.is_empty() and Engine.has_singleton("SaveSystem"):
+		# Автоматическая загрузка из SaveSystem
+		data = SaveSystem.get_player_data(1)
+	# Загружаем данные
+	max_hp = data.get("max_health", max_hp)
 	hp = data.get("current_health", hp)
 	damage = data.get("damage", damage)
 	kills = data.get("kills", kills)
+	# Позиция
+	var pos_x = data.get("position_x", global_position.x)
+	var pos_y = data.get("position_y", global_position.y)
+	global_position = Vector2(pos_x, pos_y)
