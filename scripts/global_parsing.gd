@@ -5,7 +5,7 @@ const SAVE_FILE_PATH = "user://savegame.dat"
 
 # Данные для сохранения
 var game_data = {
-	"difficulty": 1,
+	"difficulty": 2,
 	"time": 0.0,
 	"player1": {
 		"max_health": 100,
@@ -26,6 +26,8 @@ var game_data = {
 	"timestamp": "", 
 	"last_saved": ""  
 }
+
+var difficulty = 2
 
 func save_game() -> bool:
 	# Проверяем, есть ли уже timestamp (создано ли сохранение)
@@ -100,15 +102,17 @@ func get_player_data(player_num: int) -> Dictionary:
 	var player_key = "player" + str(player_num)
 	return game_data.get(player_key, {}).duplicate(true)
 
-func set_difficulty(difficulty: int):
-	game_data["difficulty"] = difficulty
+func set_difficulty(_difficulty: int):
+	game_data["difficulty"] = _difficulty
+	difficulty = _difficulty
+	print("Изменена сложность на"+str(_difficulty))
 
 func get_difficulty() -> int:
-	return game_data.get("difficulty", 1)
+	return game_data.get("difficulty", 2)
 
 
 # метод для создания новой игры
-func new_game(difficulty: int = 1):
+func new_game():
 	game_data = {
 		"difficulty": difficulty,
 		"time": 0.0,
