@@ -8,7 +8,7 @@ func _ready():
 	options.visible = false
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Worlds/TileSets/world1.tscn")
+	get_tree().change_scene_to_file("res://src/play_mode.tscn")
 
 
 func _on_settings_pressed() -> void:

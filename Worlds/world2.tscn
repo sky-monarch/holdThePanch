@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://cah61mokfrd7d"]
+[gd_scene load_steps=15 format=3 uid="uid://cah61mokfrd7d"]
 
+[ext_resource type="Script" uid="uid://cjatp44w8xo2d" path="res://scripts/world_2_test.gd" id="1_aq5od"]
 [ext_resource type="Script" uid="uid://u367mgwldw4v" path="res://scripts/sripts_for_pause_menu/manager.gd" id="1_hei82"]
 [ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="1_k2e5y"]
 [ext_resource type="Texture2D" uid="uid://df2wcbov6k2cr" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="2_4nfeb"]
 [ext_resource type="Texture2D" uid="uid://bvg7vttqldruv" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_2.png" id="3_hei82"]
 [ext_resource type="Texture2D" uid="uid://deggl3p4l1xo8" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_3.png" id="4_e1sii"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="5_aq5od"]
-[ext_resource type="PackedScene" uid="uid://c85dgywydnwos" path="res://src/warior.tscn" id="6_e1sii"]
+[ext_resource type="PackedScene" uid="uid://c1w6cpcs1aera" path="res://src/player_two.tscn" id="6_e1sii"]
 [ext_resource type="PackedScene" uid="uid://bbtfx7m8o08ek" path="res://src/pause_menu.tscn" id="7_e1sii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qbwb"]
@@ -446,6 +447,7 @@ animations = [{
 [sub_resource type="TileSet" id="TileSet_k2e5y"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_aq5od")
 
 [node name="Manager" type="Node" parent="."]
 process_mode = 3
@@ -480,8 +482,19 @@ position = Vector2(1661.9999, 143)
 scale = Vector2(16.91875, 5.7611113)
 texture = ExtResource("4_e1sii")
 
+[node name="player_two" parent="." instance=ExtResource("6_e1sii")]
+position = Vector2(865, 487)
+
 [node name="player" parent="." instance=ExtResource("5_aq5od")]
 position = Vector2(291, 491)
+speed = null
+run_speed = null
+gravity = null
+jump_force = null
+base_damage = null
+base_max_hp = null
+change_crit_damade = null
+crit_damage = null
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="player"]
 position = Vector2(-2.3333435, 2)
@@ -500,13 +513,13 @@ format = 2
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_e1sii")]
 process_mode = 2
-offset_left = -606.0
-offset_top = -119.0
-offset_right = -606.0
-offset_bottom = -119.0
+offset_left = -599.0
+offset_top = 51.0
+offset_right = -599.0
+offset_bottom = 51.0
 
-[node name="Warior" parent="." instance=ExtResource("6_e1sii")]
-position = Vector2(869, 574)
+[node name="MainCamera" type="Camera2D" parent="."]
+position = Vector2(639, 349)
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button" to="Manager" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/MainButton/Button2" to="Manager" method="_on_button_2_pressed"]

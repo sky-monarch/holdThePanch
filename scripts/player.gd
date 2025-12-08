@@ -4,12 +4,15 @@ extends CharacterBody2D
 @export var run_speed: float = 700
 @export var gravity: float = 900
 @export var jump_force: float = -500
-@export var damage: int = 10
-@export var max_hp: int = 100
+@export var base_damage: int = 10
+@export var base_max_hp: int = 100
+var max_hp: int
+var hp: int
+var damage: int
+var kills = 0
 @export var change_crit_damade = 0.3
 @export var crit_damage = 2
 
-var hp: int = max_hp
 var is_attacking: bool = false
 var is_defend: bool = false
 var is_hurting: bool = false
@@ -22,7 +25,21 @@ var is_died = false
 @onready var defend_area = $DefendArea
 @onready var helth_bar = $HelthBar/FullHelthBar
 @onready var empty_bar = $HelthBar/EmptyHelthBar
+@onready var camera = $Camera2D
 
+func _ready():
+	max_hp = base_max_hp
+	hp = max_hp
+	damage = base_damage
+	update_helth_bar()
+	# Автоматически выключаем камеру если она не нужна
+	if should_disable_camera():
+		camera.enabled = false
+
+func should_disable_camera() -> bool:
+	# Проверяем нужна ли камера в текущей сцене
+	var current_scene = get_tree().current_scene.name
+	return current_scene in "MainCamera"
 
 func _physics_process(delta: float) -> void:
 	if is_died:
@@ -136,3 +153,45 @@ func heal(amount: int):
 	update_helth_bar()
 	
 	
+func increase_max_health(amount: int):
+	# Увеличиваем максимальное здоровье
+	var old_max_hp = max_hp
+	max_hp += amount
+	
+	# Также восстанавливаем текущее здоровье пропорционально
+	var health_percentage = float(hp) / float(old_max_hp)
+	hp = int(max_hp * health_percentage) + amount
+	
+	
+	# Обновляем UI
+	update_helth_bar()
+	
+func increase_damage(_damage_bonus):
+	damage+=_damage_bonus
+	
+
+func save_data():
+	@warning_ignore("unused_variable")
+	var data =  {
+		"max_health": max_hp,
+		"current_health": hp,
+		"damage": damage,
+		"kills": kills,
+		"position_x": global_position.x,
+		"position_y": global_position.y,
+	}
+	SaveSystem.update_player_data(1, data)
+
+func load_save_data(data: Dictionary):
+	if data.is_empty() and Engine.has_singleton("SaveSystem"):
+		# Автоматическая загрузка из SaveSystem
+		data = SaveSystem.get_player_data(1)
+	# Загружаем данные
+	max_hp = data.get("max_health", max_hp)
+	hp = data.get("current_health", hp)
+	damage = data.get("damage", damage)
+	kills = data.get("kills", kills)
+	# Позиция
+	var pos_x = data.get("position_x", global_position.x)
+	var pos_y = data.get("position_y", global_position.y)
+	global_position = Vector2(pos_x, pos_y)

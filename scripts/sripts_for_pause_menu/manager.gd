@@ -2,7 +2,7 @@ extends Node
 @onready var pause_menu = $"../CanvasLayer/PauseMenu"
 var game_paused: bool = false
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		game_paused = !game_paused
 		

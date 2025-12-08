@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=3 uid="uid://djrpqwxuu7lfe"]
+
+[ext_resource type="Script" uid="uid://c7m30cko2jxf1" path="res://scripts/play_mode.gd" id="1_sh7tn"]
+[ext_resource type="Texture2D" uid="uid://b5g7tukpbk7rb" path="res://resourse/data for the main menu/background.png" id="2_8ykrq"]
+[ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="3_stkbs"]
+[ext_resource type="Script" uid="uid://baybu7a7lalmv" path="res://scripts/label_win_menu.gd" id="4_rfcqe"]
+[ext_resource type="Script" uid="uid://dhx7iq2mr7unb" path="res://scripts/panel.gd" id="5_jgylt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6ob1"]
+texture = ExtResource("2_8ykrq")
+
+[node name="play_Mode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sh7tn")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m6ob1")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49296874
+anchor_top = 0.020833334
+anchor_right = 0.49296874
+anchor_bottom = 0.020833334
+offset_left = -389.0
+offset_top = 32.0
+offset_right = 395.0
+offset_bottom = 116.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_stkbs")
+theme_override_font_sizes/font_size = 33
+text = "ВЫБЕРИТЕ ИГРОВОЙ РЕЖИМ:"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_rfcqe")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -196.0
+offset_right = 552.0
+offset_bottom = 311.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_jgylt")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -87.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_stkbs")
+theme_override_font_sizes/font_size = 25
+text = "Многопользовательский
+режим"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -580.0
+offset_top = -196.0
+offset_right = -38.0
+offset_bottom = 311.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_jgylt")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel3"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -87.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_stkbs")
+theme_override_font_sizes/font_size = 25
+text = "одиночный режим"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gui_input" from="Panel2" to="." method="_on_panel_2_gui_input"]
+[connection signal="gui_input" from="Panel3" to="." method="_on_panel_gui_input"]
