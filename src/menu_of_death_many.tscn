@@ -1,6 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://jxokqb3pqe7w"]
+[gd_scene load_steps=7 format=3 uid="uid://jxokqb3pqe7w"]
 
+[ext_resource type="Script" uid="uid://bs4gyl0cdunp8" path="res://scripts/menu_of_death_many.gd" id="1_fg2xf"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="1_onud0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onud0"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fg2xf"]
+bg_color = Color(0.5132329, 0.5132329, 0.5132329, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5c5vo"]
+bg_color = Color(0.74138474, 0.7413847, 0.74138457, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvfy7"]
 
 [node name="menu_of_death_many" type="Control"]
 layout_mode = 3
@@ -9,6 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fg2xf")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -75,6 +106,48 @@ text = "Игрок 1:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="KillsP1" type="Label" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -289.0
+offset_top = 76.0
+offset_right = 292.0
+offset_bottom = 163.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_onud0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DamageP1" type="Label" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -292.0
+offset_top = 176.0
+offset_right = 289.0
+offset_bottom = 263.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_onud0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthP1" type="Label" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -289.0
+offset_top = 273.0
+offset_right = 292.0
+offset_bottom = 360.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_onud0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Panel2" type="Panel" parent="Panel"]
 layout_mode = 1
 anchors_preset = 8
@@ -103,3 +176,64 @@ theme_override_font_sizes/font_size = 26
 text = "Игрок 2:"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="KillsP2" type="Label" parent="Panel/Panel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -289.0
+offset_top = 76.0
+offset_right = 292.0
+offset_bottom = 163.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_onud0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DamageP2" type="Label" parent="Panel/Panel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -289.0
+offset_top = 151.0
+offset_right = 292.0
+offset_bottom = 238.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_onud0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthP2" type="Label" parent="Panel/Panel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -289.0
+offset_top = 368.0
+offset_right = 292.0
+offset_bottom = 455.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_onud0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="Panel"]
+layout_mode = 1
+offset_right = 161.0
+offset_bottom = 42.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_onud0")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_onud0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fg2xf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5c5vo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pvfy7")
+text = "меню"
+
+[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]
