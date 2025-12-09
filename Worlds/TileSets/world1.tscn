@@ -940,15 +940,23 @@ format = 2
 
 [node name="skelet" parent="." instance=ExtResource("6_hhscl")]
 position = Vector2(904, 596)
+drop_crystal_chance = 0.0
+drop_sword_chance = 0.0
 
 [node name="skeletVerTwo" parent="." instance=ExtResource("7_bfr66")]
 position = Vector2(1224, 590)
+drop_crystal_chance = 0.0
+drop_sword_chance = 0.0
 
 [node name="skelet2" parent="." instance=ExtResource("6_hhscl")]
 position = Vector2(1494, 598)
+drop_crystal_chance = 0.0
+drop_sword_chance = 0.0
 
 [node name="Mushroom" parent="." instance=ExtResource("8_u62il")]
 position = Vector2(2044, 569)
+drop_crystal_chance = 0.0
+drop_sword_chance = 0.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

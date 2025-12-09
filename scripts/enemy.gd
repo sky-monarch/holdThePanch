@@ -9,8 +9,8 @@ class_name Enemy
 
 @export_category("Loot Settings")
 @export var drop_potion_chance: float = 0.7
-@export var drop_crystal_chance: float = 0  # 15% шанс
-@export var drop_sword_chance: float = 1
+@export var drop_crystal_chance: float = 0.5
+@export var drop_sword_chance: float = 0.5
 @export var potion_scene: PackedScene = preload("res://src/potion.tscn")
 @export var health_crystal_scene: PackedScene = preload("res://src/health_crystal.tscn")
 @export var sword_pickup_scene: PackedScene = preload("res://src/sword_pickup.tscn")
