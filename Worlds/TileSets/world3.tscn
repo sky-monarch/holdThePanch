@@ -21,9 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://cjlwmi86owhys" path="res://src/golem_blue.tscn" id="20_b7e8s"]
 [ext_resource type="Script" uid="uid://dgyce1dtmf7se" path="res://scripts/death_zone.gd" id="21_e7bkl"]
 [ext_resource type="PackedScene" uid="uid://dyjxx1jluq8gp" path="res://src/portal_manager.tscn" id="22_6knpy"]
-[ext_resource type="Script" uid="uid://c74hor5hodanl" path="res://scripts/show_level.gd" id="23_j6cox"]
+[ext_resource type="Script" path="res://scripts/show_level.gd" id="23_j6cox"]
 [ext_resource type="FontFile" uid="uid://8a5ad5bw24y" path="res://resourse/data for the main menu/ZenterSPDemo-Black.otf" id="24_4jgx4"]
-[ext_resource type="Script" uid="uid://c26fcwby3vrj" path="res://scripts/current_level.gd" id="25_4jgx4"]
+[ext_resource type="Script" path="res://scripts/current_level.gd" id="25_4jgx4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4pw7c"]
 texture = ExtResource("7_0t53o")
@@ -4017,7 +4017,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6knpy"]
-size = Vector2(6156, 165.5)
+size = Vector2(6156, 516.75)
 
 [node name="Node2D" type="Node2D"]
 
@@ -4175,7 +4175,7 @@ scale = Vector2(6, 6)
 script = ExtResource("21_e7bkl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
-position = Vector2(1290, 373)
+position = Vector2(1290, 548.625)
 shape = SubResource("RectangleShape2D_6knpy")
 
 [node name="PortalManager" parent="." instance=ExtResource("22_6knpy")]

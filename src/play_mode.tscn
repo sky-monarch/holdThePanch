@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dj6o88oaeydcv" path="res://resourse/sprites/player_two/Knight_player_1.4/Knight_player_1.4/Knight_player/Attack_KG_3.png" id="12_235ju"]
 [ext_resource type="Texture2D" uid="uid://1uvlxotug0ew" path="res://resourse/sprites/player_two/Knight_player_1.4/Knight_player_1.4/Knight_player/Attack_KG_4.png" id="13_phgkq"]
 [ext_resource type="Texture2D" uid="uid://b0q8uk31p8qi" path="res://resourse/sprites/player_two/Knight_player_1.4/Knight_player_1.4/Knight_player/Drinking_KG_1.png" id="14_jdnpg"]
+[ext_resource type="Script" uid="uid://dhx7iq2mr7unb" path="res://scripts/panel.gd" id="5_jgylt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6ob1"]
 texture = ExtResource("2_8ykrq")
@@ -627,6 +628,29 @@ text = "одиночный режим"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -33.0
+offset_right = 98.0
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_stkbs")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_sh7tn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ykrq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_stkbs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rfcqe")
+text = "выход"
+
 [connection signal="gui_input" from="Panel2" to="." method="_on_panel_2_gui_input"]
 [connection signal="gui_input" from="Panel3" to="." method="_on_panel_gui_input"]
 [connection signal="pressed" from="Panel3/Button2" to="Panel3/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
