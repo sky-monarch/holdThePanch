@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=4 uid="uid://c56espqo0jift"]
 
-[ext_resource type="Script" uid="uid://b1hlc3mssq8bi" path="res://scripts/world_6(multiplayer_mode).gd" id="1_74re6"]
+[ext_resource type="Script" path="res://scripts/world_6(multiplayer_mode).gd" id="1_74re6"]
 [ext_resource type="Script" uid="uid://1u24nxnd0khd" path="res://scripts/sripts_for_pause_menu/manager_many.gd" id="1_resd5"]
 [ext_resource type="Texture2D" uid="uid://cqlrk0v55uvgt" path="res://Graphics/background/карта/parallax-demon-woods-bg.png" id="1_v0scb"]
 [ext_resource type="Texture2D" uid="uid://4g6thgjyc381" path="res://Graphics/background/карта/parallax-demon-woods-far-trees.png" id="2_i0cb6"]
@@ -15,9 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="12_013eg"]
 [ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="12_u0s38"]
 [ext_resource type="PackedScene" uid="uid://c1w6cpcs1aera" path="res://src/player_two.tscn" id="15_wpne4"]
-[ext_resource type="PackedScene" uid="uid://dhdnddlnoe5vx" path="res://src/portal_enemy_one.tscn" id="16_wpne4"]
-[ext_resource type="PackedScene" uid="uid://x0mtk1ixgjec" path="res://src/portal_enemy_two.tscn" id="17_25mu1"]
-[ext_resource type="PackedScene" uid="uid://bnhu3ake4y2ey" path="res://src/portal_enemy_three.tscn" id="18_5wonv"]
+[ext_resource type="PackedScene" path="res://src/portal_enemy_one.tscn" id="16_wpne4"]
+[ext_resource type="PackedScene" path="res://src/portal_enemy_two.tscn" id="17_25mu1"]
+[ext_resource type="PackedScene" path="res://src/portal_enemy_three.tscn" id="18_5wonv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qp32v"]
 texture = ExtResource("6_qxvix")
@@ -4154,3 +4154,4 @@ position = Vector2(1881, -305)
 [editable path="CanvasLayer2/DeathMenu"]
 [editable path="portal_enemy"]
 [editable path="portal_enemy2"]
+[editable path="portal_enemy3"]

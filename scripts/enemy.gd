@@ -24,6 +24,8 @@ var is_attacking: bool = false
 var is_hurting: bool = false
 var can_take_damage = true
 var tween = null
+var last_attacker: Node2D = null  # Последний игрок, нанесший урон
+
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var detection_area: Area2D = $DetectionArea
@@ -106,11 +108,16 @@ func _attack() -> void:
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
-func take_damage(amount: int) -> void:
+func take_damage(amount: int, attacker: Node2D = null) -> void:
 	if is_dead or is_hurting or not can_take_damage:
 		return
 	
 	hp -= amount
+	
+	# Запоминаем последнего атакующего
+	if attacker and attacker.is_in_group("player"):
+		last_attacker = attacker  # Просто запоминаем последнего
+	
 	update_helth_bar()
 	is_hurting = true
 	can_attack = false
@@ -136,6 +143,19 @@ func die() -> void:
 	
 	anim.play("Die")
 	await anim.animation_finished
+	
+	# Проверяем, есть ли последний атакующий
+	if last_attacker and last_attacker.has_method("add_kill"):
+		last_attacker.add_kill()
+		print(last_attacker.name, " убил врага!")
+	else:
+		# Если last_attacker не определен, ищем любого игрока
+		# (на случай смерти от окружающего урона и т.д.)
+		var players = get_tree().get_nodes_in_group("player")
+		if players.size() > 0:
+			# Даем kill первому игроку в списке
+			players[0].add_kill()
+	
 	try_drop_loot()
 	emit_signal("died")
 	queue_free()

@@ -127,7 +127,7 @@ func take_damage(_damage):
 func _on_attack_area_body_entered(body: Node2D):
 	if body.has_method("take_damage") and not body.is_in_group("player"):
 		if randf() < change_crit_damade:
-			body.take_damage(damage * crit_damage)
+			body.take_damage(damage * crit_damage, self)
 		else:
 			body.take_damage(damage)
 		
@@ -193,3 +193,6 @@ func load_save_data():
 	var pos_x = data.get("position_x", global_position.x)
 	var pos_y = data.get("position_y", global_position.y)
 	global_position = Vector2(pos_x, pos_y)
+
+func add_kill():
+	kills += 1
