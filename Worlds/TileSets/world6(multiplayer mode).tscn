@@ -1,18 +1,19 @@
-[gd_scene load_steps=19 format=4 uid="uid://c56espqo0jift"]
+[gd_scene load_steps=20 format=4 uid="uid://c56espqo0jift"]
 
+[ext_resource type="Script" uid="uid://1u24nxnd0khd" path="res://scripts/sripts_for_pause_menu/manager_many.gd" id="1_resd5"]
 [ext_resource type="Texture2D" uid="uid://cqlrk0v55uvgt" path="res://Graphics/background/карта/parallax-demon-woods-bg.png" id="1_v0scb"]
 [ext_resource type="Texture2D" uid="uid://4g6thgjyc381" path="res://Graphics/background/карта/parallax-demon-woods-far-trees.png" id="2_i0cb6"]
 [ext_resource type="Texture2D" uid="uid://dwh0dv4udxprq" path="res://Graphics/blocky/i.jpg" id="2_vt8jp"]
 [ext_resource type="Texture2D" uid="uid://b5swtnh2pj0vq" path="res://Graphics/background/карта/parallax-demon-woods-mid-trees.png" id="3_qxvix"]
-[ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="3_v0scb"]
 [ext_resource type="PackedScene" uid="uid://nmxrnoi4v2sn" path="res://src/player.tscn" id="4_i0cb6"]
 [ext_resource type="Texture2D" uid="uid://ccbni6eb551ww" path="res://Graphics/background/карта/parallax-demon-woods-close-trees.png" id="4_rgkvb"]
-[ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/blocky/oak_woods_tileset.png" id="6_qxvix"]
-[ext_resource type="Texture2D" uid="uid://cqddl0ar4npq0" path="res://Graphics/blocky/tileset.png" id="7_rgkvb"]
+[ext_resource type="Texture2D" uid="uid://61abob4e0cvg" path="res://Graphics/new folder/oak_woods_v1.0/oak_woods_v1.0/character/oak_woods_tileset.png" id="6_qxvix"]
+[ext_resource type="Texture2D" uid="uid://cqddl0ar4npq0" path="res://Graphics/new folder/tileset.png" id="7_rgkvb"]
 [ext_resource type="Script" uid="uid://dgyce1dtmf7se" path="res://scripts/death_zone.gd" id="10_qp32v"]
+[ext_resource type="PackedScene" uid="uid://c0laweclifqre" path="res://src/pause_menu_many.tscn" id="11_013eg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qp32v"]
-texture = ExtResource("3_v0scb")
+texture = ExtResource("6_qxvix")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -3989,6 +3990,10 @@ size = Vector2(17112, 516.75)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="manager_many" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("1_resd5")
+
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 
 [node name="ParallaxDemonWoodsBg" type="Sprite2D" parent="AnimatedSprite2D2"]
@@ -4099,3 +4104,14 @@ script = ExtResource("10_qp32v")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 position = Vector2(3789, 133)
 shape = SubResource("RectangleShape2D_resd5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause_menu_many" parent="CanvasLayer" instance=ExtResource("11_013eg")]
+process_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/pause_menu_many/MainButton/Button" to="manager_many" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/pause_menu_many/MainButton/Button2" to="manager_many" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/pause_menu_many/MainButton/Button3" to="manager_many" method="_on_button_3_pressed"]
+
+[editable path="CanvasLayer/pause_menu_many"]

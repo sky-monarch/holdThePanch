@@ -28,5 +28,5 @@ func _on_button_2_pressed() -> void:
 	
 	var players = get_tree().get_nodes_in_group("player")
 	players[0].save_data()
-	players[1].save_data()
+	#players[1].save_data()
 	SaveSystem.save_game()
