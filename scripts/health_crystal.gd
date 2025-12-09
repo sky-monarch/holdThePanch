@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var min_health_bonus: int = 5
-@export var max_health_bonus: int = 15
+@export var max_health_bonus: int = 10
 
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
