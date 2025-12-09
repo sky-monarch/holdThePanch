@@ -1,8 +1,7 @@
-# SwordPickup.gd - ИСПРАВЛЕННАЯ ВЕРСИЯ
 extends Area2D
 
-@export var min_damage_bonus: int = 5
-@export var max_damage_bonus: int = 15
+@export var min_damage_bonus: int = 2
+@export var max_damage_bonus: int = 4
 @export var frame_change_speed: float = 0.8
 @export var rotation_speed: float = 8.0
 

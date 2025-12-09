@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://c56espqo0jift"]
+[gd_scene load_steps=25 format=4 uid="uid://c56espqo0jift"]
 
 [ext_resource type="Script" uid="uid://b1hlc3mssq8bi" path="res://scripts/world_6(multiplayer_mode).gd" id="1_74re6"]
 [ext_resource type="Script" uid="uid://1u24nxnd0khd" path="res://scripts/sripts_for_pause_menu/manager_many.gd" id="1_resd5"]
@@ -16,8 +16,6 @@
 [ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="12_u0s38"]
 [ext_resource type="PackedScene" uid="uid://c1w6cpcs1aera" path="res://src/player_two.tscn" id="15_wpne4"]
 [ext_resource type="PackedScene" uid="uid://dhdnddlnoe5vx" path="res://src/portal_enemy_one.tscn" id="16_wpne4"]
-[ext_resource type="PackedScene" uid="uid://x0mtk1ixgjec" path="res://src/portal_enemy_two.tscn" id="17_25mu1"]
-[ext_resource type="PackedScene" uid="uid://bnhu3ake4y2ey" path="res://src/portal_enemy_three.tscn" id="18_5wonv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qp32v"]
 texture = ExtResource("6_qxvix")
@@ -4132,18 +4130,6 @@ position = Vector2(-3667, -489)
 [node name="portal_enemy" parent="." instance=ExtResource("16_wpne4")]
 position = Vector2(-870, -463)
 
-[node name="CollisionShape2D" parent="portal_enemy" index="1"]
-position = Vector2(2.5, 0)
-
-[node name="portal_enemy2" parent="." instance=ExtResource("17_25mu1")]
-position = Vector2(3901, -312)
-
-[node name="CollisionShape2D" parent="portal_enemy2" index="1"]
-position = Vector2(0.5, 0)
-
-[node name="portal_enemy3" parent="." instance=ExtResource("18_5wonv")]
-position = Vector2(1881, -305)
-
 [connection signal="pressed" from="CanvasLayer/pause_menu_many/MainButton/Button" to="manager_many" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/pause_menu_many/MainButton/Button2" to="manager_many" method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/pause_menu_many/MainButton/Button3" to="manager_many" method="_on_button_3_pressed"]
@@ -4152,5 +4138,3 @@ position = Vector2(1881, -305)
 
 [editable path="CanvasLayer/pause_menu_many"]
 [editable path="CanvasLayer2/DeathMenu"]
-[editable path="portal_enemy"]
-[editable path="portal_enemy2"]

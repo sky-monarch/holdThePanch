@@ -26,6 +26,8 @@ func _ready():
 		players[1].load_save_data()
 		SaveSystem.is_load = false
 		
+
+		
 		
 
 func _process(delta):

@@ -1,0 +1,95 @@
+[gd_scene load_steps=22 format=3 uid="uid://x0mtk1ixgjec"]
+
+[ext_resource type="Script" uid="uid://dxymt1li5oqxg" path="res://scripts/portal_enemy_one.gd" id="1_jmucn"]
+[ext_resource type="PackedScene" uid="uid://c31ph8n8ip0hy" path="res://src/samurai.tscn" id="2_1lbit"]
+[ext_resource type="PackedScene" uid="uid://dgwbk2yxel34m" path="res://src/flying_eye.tscn" id="3_w553v"]
+[ext_resource type="PackedScene" uid="uid://chwufra1bnjhc" path="res://src/goblin.tscn" id="4_6edva"]
+[ext_resource type="PackedScene" uid="uid://dwa4p7u5pxvjr" path="res://src/skelet_ver_two.tscn" id="5_hw5ji"]
+[ext_resource type="PackedScene" uid="uid://byjf7wqtxgg2u" path="res://src/skelet.tscn" id="6_itahj"]
+[ext_resource type="PackedScene" uid="uid://cmhrewwsmp7h5" path="res://src/mushroom.tscn" id="7_0d651"]
+[ext_resource type="PackedScene" uid="uid://bm2fsfqb71kdi" path="res://src/cyclop.tscn" id="8_ufgkv"]
+[ext_resource type="PackedScene" uid="uid://c85dgywydnwos" path="res://src/warior.tscn" id="9_kje2s"]
+[ext_resource type="PackedScene" uid="uid://cje8au1s6wlon" path="res://src/bandito.tscn" id="10_qxyy2"]
+[ext_resource type="Texture2D" uid="uid://d1f7mo4uiw827" path="res://resourse/sprites/portals/portal-Sheet.png" id="11_57yai"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30eod"]
+atlas = ExtResource("11_57yai")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bowfp"]
+atlas = ExtResource("11_57yai")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtitq"]
+atlas = ExtResource("11_57yai")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lt2u1"]
+atlas = ExtResource("11_57yai")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilywj"]
+atlas = ExtResource("11_57yai")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3ueq"]
+atlas = ExtResource("11_57yai")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqcsa"]
+atlas = ExtResource("11_57yai")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6pur"]
+atlas = ExtResource("11_57yai")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0yk4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30eod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bowfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtitq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lt2u1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilywj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3ueq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqcsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6pur")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4phdb"]
+size = Vector2(306, 77)
+
+[node name="portal_enemy" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_jmucn")
+enemy_scenes = Array[PackedScene]([ExtResource("2_1lbit"), ExtResource("3_w553v"), ExtResource("4_6edva"), ExtResource("5_hw5ji"), ExtResource("6_itahj"), ExtResource("7_0d651"), ExtResource("8_ufgkv"), ExtResource("9_kje2s"), ExtResource("10_qxyy2")])
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g0yk4")
+autoplay = "default"
+frame_progress = 0.050849456
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4phdb")
+
+[node name="Timer" type="Timer" parent="."]
