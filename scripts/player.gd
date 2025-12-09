@@ -182,10 +182,8 @@ func save_data():
 	}
 	SaveSystem.update_player_data(1, data)
 
-func load_save_data(data: Dictionary):
-	if data.is_empty() and Engine.has_singleton("SaveSystem"):
-		# Автоматическая загрузка из SaveSystem
-		data = SaveSystem.get_player_data(1)
+func load_save_data():
+	var data = SaveSystem.get_player_data(1)
 	# Загружаем данные
 	max_hp = data.get("max_health", max_hp)
 	hp = data.get("current_health", hp)

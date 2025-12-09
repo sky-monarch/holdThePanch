@@ -8,4 +8,10 @@ func _check_save_on_scene_load():
 		visible = true
 	else:
 		visible = false
+
 	
+
+
+func _on_pressed() -> void:
+	SaveSystem.is_load = true
+	visible = false
