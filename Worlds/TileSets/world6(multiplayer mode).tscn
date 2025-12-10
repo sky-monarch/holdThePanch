@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=4 uid="uid://c56espqo0jift"]
 
-[ext_resource type="Script" path="res://scripts/world_6(multiplayer_mode).gd" id="1_74re6"]
+[ext_resource type="Script" uid="uid://b1hlc3mssq8bi" path="res://scripts/world_6(multiplayer_mode).gd" id="1_74re6"]
 [ext_resource type="Script" uid="uid://1u24nxnd0khd" path="res://scripts/sripts_for_pause_menu/manager_many.gd" id="1_resd5"]
 [ext_resource type="Texture2D" uid="uid://cqlrk0v55uvgt" path="res://Graphics/background/карта/parallax-demon-woods-bg.png" id="1_v0scb"]
 [ext_resource type="Texture2D" uid="uid://4g6thgjyc381" path="res://Graphics/background/карта/parallax-demon-woods-far-trees.png" id="2_i0cb6"]
@@ -12,12 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://cqddl0ar4npq0" path="res://Graphics/new folder/tileset.png" id="7_rgkvb"]
 [ext_resource type="Script" uid="uid://dgyce1dtmf7se" path="res://scripts/death_zone.gd" id="10_qp32v"]
 [ext_resource type="PackedScene" uid="uid://c0laweclifqre" path="res://src/pause_menu_many.tscn" id="11_013eg"]
-[ext_resource type="PackedScene" uid="uid://cqguh662eo5p8" path="res://src/menu_of_death.tscn" id="12_013eg"]
-[ext_resource type="Script" uid="uid://de1chsewy8txp" path="res://scripts/deathplayer.gd" id="12_u0s38"]
+[ext_resource type="Script" uid="uid://cdnr0hfjhr301" path="res://scripts/death_menu_multiplayer.gd" id="13_25mu1"]
+[ext_resource type="PackedScene" uid="uid://jxokqb3pqe7w" path="res://src/menu_of_death_many.tscn" id="14_5wonv"]
 [ext_resource type="PackedScene" uid="uid://c1w6cpcs1aera" path="res://src/player_two.tscn" id="15_wpne4"]
-[ext_resource type="PackedScene" path="res://src/portal_enemy_one.tscn" id="16_wpne4"]
-[ext_resource type="PackedScene" path="res://src/portal_enemy_two.tscn" id="17_25mu1"]
-[ext_resource type="PackedScene" path="res://src/portal_enemy_three.tscn" id="18_5wonv"]
+[ext_resource type="PackedScene" uid="uid://dhdnddlnoe5vx" path="res://src/portal_enemy_one.tscn" id="16_wpne4"]
+[ext_resource type="PackedScene" uid="uid://x0mtk1ixgjec" path="res://src/portal_enemy_two.tscn" id="17_25mu1"]
+[ext_resource type="PackedScene" uid="uid://bnhu3ake4y2ey" path="res://src/portal_enemy_three.tscn" id="18_5wonv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qp32v"]
 texture = ExtResource("6_qxvix")
@@ -4119,9 +4119,35 @@ shape = SubResource("RectangleShape2D_resd5")
 process_mode = 2
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
-script = ExtResource("12_u0s38")
+script = ExtResource("13_25mu1")
 
-[node name="DeathMenu" parent="CanvasLayer2" instance=ExtResource("12_013eg")]
+[node name="menu_of_death_many" parent="CanvasLayer2" instance=ExtResource("14_5wonv")]
+
+[node name="KillsP1" parent="CanvasLayer2/menu_of_death_many/Panel/Panel" index="1"]
+offset_left = -293.0
+offset_top = 81.0
+offset_right = 288.0
+offset_bottom = 168.0
+
+[node name="HealthP1" parent="CanvasLayer2/menu_of_death_many/Panel/Panel" index="3"]
+offset_left = -293.0
+offset_top = 275.0
+offset_right = 288.0
+offset_bottom = 362.0
+
+[node name="KillsP2" parent="CanvasLayer2/menu_of_death_many/Panel/Panel2" index="1"]
+offset_top = 81.0
+offset_bottom = 168.0
+
+[node name="DamageP2" parent="CanvasLayer2/menu_of_death_many/Panel/Panel2" index="2"]
+offset_left = -287.0
+offset_top = 178.0
+offset_right = 294.0
+offset_bottom = 265.0
+
+[node name="HealthP2" parent="CanvasLayer2/menu_of_death_many/Panel/Panel2" index="3"]
+offset_top = 276.0
+offset_bottom = 363.0
 
 [node name="player_two" parent="." instance=ExtResource("15_wpne4")]
 position = Vector2(-3315.0002, -487)
@@ -4147,11 +4173,9 @@ position = Vector2(1881, -305)
 [connection signal="pressed" from="CanvasLayer/pause_menu_many/MainButton/Button" to="manager_many" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/pause_menu_many/MainButton/Button2" to="manager_many" method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/pause_menu_many/MainButton/Button3" to="manager_many" method="_on_button_3_pressed"]
-[connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button" to="CanvasLayer2" method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer2/DeathMenu/MainButton/Button3" to="CanvasLayer2" method="_on_button_3_pressed"]
 
 [editable path="CanvasLayer/pause_menu_many"]
-[editable path="CanvasLayer2/DeathMenu"]
+[editable path="CanvasLayer2/menu_of_death_many"]
 [editable path="portal_enemy"]
 [editable path="portal_enemy2"]
 [editable path="portal_enemy3"]

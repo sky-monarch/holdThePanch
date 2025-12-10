@@ -64,19 +64,6 @@ text = "Статистика: "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="Panel"]
-layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -5.0
-offset_top = 112.0
-offset_right = 3.0
-offset_bottom = -26.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="Panel" type="Panel" parent="Panel"]
 layout_mode = 1
 anchors_preset = 8
