@@ -235,7 +235,7 @@ position = Vector2(283, 472)
 scale = Vector2(5.484375, 5.380952)
 sprite_frames = SubResource("SpriteFrames_mlhnx")
 autoplay = "default"
-frame_progress = 0.31609884
+frame_progress = 0.67217034
 
 [node name="Panel2" type="Panel" parent="Panel"]
 layout_mode = 1
