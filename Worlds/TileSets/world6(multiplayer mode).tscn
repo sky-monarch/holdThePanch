@@ -4149,6 +4149,10 @@ offset_bottom = 265.0
 offset_top = 276.0
 offset_bottom = 363.0
 
+[node name="AnimatedSprite2D" parent="CanvasLayer2/menu_of_death_many/Panel/Panel2" index="4"]
+position = Vector2(306.99997, 471.00003)
+frame_progress = 0.018634776
+
 [node name="player_two" parent="." instance=ExtResource("15_wpne4")]
 position = Vector2(-3315.0002, -487)
 
