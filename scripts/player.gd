@@ -138,7 +138,6 @@ func die():
 	anim.play("Died")
 	await anim.animation_finished
 	await get_tree().create_timer(2).timeout
-	queue_free()
 	
 func update_helth_bar():
 	var scale_hp = clamp(float(hp)/float(max_hp), 0.0, 1.0)/2

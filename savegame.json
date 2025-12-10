@@ -1,21 +1,21 @@
 {
-	"difficulty": 2,
-	"last_saved": "2025-12-09T23:07:40",
+	"difficulty": 2.0,
+	"last_saved": "2025-12-10T22:55:16",
 	"player1": {
-		"current_health": 48,
+		"current_health": 100,
 		"damage": 10,
-		"kills": 1,
-		"max_health": 107,
-		"position_x": -1240.13818359375,
-		"position_y": -428.880676269531
+		"kills": 0.0,
+		"max_health": 100,
+		"position_x": -2660.076171875,
+		"position_y": -235.567428588867
 	},
 	"player2": {
 		"current_health": 100,
 		"damage": 10,
-		"kills": 0,
+		"kills": 0.0,
 		"max_health": 100,
-		"position_x": -1414.96618652344,
-		"position_y": -428.880676269531
+		"position_x": -3315.00024414063,
+		"position_y": -235.5888671875
 	},
-	"timestamp": "2025-12-09T23:07:40"
+	"timestamp": "2025-12-10T22:54:37"
 }

@@ -546,6 +546,8 @@ size = Vector2(64, 35)
 size = Vector2(64, 35.333336)
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
+light_mask = 49
+visibility_layer = 49
 scale = Vector2(3, 3)
 script = ExtResource("1_ehvfd")
 
