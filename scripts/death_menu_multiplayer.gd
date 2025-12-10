@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var death_check_timer: Timer
+var is_show = false
 
 func _ready():
 	# Сразу скрываем меню
@@ -75,7 +76,7 @@ func show_menu():
 	
 	# Показываем меню и ставим игру на паузу
 	visible = true
-	get_tree().paused = true
+	is_show = true
 	print("Меню смерти показано - хотя бы один игрок мертв")
 
 func _on_button_pressed() -> void:

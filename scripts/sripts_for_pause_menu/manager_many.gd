@@ -1,5 +1,6 @@
 extends Node
 @onready var pause_menu = $"../CanvasLayer/pause_menu_many"
+@onready var pause_death_menu = $"../CanvasLayer2"
 var game_paused: bool = false
 
 func _process(_delta):
@@ -12,6 +13,9 @@ func _process(_delta):
 	else:
 		get_tree().paused = false
 		pause_menu.hide()
+	
+	if pause_death_menu.is_show == true:
+		get_tree().paused = true
 		
 
 

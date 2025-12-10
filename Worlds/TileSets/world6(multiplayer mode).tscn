@@ -4116,24 +4116,39 @@ shape = SubResource("RectangleShape2D_resd5")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="pause_menu_many" parent="CanvasLayer" instance=ExtResource("11_013eg")]
-process_mode = 2
+process_mode = 3
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 script = ExtResource("13_25mu1")
 
 [node name="menu_of_death_many" parent="CanvasLayer2" instance=ExtResource("14_5wonv")]
+process_mode = 3
+
+[node name="Panel" parent="CanvasLayer2/menu_of_death_many/Panel" index="1"]
+process_mode = 3
+
+[node name="Label" parent="CanvasLayer2/menu_of_death_many/Panel/Panel" index="0"]
+process_mode = 3
 
 [node name="KillsP1" parent="CanvasLayer2/menu_of_death_many/Panel/Panel" index="1"]
+process_mode = 3
 offset_left = -293.0
 offset_top = 81.0
 offset_right = 288.0
 offset_bottom = 168.0
 
+[node name="DamageP1" parent="CanvasLayer2/menu_of_death_many/Panel/Panel" index="2"]
+process_mode = 3
+
 [node name="HealthP1" parent="CanvasLayer2/menu_of_death_many/Panel/Panel" index="3"]
+process_mode = 3
 offset_left = -293.0
 offset_top = 275.0
 offset_right = 288.0
 offset_bottom = 362.0
+
+[node name="AnimatedSprite2D" parent="CanvasLayer2/menu_of_death_many/Panel/Panel" index="4"]
+process_mode = 3
 
 [node name="KillsP2" parent="CanvasLayer2/menu_of_death_many/Panel/Panel2" index="1"]
 offset_top = 81.0
@@ -4150,8 +4165,12 @@ offset_top = 276.0
 offset_bottom = 363.0
 
 [node name="AnimatedSprite2D" parent="CanvasLayer2/menu_of_death_many/Panel/Panel2" index="4"]
+process_mode = 3
 position = Vector2(306.99997, 471.00003)
 frame_progress = 0.018634776
+
+[node name="Button3" parent="CanvasLayer2/menu_of_death_many/Panel" index="3"]
+process_mode = 3
 
 [node name="player_two" parent="." instance=ExtResource("15_wpne4")]
 position = Vector2(-3315.0002, -487)
