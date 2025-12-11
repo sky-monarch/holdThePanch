@@ -10,7 +10,7 @@ class_name Enemy
 @export_category("Loot Settings")
 @export var drop_potion_chance: float = 0.7
 @export var drop_crystal_chance: float = 0.5
-@export var drop_sword_chance: float = 0.5
+@export var drop_sword_chance: float = 1.0
 @export var potion_scene: PackedScene = preload("res://src/potion.tscn")
 @export var health_crystal_scene: PackedScene = preload("res://src/health_crystal.tscn")
 @export var sword_pickup_scene: PackedScene = preload("res://src/sword_pickup.tscn")
@@ -177,7 +177,7 @@ func try_drop_loot():
 	if health_crystal_scene and randf() <= drop_crystal_chance:
 		drop_item(health_crystal_scene)
 		# Меч
-	if sword_pickup_scene and randf() <= drop_sword_chance:
+	elif sword_pickup_scene and randf() <= drop_sword_chance:
 		drop_item(sword_pickup_scene)
 		
 func drop_item(item_scene: PackedScene):
