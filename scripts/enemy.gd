@@ -25,6 +25,7 @@ var is_hurting: bool = false
 var can_take_damage = true
 var tween = null
 var last_attacker: Node2D = null  # Последний игрок, нанесший урон
+var difficulty = SaveSystem.difficulty
 
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
@@ -41,6 +42,10 @@ func _ready() -> void:
 	attack_area.body_entered.connect(_on_attack_body_entered)
 	attack_area.body_exited.connect(_on_attack_body_exited)
 	add_to_group("enemies")
+	damage = damage * difficulty
+	max_hp = max_hp * difficulty
+	hp = max_hp
+	
 
 func _physics_process(_delta: float) -> void:
 	if is_dead:

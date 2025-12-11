@@ -3,8 +3,8 @@ extends Area2D
 class_name Portal
 
 # Настройки
-@export var spawn_delay: float = 30.0  # Базовая задержка - 30 секунд
-@export var min_spawn_delay: float = 20.0  # Минимальная задержка - 20 секунд
+@export var spawn_delay: float = 8
+@export var min_spawn_delay: float = 12  
 @export var difficulty_curve: Curve  # Кривая сложности (опционально)
 @export var enemy_scenes: Array[PackedScene] = []  # Сцены врагов для спавна
 

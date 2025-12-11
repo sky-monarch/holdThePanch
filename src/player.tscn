@@ -550,6 +550,7 @@ light_mask = 49
 visibility_layer = 49
 scale = Vector2(3, 3)
 script = ExtResource("1_ehvfd")
+change_crit_damade = 0.1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -3)
