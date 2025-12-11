@@ -1,7 +1,7 @@
 extends Node
 
 # Константы
-const SAVE_FILE_PATH = "res://savegame.json"
+const SAVE_FILE_PATH = "user://savegame.json"
 
 # Данные для сохранения
 var game_data = {
